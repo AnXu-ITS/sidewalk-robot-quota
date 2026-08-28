@@ -1,0 +1,13 @@
+cell_id,context,W,qp,vbar,base_pass,dens_base,fr_base,qr_star,above_upper,qhat_A,qhat_A_round,qhat_A_floor,qhat_B,qhat_iso,over_A_round,over_A_floor,over_iso
+BND-661246488-2,MRT-frontage,2.6,78,0.953,True,0.527,0.978,0.0,False,4.39,4.5,4,5.0,0.0,1,1,0
+BND-661246488-3,MRT-frontage,2.6,78,0.984,True,0.507,0.979,0.0,False,4.39,4.5,4,5.0,0.0,1,1,0
+BND-661246488-2,MRT-frontage,2.6,117,0.097,False,2.609,6.641,0.0,False,0.0,0.0,0,0.0,0.0,0,0,0
+BND-661246488-3,MRT-frontage,2.6,117,0.14,False,2.151,2.633,0.0,False,0.0,0.0,0,0.0,0.0,0,0,0
+BND-873552517-2,commercial,2.25,34,1.215,True,0.209,0.997,12.0,False,6.7,6.5,6,6.71,7.96,0,0,0
+BND-873552517-3,commercial,2.25,34,1.181,True,0.216,0.995,12.0,False,6.7,6.5,6,6.71,7.96,0,0,0
+BND-873552517-2,commercial,2.25,56,1.099,True,0.381,1.003,3.0,False,4.43,4.5,4,4.47,0.94,1,1,0
+BND-873552517-3,commercial,2.25,56,1.007,True,0.417,0.993,4.0,False,4.43,4.5,4,4.47,0.94,1,0,0
+BND-253918225-3,residential,1.65,8,1.308,True,0.063,0.998,12.0,False,12.6,12.5,12,9.59,11.0,1,0,0
+BND-253918225-0,residential,1.65,8,1.252,True,0.066,1.0,12.0,False,12.6,12.5,12,9.59,11.0,1,0,0
+BND-253918225-3,residential,1.65,20,1.251,True,0.164,1.001,6.0,False,5.9,6.0,5,4.56,6.87,0,0,1
+BND-253918225-0,residential,1.65,20,1.208,True,0.171,0.998,8.0,False,5.9,6.0,5,4.56,6.87,0,0,0

@@ -1,0 +1,3 @@
+model,SVR,n_viol,n_feasible
+A-floor,0.0,0,32
+A-iso,0.03125,1,32

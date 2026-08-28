@@ -1,0 +1,38 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+
+# ---- Logs & error streams ----
+*.log
+*.err
+
+# ---- SUMO temporary run directories (large FCD / error dumps) ----
+experiment_sumo/outputs/sumo_tmp/
+
+# ---- Batch worker scratch space ----
+experiment/outputs/_batch_tmp/
+experiment_sumo/outputs/_batch_tmp/
+
+# ---- Archived snapshots (superseded by current state) ----
+experiment_sumo/archive/
+
+# ---- Raw downloaded OSM extracts + converted network ----
+# (regenerate with sumo_jupedsim/scripts/download_osm.py and netconvert)
+sumo_jupedsim/data/osm/
+sumo_jupedsim/data/bendemeer.net.xml
+
+# ---- OS / editor / IDE ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

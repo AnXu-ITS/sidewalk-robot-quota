@@ -1,0 +1,13 @@
+cell_id,context,W,qp,reason,qr_star,dens_base,fr_base,Rv_qr1
+BND-253918225-0,residential,1.65,36,qr1-pass,1.0,0.341,0.999,0.986
+BND-253918225-0,residential,1.65,40,qr1-pass,1.0,0.392,1.001,0.978
+BND-253918225-0,residential,1.65,44,qr1-pass,1.0,0.454,0.995,0.955
+BND-253918225-0,residential,1.65,48,qr1-pass,1.0,0.542,0.995,0.922
+BND-873552517-2,commercial,2.25,60,qr1-pass,1.0,0.413,1.001,0.981
+BND-873552517-2,commercial,2.25,66,qr1-fail,0.0,0.469,1.002,0.79
+BND-873552517-2,commercial,2.25,70,qr1-fail,0.0,0.511,0.998,0.636
+BND-873552517-2,commercial,2.25,74,qr1-fail,0.0,0.549,1.003,0.594
+BND-661246488-2,MRT-frontage,2.6,60,qr1-pass,1.0,0.375,0.991,1.017
+BND-661246488-2,MRT-frontage,2.6,66,qr1-pass,1.0,0.417,0.995,0.973
+BND-661246488-2,MRT-frontage,2.6,70,qr1-pass,1.0,0.445,0.996,0.96
+BND-661246488-2,MRT-frontage,2.6,74,qr1-pass,1.0,0.48,1.001,0.917
