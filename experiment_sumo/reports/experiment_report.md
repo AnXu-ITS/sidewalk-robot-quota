@@ -274,15 +274,38 @@ single corner vs ≤ 0.5 for a gradual curve) — a 30° corner has sinuosity on
 1.035, which the `W_c=W/sinuosity` penalty cannot capture. The real multi-city
 "B curve" cells are gradual (multi-bend), which is why they were healthy.
 
+**Corner-position sweep.** `bend_position_sweep.py` (θ∈{0,15,20,30,45,60,75,90}° ×
+position∈{entry,middle,exit}, W=2.5 m, q_p=50, 30 seeds, 22 combos) resolves
+WHERE the corner sits:
+
+| θ \ pos | entry | middle | exit |
+|---|---|---|---|
+| 15° | 6 | 2 | 3 |
+| 30° | 6 | 1 | 3 |
+| 45° | 4 | 1 | 3 |
+| 60° | 1 | 2 | 3 |
+| 75° | 0 | 0 | 0 |
+| 90° | 20* | 0 | 0 |
+
+Corner **position** matters: an **exit** corner (short stub before the exit,
+as in AMS-1351790552) is a queueing bottleneck and collapses at 90° (q_r*=0);
+an **entry** corner is more forgiving at mild angles (15–30° admit 6) but still
+collapses by 75°; **middle** corners collapse most monotonically. The `*` on
+entry-90° is a **relative-criterion artifact**: its baseline is vbar=0.645 m/s
+(the corner alone slows pedestrians ~46%) yet it "passes" at q_r=20 because
+`R_v = v̄/v̄₀ ≥ 0.90` is trivially satisfied on an already-slow baseline. An
+**absolute speed floor** (`vbar < 0.8 m/s → 0`) closes this gap with zero impact
+on the 200 real combos (all 36 combos with vbar<0.8 already have q_r*=0).
+
 **Conservative guard (evaluated, not adopted).** The refined P2 variant applies
 `max_turn ≥ 20° AND cum_turn ≥ 20° AND max_turn/cum_turn ≥ 0.6 → q̂=0`
-(concentrated single corner) plus `q_max=15` for `W > 3.0 m`
-(`quota_params_p2.json`). On the 200 combos it moves over-allocation 14 → 12
-(`max_over` 5 → 4) at the cost of one extra under-allocation (62 → 63); MAE is
-unchanged (1.370). The 100-cell sample under-represents single corners (its
-"B" cells are gradual), so the guard's in-sample effect is small; its value is
-protecting future intersection-corner cells. It is kept as a documented variant
-pending a wider angle/position sweep (corner near entry vs exit) before
+(concentrated single corner), `vbar < 0.8 m/s → q̂=0` (absolute speed floor),
+plus `q_max=15` for `W > 3.0 m` (`quota_params_p2.json`). On the 200 combos it
+moves over-allocation 14 → 12 (`max_over` 5 → 4) at the cost of one extra
+under-allocation (62 → 63); MAE is unchanged (1.370). The 100-cell sample
+under-represents single corners (its "B" cells are gradual), so the guard's
+in-sample effect is small; its value is protecting future intersection-corner
+cells. Real intersection-corner sampling is the remaining precondition for
 adoption.
 
 **Data anomaly resolved (width-tag check).** AMS-244428233-0 (`highway=path`

@@ -4,9 +4,15 @@
 Evaluates the P1 model vs a guarded P2 model on the 200 multi-city combos,
 reporting over-allocation and under-allocation before/after.
 
-Guard rules (interim, documented as sparse-sample):
-  * sharp corner: corrected max_turn_deg >= SHARP_DEG -> q_hat = 0 (discrete).
-  * extra wide:  W > 3.0 -> q_max = QMAX_EXTRA (15) instead of 20.
+Guard rules (refined by the bend-angle + corner-position mini-experiments):
+  * single sharp corner: corrected max_turn>=20 AND cum>=20 AND
+    max_turn/cum>=0.6 -> q_hat = 0 (discrete; a CONCENTRATED corner, not a
+    gradual curve).
+  * absolute pedestrian-speed floor: vbar < VBAR_MIN -> q_hat = 0.  The
+    relative speed-retention criterion is fragile for "slow-but-uncongested"
+    corners (position sweep: entry-90 deg gives vbar=0.645 yet passes at
+    q_r=20); an absolute floor closes that gap.
+  * extra wide: W > 3.0 -> q_max = QMAX_EXTRA (15) instead of 20.
 """
 import json
 import os
@@ -20,6 +26,7 @@ from fit_multicity import load_p1_model, load_real, _pred
 
 SHARP_DEG = 20.0      # corrected max_turn lower bound (bend sweep collapses >= 30 deg)
 CONC_RATIO = 0.6      # max_turn/cum_turn: ~1 = single sharp corner, <~0.5 = gradual curve
+VBAR_MIN = 0.8        # absolute pedestrian free-flow floor (m/s)
 QMAX_EXTRA = 15.0
 
 
@@ -31,10 +38,13 @@ def predict_guarded(real, p1):
     mt = real["cell_id"].map(lambda c: cells[c]["max_turn_deg"]).to_numpy(float)
     cum = real["cell_id"].map(lambda c: cells[c]["cum_turn_deg"]).to_numpy(float)
     W = real["W"].to_numpy(float)
+    vbar = real["vbar"].to_numpy(float)
     # single sharp-corner hazard: a concentrated corner (not a gradual curve)
     conc = np.divide(mt, cum, out=np.zeros_like(mt), where=cum > 1e-6)
     sharp = (mt >= SHARP_DEG) & (cum >= SHARP_DEG) & (conc >= CONC_RATIO)
     base = np.where(sharp, 0.0, base)
+    # absolute pedestrian-speed floor (slow-but-uncongested corner artifact)
+    base = np.where(vbar < VBAR_MIN, 0.0, base)
     # extra-wide q_max cap
     base = np.where(W > 3.0, np.minimum(base, QMAX_EXTRA), base)
     return base
