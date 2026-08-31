@@ -169,8 +169,10 @@ def cell_geometry(sub):
     path = 0.0
     for i in range(len(sub) - 1):
         dx, dy = sub[i + 1][0] - sub[i][0], sub[i + 1][1] - sub[i][1]
-        path += math.hypot(dx, dy)
-        brgs.append((math.degrees(math.atan2(dy, dx)) + 360.0) % 360.0)
+        d = math.hypot(dx, dy)
+        path += d
+        if d > 1e-6:  # skip zero-length (duplicate) segments: atan2(0,0) is bogus
+            brgs.append((math.degrees(math.atan2(dy, dx)) + 360.0) % 360.0)
     max_turn = max((ang_diff(brgs[i], brgs[i + 1]) for i in range(len(brgs) - 1)),
                    default=0.0)
     cum_turn = sum(ang_diff(brgs[i], brgs[i + 1]) for i in range(len(brgs) - 1))

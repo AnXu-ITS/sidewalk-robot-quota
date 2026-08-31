@@ -191,14 +191,187 @@ tourism/mixed, then `q_p = x_ctx · W_eff` with the §5 priors:
 re-derived. Residual gaps (commercial −10, MRT-frontage −11) reflect the
 sampled districts; tourism/mixed overlaps retail in mixed-use districts.
 
-### 8.3 Ground truth and validation (results pending)
+### 8.3 Results
 
-`p1_multicity.py` runs the same baseline → ascending-sweep → `q_r*` derivation
-on all 100 cells × 2 flow levels × 30 seeds (200 combos). `fit_multicity.py`
-then: (1) cross-city holdout (train synthetic + singapore/london/tokyo,
-holdout amsterdam); (2) combined re-fit of the Model-A amplitude (c, p) keeping
-the P1 real capacity structure (x_crit=29, W_min=1.6, C(W)); (3) Type-B/C
-external validation with the curvature penalty `W_c = W/sinuosity`.
+The full run completed: 200 combos (100 cells × 2 flow levels × 30 seeds),
+82 with nonzero `q_r*`, 17 capped at `q_max=20`, 25 pedestrian-only
+over-capacity (Case-1, zeroed).
 
-<!-- TODO(2026-08-24): fill §8.3 numbers from outputs/p1_multicity/ once the
-     ground-truth run completes (~10 h). -->
+**Width floor validated.** Cells below `W_min=1.6` m are 106/200 combos; 104 of
+them have `q_r*=0` (narrow Tokyo `path` default 1.2 m and 1.5 m cells do not
+admit robots, consistent with the 0.96 m robot disc + passing space).
+
+**Model transfer (P1 model, synthetic c/p, on all 200 combos):**
+
+| metric | plain W_eff | W_c = W/sinuosity |
+|---|---|---|
+| MAE (robot/min) | 1.286 | 1.284 |
+| over-allocation rate (OAR) | 0.090 | 0.085 |
+| floor-rule violations | 16/200 | 14/200 |
+
+Of the 16 floor violations, 8 over-allocate by 1 robot, 3 by 2–3, and 5 by
+4–5. The severe ones concentrate in (a) extra-wide cells (W = 3.6–4.0 m, true
+`q_r*` 8–15 but capped at `q_max=20`) and (b) Amsterdam curve cells at
+moderate flow (e.g. W=2.5 m, q_p=50, true `q_r*=0`, predicted 5).
+
+**Combined re-fit (c, p) is NOT adopted.** Re-fitting the amplitude on
+synthetic + real gives (c, p) = (32.2, −0.856) vs P1's (28.2, −0.828): MAE
+improves marginally (1.286 → 1.268) but floor violations worsen 16 → 27
+(OAR 0.090 → 0.145). The residual violations are therefore *not* amplitude
+errors; they stem from `q_max=20` being generous beyond the synthetic width
+range and from discrete curve-cell failures, neither of which a power-law
+amplitude re-fit can remove. The synthetic-trained P1 model is retained.
+
+**Cross-city holdout** (train synthetic + singapore/london/tokyo = 212 rows,
+test amsterdam = 36): holdout MAE 2.917 (2.851 with sinuosity penalty),
+OAR 0.222, floor violations 8/36. Transfer degrades on the held-out city,
+driven by its curved canalside B cells and 4.0 m promenades.
+
+**Type-B / Type-C external validation (P1 model):**
+
+| type | n | sinuosity | plain over_floor | with W_c=W/sinuosity |
+|---|---|---|---|---|
+| B (curve) | 40 | 1.022–1.228 | 7/40 (MAE 0.726) | 5/40 (MAE 0.704) |
+| C (bottleneck) | 50 | 1.000–1.339 | 2/50 (MAE 1.761) | 2/50 (MAE 1.745) |
+
+Bottleneck (C) cells are safe (4 % over-allocation); curve (B) cells need the
+curvature penalty (17.5 % → 12.5 %), but a residual discrete failure remains
+on curved cells at moderate flow — the smooth power law with `W_c=W/sinuosity`
+still over-allocates where robot–pedestrian interaction degrades sharply on a
+bend. The algorithm's applicability domain is therefore straight-to-mildly-
+curved corridors; sharp curves need a discrete (zeroed) treatment.
+
+### 8.4 P2 hardening: turn-angle fix + conservative guard
+
+**Turn-angle metric bug (fixed).** `build_cells.cell_geometry` and
+`analyze_osm` computed segment bearings for zero-length (duplicate) centerline
+points, so `atan2(0,0)=0°` produced bogus `max_turn_deg` (e.g. AMS-4480644-0
+recorded 116.4° but is geometrically straight). Skipping `d ≤ 1e-6` segments
+corrected 8/100 cells in place (`fix_turn_angles.py`); the ground-truth
+centerlines were unchanged, so no re-simulation was needed.
+
+**Sharp-corner signal (corrected) vs bend sweep.** With corrected angles only
+two W≥1.6 m cells carry a concentrated sharp corner (AMS-1351790552-1, 90.2°,
+`q_r*=0`; SIN-1105987650-1, 95.1°, `q_r*=6`), while mild bends (40–51°) admit
+8–18 robot/min — too sparse to fix a threshold. A controlled **bend-angle ×
+width mini-experiment** (`bend_sweep.py`, θ∈{0,30,45,60,75,90}° × W∈{2.0,2.5,3.0}
+m × q_p=50 × 30 seeds) closed the gap:
+
+| θ \ W | 2.0 | 2.5 | 3.0 |
+|---|---|---|---|
+| 0° (straight) | 0 | 8 | 10 |
+| 30° | 1 | 1 | 1 |
+| 45° | 1 | 1 | 1 |
+| 60° | 1 | 2 | 2 |
+| 75° | 0 | 0 | 1 |
+| 90° | 0 | 0 | 0 |
+
+**A single sharp corner collapses robot throughput even at 30°** (8–10 → 0–2)
+at every width: the corner itself already slows the pedestrian baseline
+(vbar 1.198 → 0.931 at 30° → 0.623 at 90°), so one robot tips it over. The
+operative feature is turn **concentration** (`max_turn/cum_turn` ≈ 1 for a
+single corner vs ≤ 0.5 for a gradual curve) — a 30° corner has sinuosity only
+1.035, which the `W_c=W/sinuosity` penalty cannot capture. The real multi-city
+"B curve" cells are gradual (multi-bend), which is why they were healthy.
+
+**Conservative guard (evaluated, not adopted).** The refined P2 variant applies
+`max_turn ≥ 20° AND cum_turn ≥ 20° AND max_turn/cum_turn ≥ 0.6 → q̂=0`
+(concentrated single corner) plus `q_max=15` for `W > 3.0 m`
+(`quota_params_p2.json`). On the 200 combos it moves over-allocation 14 → 12
+(`max_over` 5 → 4) at the cost of one extra under-allocation (62 → 63); MAE is
+unchanged (1.370). The 100-cell sample under-represents single corners (its
+"B" cells are gradual), so the guard's in-sample effect is small; its value is
+protecting future intersection-corner cells. It is kept as a documented variant
+pending a wider angle/position sweep (corner near entry vs exit) before
+adoption.
+
+**Data anomaly resolved (width-tag check).** AMS-244428233-0 (`highway=path`
+"Kop van Jut", `barrier=cycle_barrier`) returns `q_r*=20` at q_p=6 and 14 —
+the ONLY cell below W_min=1.6 with nonzero quota (both its combos). OSM way
+244428233 carries only `highway=path` + `surface=asphalt` + `name` — **no
+`width`/`sidewalk` tag** — so `W_eff=1.2 m` is the OSM `path` *default*, not a
+measured width; an asphalt named street is very likely ≥ 2 m. The W_min=1.6
+floor therefore over-conservatively zeroes the model (predicted 0 vs true 20),
+a safe-side under-allocation driven by width-tag understatement, not an
+algorithm defect. Recommended fix: re-tag from aerial width or exclude
+width-untagged `path` cells; kept as-is here (safe side).
+
+### 8.5 Cross-engine consistency (P2 item 2, RQ4)
+
+The quota algorithm is run against a second, independent dynamics engine —
+the Python social-force model (`experiment/`, hard-core discs + continuous
+repulsion) — and its reference frontier is placed beside the JuPedSim frontier
+on the common `W ∈ {1.5,1.8,2.1,2.4,2.7,3.0}` × `q_p ∈ {10…60}` grid
+(`cross_engine.py`).
+
+| engine | 10 | 20 | 30 | 40 | 50 | 60 (q_p) |
+|---|---|---|---|---|---|---|
+| social-force 1.8 m | 1 | 1 | 0 | 0 | 0 | 0 |
+| social-force 2.4 m | 4 | 3 | 1 | 1 | 0 | 0 |
+| social-force 3.0 m | 10 | 8 | 2 | 1 | 0 | 0 |
+| JuPedSim 1.8 m | 12 | 6 | 4 | 1 | 0 | 0 |
+| JuPedSim 2.4 m | 20 | 15 | 12 | 12 | 6 | 4 |
+| JuPedSim 3.0 m | 20 | 20 | 18 | 15 | 10 | 6 |
+
+Re-fitting Model A on the common grid with the **same procedure** as
+`fit_quota.py`:
+
+| engine | c | p | x_crit | W_min |
+|---|---|---|---|---|
+| social-force | 11.2 | −1.186 | 25.0 | 1.8 |
+| JuPedSim | 31.3 | −0.856 | 33.3 | 1.8 |
+
+**Structure is engine-robust, parameters are engine-specific.** The two
+frontiers are near-identically *ordered* (Spearman ρ = 0.915 on the 36 common
+combos): quota decreases in q_p and increases in W in both, with a hard
+capacity cutoff (`x_crit`) and a width floor (`W_min`). The `W_min` gap
+(1.8 vs 1.6) is a **grid-coverage artifact**: the social-force grid never
+tested 1.6–1.7 m, where JuPedSim found 6–10 robot/min at low flow — the width
+floor itself (≈ the 0.48 m robot disc + passing space) is geometric and
+engine-independent.
+
+The **scale differs by ~2.8×** (amplitude) and the exponent by ~0.72×
+(social-force decays faster, p = −1.19 vs −0.86): the social-force model's
+continuous repulsion degrades pedestrian service more aggressively than
+JuPedSim's collision-free steering, so it admits fewer robots at the same
+(x = q_p/W). This is expected — the (c, p) coefficients encode engine dynamics,
+not the algorithm.
+
+**Implication for deployment.** The *form* of the algorithm (`q̂_r = W·c·x^p`,
+W_min floor, x_crit zeroing, floor() safe-side) transfers across engines; only
+(c, p) must be re-calibrated. Calibrating on the more conservative engine
+(social-force) yields a lower — hence safer — quota than the JuPedSim
+calibration, so the JuPedSim-trained production model is the optimistic bound
+and the social-force model the conservative bound. The quota is thus robust to
+the choice of dynamics engine in *structure*, with the engine's conservatism
+spanning the deployment margin.
+
+### 8.6 Pass-criterion: mean vs per-seed (P2 item 1)
+
+The plan specifies a per-seed service guarantee `Pr(C_p=1) ≥ 0.95`
+(`conf_level=0.95` in `config.CONSTRAINTS`), but the implementation has been
+using a **seed-averaged** pass rule (a level passes if the *mean* speed-retention
+/ flow-ratio / density over 30 seeds satisfies the constraint). `rescore_seedwise.py`
+re-scores the SAME sweep data under the per-seed rule — a (tag, q_r) level passes
+only if ≥ 29/30 seeds individually satisfy all three constraints — no
+re-simulation.
+
+| criterion | sum of q_r* | nonzero combos |
+|---|---|---|
+| mean-based (current) | 1028 | 82/175 |
+| per-seed (≥ 95%) | 753 | 78/175 |
+
+The per-seed criterion is strictly more conservative: **70/175 combos lower
+(none higher), total quota −27%**, and the reductions concentrate at **low flow**
+(q_p = 9–12 ped/min) — e.g. SIN-200171267-2 (q_p=10) drops 20 → 10 — exactly the
+regime the plan flagged as "arrival-noise-dominated". At low flow a single
+unlucky seed (a late arrival, a transient jam) is enough to pull the *mean*
+below/above threshold inconsistently, whereas the per-seed rule demands
+near-unanimity across seeds.
+
+**Decision.** The per-seed rule is the correct *service-guarantee* ground truth
+and should be the primary reference for the algorithm evaluation; the mean-based
+`q_r*` is an upper bound that understates the low-flow noise. Re-scoring
+(`rescore_seedwise.csv`) is adopted as the reference for the low-flow regime,
+and the paper reports both criteria with the −27% gap as the cost of the
+seedwise guarantee.

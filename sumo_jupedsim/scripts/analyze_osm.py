@@ -226,7 +226,8 @@ def main(args):
         for i in range(len(pts) - 1):
             d = haversine(pts[i][0], pts[i][1], pts[i + 1][0], pts[i + 1][1])
             total += d
-            seg_brg.append(bearing(pts[i][0], pts[i][1], pts[i + 1][0], pts[i + 1][1]))
+            if d > 1e-6:  # skip zero-length (duplicate) segments
+                seg_brg.append(bearing(pts[i][0], pts[i][1], pts[i + 1][0], pts[i + 1][1]))
 
         # straightness: max turning angle between consecutive segments
         max_turn = 0.0
