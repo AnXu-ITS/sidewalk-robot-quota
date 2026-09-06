@@ -12,8 +12,8 @@ git_commit: "c5bf01def5dcfefe06908ba3f67346e74cf045b6"
 
 nominal_model:
   form: "q_hat_nom = c * W * (q_p / W)^p"
-  c: 24.37
-  p: -0.945
+  c: 24.374155890965095        # full-precision frozen fit (displayed as 24.37)
+  p: -0.9454494315945483       # full-precision frozen fit (displayed as -0.945)
   width_exponent: {value: 0.992, se: 0.154, note: "CI includes 1 -> keep W^1"}
 
 safety_margin:
@@ -66,6 +66,8 @@ applicability_domain:
   q_p_max: 60.0                # ped/min
   x_max: 33.333333333333336    # q_p / W
   geometry: "Type A, or Type B with sinuosity <= 1.05; no barriers; no sharp concentrated corners"
+  type_in_domain: ["A", "B"]          # geometry types admitted to the closed-form rule
+  type_b_sinuosity_max: 1.05          # Type B admitted only if sinuosity <= this
   ood_rule: "out-of-domain fallback — NO closed-form recommendation"
 
 dataset:

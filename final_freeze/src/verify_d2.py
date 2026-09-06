@@ -1,9 +1,20 @@
 # -*- coding: utf-8 -*-
 """Summarize the authoritative D2 table (read-only)."""
+import os
 import sys
+
 import pandas as pd
 
-p = sys.argv[1]
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_REPO = os.path.dirname(os.path.dirname(_HERE))          # final_freeze/src -> repo root
+_DEFAULT = os.path.join(_REPO, "data", "final", "full_reference_dataset.csv")
+
+p = sys.argv[1] if len(sys.argv) > 1 else _DEFAULT
+if not os.path.exists(p):
+    print(f"[BLOCKED] D2 table not found: {p}")
+    print(f"Usage: python verify_d2.py [path-to-full_reference_dataset.csv]")
+    print(f"Default: {_DEFAULT}")
+    sys.exit(3)
 df = pd.read_csv(p)
 print("path      :", p)
 print("rows      :", len(df))

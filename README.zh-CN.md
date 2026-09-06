@@ -36,15 +36,20 @@ OOD -> base_pass -> zero_guards -> nominal -> -Δ80 -> Q_low -> q_max -> floor
 `Q_low(W)` 低流量上限——这四条构成头条链条。冻结配置还规定了部署层护栏：`C(W)` 容量、
 急弯护栏、绝对速度下限（v̄ ≥ 0.8 m/s）。
 
-**头条留出城市过配链条**（LOCO，7 城）：
+**留出城市过配链条** —— 两种口径如实并列
+（2026-09-06 独立审计回应：见 [`final_freeze/AUDIT_RESPONSE_2026-09-06.md`](final_freeze/AUDIT_RESPONSE_2026-09-06.md)）：
 
-| 变体 | 过配率 | 最大过配 |
-|---|---|---|
-| G0 名义 | **25.75 %** | **19** |
-| G1 + Q80 | **6.75 %** | **16** |
-| G1 + 基线护栏 | **2.75 %** | **7** |
+| 口径 | G0 名义 | G1 + Q80 | G1 + 基线护栏 | 最大过配 |
+|---|---|---|---|---|
+| **严格 LOCO**（每折重拟合 `c,p`）—— *主口径* | **26.25 %** | **7.50 %** | **3.50 %** | 19 → 16 → 7 |
+| 池化拟合 + 折裕量 —— *诊断值* | 25.75 % | 6.75 % | 2.75 % | 19 → 16 → 7 |
 
-LOCO MAE（模型 A）：**2.189**。
+- **严格 LOCO** 才是诚实的「独立留出城市」数字：每折在其余 6 城重拟合 `c,p`，再在这 6 城
+  标定 Q80 裕量。
+- **池化**行用的是全 7 城最终系数（Seattle / Taoyuan 参与拟合），是诊断值，**不是**严格 LOCO。
+- 两行的分母都是**池化 400 条**（164 域内 + 236 域外）——**并非**「域内」数字。
+
+LOCO MAE（模型 A，每折重拟合）：**2.189**。
 
 **唯一事实来源：** [`final_freeze/final_quota_method_config.yaml`](final_freeze/final_quota_method_config.yaml)
 （及 JSON 孪生文件）。冻结运行时：[`final_freeze/src/operational_quota.py`](final_freeze/src/operational_quota.py)。
@@ -91,11 +96,14 @@ python final_freeze/src/verify_base_pass.py
 
 # 3) 由 data/final/ 中的 D2 表复现头条链条
 python final_freeze/src/reproduce_frozen_chain.py
+python final_freeze/src/reproduce_metrics.py
+python final_freeze/src/strict_loco.py      # 两种口径并列
 ```
 
-预期输出：过配率 `25.75 -> 6.75 -> 2.75 %`，最大过配 `19 -> 16 -> 7`。
-完整审计见 `final_freeze/SHA256SUMS.txt` 与
-`final_freeze/FINAL_REPRODUCIBILITY_FREEZE_REPORT.md`。
+预期输出：严格 LOCO `26.25 -> 7.50 -> 3.50 %`，池化 `25.75 -> 6.75 -> 2.75 %`，
+最大过配 `19 -> 16 -> 7`。完整审计见 `final_freeze/SHA256SUMS.txt`、
+`final_freeze/FINAL_REPRODUCIBILITY_FREEZE_REPORT.md`，独立审计修正见
+`final_freeze/AUDIT_RESPONSE_2026-09-06.md`。
 
 ## 仓库结构
 

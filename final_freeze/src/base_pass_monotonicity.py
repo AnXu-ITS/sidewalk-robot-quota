@@ -28,6 +28,11 @@ from collections import defaultdict
 
 import pandas as pd
 
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_REPO = os.path.dirname(os.path.dirname(_HERE))          # final_freeze/src -> repo root
+_DEFAULT_INPUT = os.path.join(_REPO, "data", "final", "full_reference_dataset.csv")
+_DEFAULT_OUT = os.path.join(_REPO, "final_freeze", "data")
+
 
 def bp(r):
     """Direct base_pass if present, else proxy (1 or None/unknown)."""
@@ -43,8 +48,10 @@ def bp(r):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--input", required=True)
-    ap.add_argument("--out-dir", default=".")
+    ap.add_argument("--input", default=_DEFAULT_INPUT,
+                    help=f"reference CSV (default: {_DEFAULT_INPUT})")
+    ap.add_argument("--out-dir", default=_DEFAULT_OUT,
+                    help=f"output dir (default: {_DEFAULT_OUT})")
     args = ap.parse_args()
 
     df = pd.read_csv(args.input)

@@ -27,7 +27,9 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-FINAL_JSON = r"C:\Users\xuan1\Desktop\UOL学习\配送机器人workbench\archive\2026-09-03_旧实验与旧数据\旧仿真实验\experiment_sumo\models\quota_algorithm\quota_params_final.json"
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_REPO = os.path.dirname(_HERE)                     # pipeline/ -> repo root
+FINAL_JSON = os.path.join(_REPO, "quota_params", "quota_params_final.json")
 
 
 def load_final_guards():

@@ -55,13 +55,15 @@ Use exactly these terms:
 - A **simulation-derived, interpretable** sidewalk robot quota law.
 - Calibrated on **real-world sidewalk geometries** (official width data across
   7 cities).
-- **Cross-city evaluated using LOCO validation** (leave-one-city-out).
+- **Cross-city evaluated using strict LOCO validation** (leave-one-city-out with
+  per-fold re-fit of the coefficients).
 - **Targeted decoupling improved parameter identifiability** (D1 `p = -0.804`
   → D2 `p = -0.945`).
 - **Width exponent 1 is empirically supported** (Model A+ `α = 0.992 ± 0.154`,
   CI includes 1).
 - **Conservative operational guardrails substantially reduced unsafe-side quota
-  overprediction** (25.75% → 6.75% → 2.75%; max 19 → 16 → 7).
+  overprediction** (strict LOCO 26.25% → 7.50% → 3.50%; pooled diagnostic
+  25.75% → 6.75% → 2.75%; max 19 → 16 → 7).
 - **Baseline-feasibility screening removed structurally invalid assignments**
   (Amsterdam held-out overprediction ≈ 1.7%).
 - **Geometry-related applicability limits were identified** (the Amsterdam

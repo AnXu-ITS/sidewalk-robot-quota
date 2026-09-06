@@ -57,6 +57,9 @@ class OperationalQuota:
         d = self.cfg["applicability_domain"]
         self.W_lo, self.W_hi = [float(v) for v in d["W_range"]]
         self.qp_max = float(d["q_p_max"])
+        self.type_in_domain = [str(t).upper()
+                               for t in d.get("type_in_domain", ["A", "B"])]
+        self.type_b_sinuosity_max = float(d.get("type_b_sinuosity_max", 1.05))
 
     # ---- Step 0: OOD ------------------------------------------------------
     def in_domain(self, W, qp, geom=None):
@@ -67,6 +70,18 @@ class OperationalQuota:
         if (qp / W) >= self.x_crit:
             return False
         if geom is not None:
+            # geometry type / sinuosity gate: Type A, or Type B with
+            # sinuosity <= type_b_sinuosity_max (per the frozen applicability
+            # domain). Type C and sinuous Type B are out-of-domain.
+            gtype = geom.get("type")
+            if gtype is not None:
+                gtype = str(gtype).upper()
+                if gtype not in self.type_in_domain:
+                    return False
+                if gtype == "B" and \
+                        float(geom.get("sinuosity", 0.0)) > self.type_b_sinuosity_max:
+                    return False
+            # sharp-corner guard
             mt = float(geom.get("max_turn_deg", 0.0))
             cum = float(geom.get("cum_turn_deg", 0.0))
             conc = (mt / cum) if cum > 1e-6 else 0.0

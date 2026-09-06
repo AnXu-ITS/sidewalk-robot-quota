@@ -22,15 +22,17 @@ identifiability figure.
 
 ## Figure C — Nominal vs operational performance
 
-Bar/step plot of the evidence chain:
+Bar/step plot of the evidence chain, with both scopes (strict LOCO as primary):
 
 ```
-overprediction:  25.75%  →  6.75%  →  2.75%
-max overprediction:   19  →   16    →    7
+strict LOCO (per-fold refit):  26.25%  →  7.50%  →  3.50%
+pooled fit + fold margin:      25.75%  →  6.75%  →  2.75%
+max overprediction (both):        19   →    16    →    7
 ```
 
 with the capacity-cost annotation (mean conservative loss 2.623, median
 utilization 0.25) on the Q80 step, and "unchanged" on the baseline-guard step.
+Annotate the denominator as pooled 400 rows (164 in-domain + 236 OOD).
 
 ## Figure D — Amsterdam failure case
 

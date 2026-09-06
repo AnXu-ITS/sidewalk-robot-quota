@@ -15,20 +15,25 @@ the fitted flow exponent is no longer biased toward zero.
 
 ## 2. Guardrail ablation
 
-The evidence chain is
+Two held-out scopes are reported side by side (2026-09-06 audit correction):
 
-```
-overprediction:  25.75%  →  6.75%  →  2.75%
-max overprediction:   19  →   16    →    7
-```
+| Scope | G0 nominal | G1 + Q80 | G1 + baseline guard |
+|---|---|---|---|
+| **Strict LOCO** (per-fold refit of `c,p`) — *primary* | **26.25 %** | **7.50 %** | **3.50 %** |
+| Pooled fit + fold margin — *diagnostic* | 25.75 % | 6.75 % | 2.75 % |
 
-- **Nominal law** (no margin): 25.75% overprediction, max 19.
-- **+ Q80 additive margin (`Δ80 = 3.1068`)**: 6.75% overprediction, max 16. The
-  margin has a capacity cost: mean conservative loss 2.623 quota units, median
-  utilization 0.25.
-- **+ baseline-feasibility guard (`base_pass = 0 ⇒ 0`)**: 2.75% overprediction,
+`max overprediction: 19 → 16 → 7` (both scopes).
+
+- **Nominal law** (no margin): 26.25% (strict LOCO) / 25.75% (pooled) overprediction, max 19.
+- **+ Q80 additive margin** (fold-calibrated; `Δ80 = 3.1068` is the representative value):
+  7.50% / 6.75% overprediction, max 16. The margin has a capacity cost: mean conservative
+  loss 2.623 quota units, median utilization 0.25.
+- **+ baseline-feasibility guard (`base_pass = 0 ⇒ 0`)**: 3.50% / 2.75% overprediction,
   max 7. Amsterdam held-out overprediction ≈ 1.7%. The guard does **not** increase
   quota sacrifice: loss, utilization, and zero-quota rate are unchanged.
+
+Both denominators are the **pooled 400 rows** (164 in-domain + 236 OOD); the chain is a
+pooled in-domain+OOD evaluation, **not** an in-domain-only number.
 
 ## 3. Negative findings
 

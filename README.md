@@ -38,15 +38,22 @@ Guardrails: `W_min = 1.6 m`, `x_crit = 33.33` ped/min/m, `q_max = 20` robot/min,
 additionally specifies deployment-layer guards: `C(W)` capacity, sharp-corner guard, and
 an absolute speed floor (v̄ ≥ 0.8 m/s).
 
-**Headline held-out-city overprediction chain** (LOCO, 7 cities):
+**Held-out-city overprediction chain** — two scopes, reported honestly
+(2026-09-06 independent audit response: [`final_freeze/AUDIT_RESPONSE_2026-09-06.md`](final_freeze/AUDIT_RESPONSE_2026-09-06.md)):
 
-| Variant | Overprediction | Max overprediction |
-|---|---|---|
-| G0 nominal | **25.75 %** | **19** |
-| G1 + Q80 | **6.75 %** | **16** |
-| G1 + baseline guard | **2.75 %** | **7** |
+| Scope | G0 nominal | G1 + Q80 | G1 + baseline guard | Max overprediction |
+|---|---|---|---|---|
+| **Strict LOCO** (per-fold refit of `c,p`) — *primary* | **26.25 %** | **7.50 %** | **3.50 %** | 19 → 16 → 7 |
+| Pooled fit + fold margin — *diagnostic* | 25.75 % | 6.75 % | 2.75 % | 19 → 16 → 7 |
 
-LOCO MAE (model A): **2.189**.
+- **Strict LOCO** is the honest "independent held-out city" number: `c,p` are re-fit on the
+  other 6 cities per fold, then the Q80 margin is calibrated on those 6.
+- The **pooled** row uses the final all-7-city coefficients (Seattle / Taoyuan included in the
+  fit) and is a diagnostic, **not** a strict LOCO.
+- Both denominators are the **pooled 400 rows** (164 in-domain + 236 OOD) — these are **not**
+  in-domain-only numbers.
+
+LOCO MAE (model A, per-fold refit): **2.189**.
 
 **Single source of truth:** [`final_freeze/final_quota_method_config.yaml`](final_freeze/final_quota_method_config.yaml)
 (+ JSON twin). Frozen runtime: [`final_freeze/src/operational_quota.py`](final_freeze/src/operational_quota.py).
@@ -96,11 +103,14 @@ python final_freeze/src/verify_base_pass.py
 
 # 3) reproduce the headline chain from the D2 table in data/final/
 python final_freeze/src/reproduce_frozen_chain.py
+python final_freeze/src/reproduce_metrics.py
+python final_freeze/src/strict_loco.py      # both scopes side by side
 ```
 
-Expected: overprediction `25.75 -> 6.75 -> 2.75 %`, max `19 -> 16 -> 7`.
-See `final_freeze/SHA256SUMS.txt` for immutable hashes and
-`final_freeze/FINAL_REPRODUCIBILITY_FREEZE_REPORT.md` for the full audit.
+Expected: strict LOCO `26.25 -> 7.50 -> 3.50 %`, pooled `25.75 -> 6.75 -> 2.75 %`,
+max `19 -> 16 -> 7`. See `final_freeze/SHA256SUMS.txt` for immutable hashes,
+`final_freeze/FINAL_REPRODUCIBILITY_FREEZE_REPORT.md` for the full freeze audit, and
+`final_freeze/AUDIT_RESPONSE_2026-09-06.md` for the independent-audit corrections.
 
 ## Repository layout
 

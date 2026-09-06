@@ -37,11 +37,12 @@
     "note": "qr_star only (no base_pass column); superseded by the D2 table for headline counts"
   },
   "headline_results_frozen_and_verified": {
-    "overprediction_chain_pct": [25.75, 6.75, 2.75],
+    "strict_loco_chain_pct": [26.25, 7.5, 3.5],
+    "pooled_fit_chain_pct": [25.75, 6.75, 2.75],
     "max_overprediction_chain": [19, 16, 7],
     "mean_conservative_loss": 2.623,
     "median_utilization": 0.25,
     "loco_mae_model_A": 2.189,
-    "note": "reproduced exactly on the 400-row D2 table (src/reproduce_frozen_chain.py + guardrail_form_audit.py)"
+    "note": "strict LOCO (per-fold refit of c,p) is the PRIMARY held-out claim; pooled fit + fold margin (all-7-city coefficients) is a diagnostic only. Both reproduced on the 400-row D2 table (src/strict_loco.py + src/reproduce_frozen_chain.py). Denominator = pooled 400 rows (164 in-domain + 236 OOD), NOT in-domain-only."
   }
 }
