@@ -1,0 +1,69 @@
+{
+  "criterion": "per-seed (Pr(C_p=1) >= 0.95, >= 29/30 seeds)",
+  "architecture": "admissibility guards -> level = min(power law, Q_low(W)) -> floor",
+  "x_crit": 33.333333333333336,
+  "W_min": 1.6,
+  "C_W": {
+    "W": [
+      1.5,
+      1.6,
+      1.7,
+      1.8,
+      2.1,
+      2.4,
+      2.7,
+      3.0
+    ],
+    "C": [
+      10.0,
+      35.0,
+      35.0,
+      45.0,
+      45.0,
+      55.0,
+      90.0,
+      90.0
+    ]
+  },
+  "q_max": 20.0,
+  "A": {
+    "c": 27.165910765240344,
+    "p": -0.9334456442159141
+  },
+  "Q_low_W": {
+    "W": [
+      1.5,
+      1.6,
+      1.7,
+      1.8,
+      2.1,
+      2.4,
+      2.7,
+      3.0
+    ],
+    "Q": [
+      0.0,
+      5.0,
+      6.0,
+      8.0,
+      10.0,
+      18.0,
+      20.0,
+      20.0
+    ],
+    "source": "per-seed training labels at q_p=10; finite robot throughput of a nearly-empty corridor"
+  },
+  "guards": {
+    "sharp_corner_zero": {
+      "max_turn_min_deg": 20.0,
+      "cum_turn_min_deg": 20.0,
+      "concentration_min": 0.6,
+      "source": "bend_sweep + position_sweep"
+    },
+    "absolute_speed_floor": {
+      "vbar_min": 0.8,
+      "source": "position_sweep artifact fix"
+    }
+  },
+  "domain": "calibrated for straight-to-mildly-curved corridors with W <= 3.0 m and q_p <= 60 ped/min; extra-wide / sharp-corner cells need discrete treatment or re-calibration"
+}

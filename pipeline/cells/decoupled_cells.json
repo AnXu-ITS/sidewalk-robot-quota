@@ -1,0 +1,3245 @@
+{
+ "n": 120,
+ "combos": [
+  {
+   "combo_id": "DC-000",
+   "cell_id": "NYC-nyc-10517-0-3",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.762,
+   "L": 50.0,
+   "qp": 13.7,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     49.729,
+     -5.672
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-001",
+   "cell_id": "NYC-nyc-10517-0-3",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.762,
+   "L": 50.0,
+   "qp": 18.3,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     49.729,
+     -5.672
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-002",
+   "cell_id": "NYC-nyc-10517-0-3",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.762,
+   "L": 50.0,
+   "qp": 22.9,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     49.729,
+     -5.672
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-003",
+   "cell_id": "NYC-nyc-53282-0-0",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.853,
+   "L": 50.0,
+   "qp": 15.4,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     29.809,
+     39.931
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-004",
+   "cell_id": "NYC-nyc-53282-0-0",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.853,
+   "L": 50.0,
+   "qp": 20.5,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     29.809,
+     39.931
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-005",
+   "cell_id": "NYC-nyc-53282-0-0",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.853,
+   "L": 50.0,
+   "qp": 25.6,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     29.809,
+     39.931
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-006",
+   "cell_id": "NYC-nyc-46079-0-1",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.676,
+   "L": 50.0,
+   "qp": 30.2,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     40.673,
+     -28.973
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-007",
+   "cell_id": "NYC-nyc-46079-0-1",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.676,
+   "L": 50.0,
+   "qp": 40.2,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     40.673,
+     -28.973
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-008",
+   "cell_id": "NYC-nyc-46079-0-1",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.676,
+   "L": 50.0,
+   "qp": 50.3,
+   "x": 30.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     40.673,
+     -28.973
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-009",
+   "cell_id": "NYC-nyc-110605-0-2",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.707,
+   "L": 50.0,
+   "qp": 30.7,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     32.25,
+     -38.014
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-010",
+   "cell_id": "NYC-nyc-110605-0-2",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.707,
+   "L": 50.0,
+   "qp": 41.0,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     32.25,
+     -38.014
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-011",
+   "cell_id": "NYC-nyc-110605-0-2",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.707,
+   "L": 50.0,
+   "qp": 51.2,
+   "x": 30.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     32.25,
+     -38.014
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-012",
+   "cell_id": "NYC-nyc-17655-0-0",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 2.408,
+   "L": 50.0,
+   "qp": 43.3,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     42.445,
+     -26.348
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-013",
+   "cell_id": "NYC-nyc-17655-0-0",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 2.408,
+   "L": 50.0,
+   "qp": 57.8,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     42.445,
+     -26.348
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-014",
+   "cell_id": "NYC-nyc-17655-0-0",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 2.408,
+   "L": 50.0,
+   "qp": 72.2,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     42.445,
+     -26.348
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-015",
+   "cell_id": "NYC-nyc-9648-0-0",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 3.719,
+   "L": 50.0,
+   "qp": 66.9,
+   "x": 18.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     19.053,
+     45.964
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-016",
+   "cell_id": "NYC-nyc-9648-0-0",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 3.719,
+   "L": 50.0,
+   "qp": 89.3,
+   "x": 24.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     19.053,
+     45.964
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-017",
+   "cell_id": "NYC-nyc-9648-0-0",
+   "city": "nyc",
+   "city_code": "NYC",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 3.719,
+   "L": 50.0,
+   "qp": 111.6,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     19.053,
+     45.964
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-018",
+   "cell_id": "AMS-amsterdam-chain-77474-550",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.643,
+   "L": 50.0,
+   "qp": 11.6,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -0.485,
+     -0.036
+    ],
+    [
+     -15.069,
+     0.656
+    ],
+    [
+     -50.038,
+     0.583
+    ]
+   ],
+   "sinuosity": 1.0003
+  },
+  {
+   "combo_id": "DC-019",
+   "cell_id": "AMS-amsterdam-chain-77474-550",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.643,
+   "L": 50.0,
+   "qp": 15.4,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -0.485,
+     -0.036
+    ],
+    [
+     -15.069,
+     0.656
+    ],
+    [
+     -50.038,
+     0.583
+    ]
+   ],
+   "sinuosity": 1.0003
+  },
+  {
+   "combo_id": "DC-020",
+   "cell_id": "AMS-amsterdam-chain-77474-550",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.643,
+   "L": 50.0,
+   "qp": 19.3,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -0.485,
+     -0.036
+    ],
+    [
+     -15.069,
+     0.656
+    ],
+    [
+     -50.038,
+     0.583
+    ]
+   ],
+   "sinuosity": 1.0003
+  },
+  {
+   "combo_id": "DC-021",
+   "cell_id": "AMS-amsterdam-chain-75190-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.91,
+   "L": 50.0,
+   "qp": 16.4,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -31.697,
+     31.937
+    ],
+    [
+     -34.97,
+     35.558
+    ]
+   ],
+   "sinuosity": 1.0001
+  },
+  {
+   "combo_id": "DC-022",
+   "cell_id": "AMS-amsterdam-chain-75190-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.91,
+   "L": 50.0,
+   "qp": 21.8,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -31.697,
+     31.937
+    ],
+    [
+     -34.97,
+     35.558
+    ]
+   ],
+   "sinuosity": 1.0001
+  },
+  {
+   "combo_id": "DC-023",
+   "cell_id": "AMS-amsterdam-chain-75190-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.91,
+   "L": 50.0,
+   "qp": 27.3,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -31.697,
+     31.937
+    ],
+    [
+     -34.97,
+     35.558
+    ]
+   ],
+   "sinuosity": 1.0001
+  },
+  {
+   "combo_id": "DC-024",
+   "cell_id": "AMS-amsterdam-chain-173340-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "B",
+   "context": "residential",
+   "W": 1.96,
+   "L": 50.0,
+   "qp": 35.3,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     25.491,
+     5.447
+    ],
+    [
+     26.197,
+     4.995
+    ],
+    [
+     31.153,
+     -17.452
+    ]
+   ],
+   "sinuosity": 1.3994
+  },
+  {
+   "combo_id": "DC-025",
+   "cell_id": "AMS-amsterdam-chain-173340-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "B",
+   "context": "residential",
+   "W": 1.96,
+   "L": 50.0,
+   "qp": 47.0,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     25.491,
+     5.447
+    ],
+    [
+     26.197,
+     4.995
+    ],
+    [
+     31.153,
+     -17.452
+    ]
+   ],
+   "sinuosity": 1.3994
+  },
+  {
+   "combo_id": "DC-026",
+   "cell_id": "AMS-amsterdam-chain-173340-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "B",
+   "context": "residential",
+   "W": 1.96,
+   "L": 50.0,
+   "qp": 58.8,
+   "x": 30.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     25.491,
+     5.447
+    ],
+    [
+     26.197,
+     4.995
+    ],
+    [
+     31.153,
+     -17.452
+    ]
+   ],
+   "sinuosity": 1.3994
+  },
+  {
+   "combo_id": "DC-027",
+   "cell_id": "AMS-amsterdam-chain-3511-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "B",
+   "context": "residential",
+   "W": 1.969,
+   "L": 50.0,
+   "qp": 35.4,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -0.316,
+     -0.46
+    ],
+    [
+     3.644,
+     -20.96
+    ],
+    [
+     4.151,
+     -23.761
+    ],
+    [
+     7.776,
+     -25.935
+    ],
+    [
+     9.084,
+     -27.827
+    ],
+    [
+     11.317,
+     -29.353
+    ],
+    [
+     27.39,
+     -26.369
+    ]
+   ],
+   "sinuosity": 1.3121
+  },
+  {
+   "combo_id": "DC-028",
+   "cell_id": "AMS-amsterdam-chain-3511-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "B",
+   "context": "residential",
+   "W": 1.969,
+   "L": 50.0,
+   "qp": 47.3,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -0.316,
+     -0.46
+    ],
+    [
+     3.644,
+     -20.96
+    ],
+    [
+     4.151,
+     -23.761
+    ],
+    [
+     7.776,
+     -25.935
+    ],
+    [
+     9.084,
+     -27.827
+    ],
+    [
+     11.317,
+     -29.353
+    ],
+    [
+     27.39,
+     -26.369
+    ]
+   ],
+   "sinuosity": 1.3121
+  },
+  {
+   "combo_id": "DC-029",
+   "cell_id": "AMS-amsterdam-chain-3511-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "B",
+   "context": "residential",
+   "W": 1.969,
+   "L": 50.0,
+   "qp": 59.1,
+   "x": 30.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -0.316,
+     -0.46
+    ],
+    [
+     3.644,
+     -20.96
+    ],
+    [
+     4.151,
+     -23.761
+    ],
+    [
+     7.776,
+     -25.935
+    ],
+    [
+     9.084,
+     -27.827
+    ],
+    [
+     11.317,
+     -29.353
+    ],
+    [
+     27.39,
+     -26.369
+    ]
+   ],
+   "sinuosity": 1.3121
+  },
+  {
+   "combo_id": "DC-030",
+   "cell_id": "AMS-amsterdam-chain-22812-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "B",
+   "context": "residential",
+   "W": 2.796,
+   "L": 50.0,
+   "qp": 50.3,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -0.941,
+     3.885
+    ],
+    [
+     -1.316,
+     5.437
+    ],
+    [
+     -2.176,
+     6.221
+    ],
+    [
+     -2.374,
+     10.077
+    ],
+    [
+     23.724,
+     39.347
+    ]
+   ],
+   "sinuosity": 1.0839
+  },
+  {
+   "combo_id": "DC-031",
+   "cell_id": "AMS-amsterdam-chain-22812-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "B",
+   "context": "residential",
+   "W": 2.796,
+   "L": 50.0,
+   "qp": 67.1,
+   "x": 24.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -0.941,
+     3.885
+    ],
+    [
+     -1.316,
+     5.437
+    ],
+    [
+     -2.176,
+     6.221
+    ],
+    [
+     -2.374,
+     10.077
+    ],
+    [
+     23.724,
+     39.347
+    ]
+   ],
+   "sinuosity": 1.0839
+  },
+  {
+   "combo_id": "DC-032",
+   "cell_id": "AMS-amsterdam-chain-22812-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "B",
+   "context": "residential",
+   "W": 2.796,
+   "L": 50.0,
+   "qp": 83.9,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -0.941,
+     3.885
+    ],
+    [
+     -1.316,
+     5.437
+    ],
+    [
+     -2.176,
+     6.221
+    ],
+    [
+     -2.374,
+     10.077
+    ],
+    [
+     23.724,
+     39.347
+    ]
+   ],
+   "sinuosity": 1.0839
+  },
+  {
+   "combo_id": "DC-033",
+   "cell_id": "AMS-amsterdam-chain-142287-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "B",
+   "context": "residential",
+   "W": 3.651,
+   "L": 50.0,
+   "qp": 65.7,
+   "x": 18.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.894,
+     -0.148
+    ],
+    [
+     11.386,
+     5.314
+    ],
+    [
+     13.112,
+     4.957
+    ],
+    [
+     17.396,
+     7.767
+    ],
+    [
+     32.883,
+     4.718
+    ],
+    [
+     47.405,
+     6.38
+    ]
+   ],
+   "sinuosity": 1.0464
+  },
+  {
+   "combo_id": "DC-034",
+   "cell_id": "AMS-amsterdam-chain-142287-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "B",
+   "context": "residential",
+   "W": 3.651,
+   "L": 50.0,
+   "qp": 87.6,
+   "x": 24.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.894,
+     -0.148
+    ],
+    [
+     11.386,
+     5.314
+    ],
+    [
+     13.112,
+     4.957
+    ],
+    [
+     17.396,
+     7.767
+    ],
+    [
+     32.883,
+     4.718
+    ],
+    [
+     47.405,
+     6.38
+    ]
+   ],
+   "sinuosity": 1.0464
+  },
+  {
+   "combo_id": "DC-035",
+   "cell_id": "AMS-amsterdam-chain-142287-0",
+   "city": "amsterdam",
+   "city_code": "AMS",
+   "split": "train",
+   "type": "B",
+   "context": "residential",
+   "W": 3.651,
+   "L": 50.0,
+   "qp": 109.5,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.894,
+     -0.148
+    ],
+    [
+     11.386,
+     5.314
+    ],
+    [
+     13.112,
+     4.957
+    ],
+    [
+     17.396,
+     7.767
+    ],
+    [
+     32.883,
+     4.718
+    ],
+    [
+     47.405,
+     6.38
+    ]
+   ],
+   "sinuosity": 1.0464
+  },
+  {
+   "combo_id": "DC-036",
+   "cell_id": "MEL-melbourne-RPSP1011231-0-5",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.209,
+   "L": 50.0,
+   "qp": 3.8,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     46.883,
+     17.417
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-037",
+   "cell_id": "MEL-melbourne-RPSP1011231-0-5",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.209,
+   "L": 50.0,
+   "qp": 5.0,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     46.883,
+     17.417
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-038",
+   "cell_id": "MEL-melbourne-RPSP1011231-0-5",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 0.209,
+   "L": 50.0,
+   "qp": 6.3,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     46.883,
+     17.417
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-039",
+   "cell_id": "MEL-melbourne-RPSP03A13291L1-0-0",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "C",
+   "context": "commercial",
+   "W": 0.305,
+   "L": 50.0,
+   "qp": 5.5,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     49.597,
+     -6.721
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-040",
+   "cell_id": "MEL-melbourne-RPSP03A13291L1-0-0",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "C",
+   "context": "commercial",
+   "W": 0.305,
+   "L": 50.0,
+   "qp": 7.3,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     49.597,
+     -6.721
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-041",
+   "cell_id": "MEL-melbourne-RPSP03A13291L1-0-0",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "C",
+   "context": "commercial",
+   "W": 0.305,
+   "L": 50.0,
+   "qp": 9.2,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     49.597,
+     -6.721
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-042",
+   "cell_id": "MEL-melbourne-1389612-0-2",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.697,
+   "L": 50.0,
+   "qp": 30.5,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -6.265,
+     49.315
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-043",
+   "cell_id": "MEL-melbourne-1389612-0-2",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.697,
+   "L": 50.0,
+   "qp": 40.7,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -6.265,
+     49.315
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-044",
+   "cell_id": "MEL-melbourne-1389612-0-2",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.697,
+   "L": 50.0,
+   "qp": 50.9,
+   "x": 30.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -6.265,
+     49.315
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-045",
+   "cell_id": "MEL-melbourne-1465622-0-2",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.749,
+   "L": 50.0,
+   "qp": 31.5,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -35.711,
+     -34.831
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-046",
+   "cell_id": "MEL-melbourne-1465622-0-2",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.749,
+   "L": 50.0,
+   "qp": 42.0,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -35.711,
+     -34.831
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-047",
+   "cell_id": "MEL-melbourne-1465622-0-2",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.749,
+   "L": 50.0,
+   "qp": 52.5,
+   "x": 30.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -35.711,
+     -34.831
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-048",
+   "cell_id": "MEL-melbourne-1389823-0-3",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 2.722,
+   "L": 50.0,
+   "qp": 49.0,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -38.855,
+     31.336
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-049",
+   "cell_id": "MEL-melbourne-1389823-0-3",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 2.722,
+   "L": 50.0,
+   "qp": 65.3,
+   "x": 24.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -38.855,
+     31.336
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-050",
+   "cell_id": "MEL-melbourne-1389823-0-3",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 2.722,
+   "L": 50.0,
+   "qp": 81.7,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -38.855,
+     31.336
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-051",
+   "cell_id": "MEL-melbourne-RPSP03A10530L1-0-0",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "A",
+   "context": "commercial",
+   "W": 3.609,
+   "L": 50.0,
+   "qp": 65.0,
+   "x": 18.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     8.021,
+     49.063
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-052",
+   "cell_id": "MEL-melbourne-RPSP03A10530L1-0-0",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "A",
+   "context": "commercial",
+   "W": 3.609,
+   "L": 50.0,
+   "qp": 86.6,
+   "x": 24.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     8.021,
+     49.063
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-053",
+   "cell_id": "MEL-melbourne-RPSP03A10530L1-0-0",
+   "city": "melbourne",
+   "city_code": "MEL",
+   "split": "train",
+   "type": "A",
+   "context": "commercial",
+   "W": 3.609,
+   "L": 50.0,
+   "qp": 108.3,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     8.021,
+     49.063
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-054",
+   "cell_id": "TPE-taipei-idx9524-0-2",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 1.19,
+   "L": 50.0,
+   "qp": 21.4,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     49.623,
+     6.529
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-055",
+   "cell_id": "TPE-taipei-idx9524-0-2",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 1.19,
+   "L": 50.0,
+   "qp": 28.6,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     49.623,
+     6.529
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-056",
+   "cell_id": "TPE-taipei-idx9524-0-2",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 1.19,
+   "L": 50.0,
+   "qp": 35.7,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     49.623,
+     6.529
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-057",
+   "cell_id": "TPE-taipei-idx5150-0-0",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "C",
+   "context": "commercial",
+   "W": 1.2,
+   "L": 50.0,
+   "qp": 21.6,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     50.036,
+     -1.418
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-058",
+   "cell_id": "TPE-taipei-idx5150-0-0",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "C",
+   "context": "commercial",
+   "W": 1.2,
+   "L": 50.0,
+   "qp": 28.8,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     50.036,
+     -1.418
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-059",
+   "cell_id": "TPE-taipei-idx5150-0-0",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "C",
+   "context": "commercial",
+   "W": 1.2,
+   "L": 50.0,
+   "qp": 36.0,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     50.036,
+     -1.418
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-060",
+   "cell_id": "TPE-taipei-idx12521-0-5",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.75,
+   "L": 50.0,
+   "qp": 31.5,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     15.866,
+     -47.143
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-061",
+   "cell_id": "TPE-taipei-idx12521-0-5",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.75,
+   "L": 50.0,
+   "qp": 42.0,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     15.866,
+     -47.143
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-062",
+   "cell_id": "TPE-taipei-idx12521-0-5",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.75,
+   "L": 50.0,
+   "qp": 52.5,
+   "x": 30.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     15.866,
+     -47.143
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-063",
+   "cell_id": "TPE-taipei-idx1592-0-2",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.96,
+   "L": 50.0,
+   "qp": 35.3,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     49.86,
+     -4.398
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-064",
+   "cell_id": "TPE-taipei-idx1592-0-2",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.96,
+   "L": 50.0,
+   "qp": 47.0,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     49.86,
+     -4.398
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-065",
+   "cell_id": "TPE-taipei-idx1592-0-2",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.96,
+   "L": 50.0,
+   "qp": 58.8,
+   "x": 30.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     49.86,
+     -4.398
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-066",
+   "cell_id": "TPE-taipei-idx15608-0-1",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "A",
+   "context": "commercial",
+   "W": 2.48,
+   "L": 50.0,
+   "qp": 44.6,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -50.041,
+     1.246
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-067",
+   "cell_id": "TPE-taipei-idx15608-0-1",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "A",
+   "context": "commercial",
+   "W": 2.48,
+   "L": 50.0,
+   "qp": 59.5,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -50.041,
+     1.246
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-068",
+   "cell_id": "TPE-taipei-idx15608-0-1",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "A",
+   "context": "commercial",
+   "W": 2.48,
+   "L": 50.0,
+   "qp": 74.4,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -50.041,
+     1.246
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-069",
+   "cell_id": "TPE-taipei-idx4344-0-0",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 3.54,
+   "L": 50.0,
+   "qp": 63.7,
+   "x": 18.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -47.886,
+     -14.476
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-070",
+   "cell_id": "TPE-taipei-idx4344-0-0",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 3.54,
+   "L": 50.0,
+   "qp": 85.0,
+   "x": 24.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -47.886,
+     -14.476
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-071",
+   "cell_id": "TPE-taipei-idx4344-0-0",
+   "city": "taipei",
+   "city_code": "TPE",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 3.54,
+   "L": 50.0,
+   "qp": 106.2,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -47.886,
+     -14.476
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-072",
+   "cell_id": "NTP-newtaipei-idx12919-0-1",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 1.12,
+   "L": 50.0,
+   "qp": 20.2,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -45.77,
+     -20.125
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-073",
+   "cell_id": "NTP-newtaipei-idx12919-0-1",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 1.12,
+   "L": 50.0,
+   "qp": 26.9,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -45.77,
+     -20.125
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-074",
+   "cell_id": "NTP-newtaipei-idx12919-0-1",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "C",
+   "context": "residential",
+   "W": 1.12,
+   "L": 50.0,
+   "qp": 33.6,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -45.77,
+     -20.125
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-075",
+   "cell_id": "NTP-newtaipei-idx3916-0-1",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "C",
+   "context": "MRT-frontage",
+   "W": 1.4,
+   "L": 50.0,
+   "qp": 25.2,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -43.766,
+     24.123
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-076",
+   "cell_id": "NTP-newtaipei-idx3916-0-1",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "C",
+   "context": "MRT-frontage",
+   "W": 1.4,
+   "L": 50.0,
+   "qp": 33.6,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -43.766,
+     24.123
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-077",
+   "cell_id": "NTP-newtaipei-idx3916-0-1",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "C",
+   "context": "MRT-frontage",
+   "W": 1.4,
+   "L": 50.0,
+   "qp": 42.0,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -43.766,
+     24.123
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-078",
+   "cell_id": "NTP-newtaipei-idx13776-0-2",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.71,
+   "L": 50.0,
+   "qp": 30.8,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -22.591,
+     44.355
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-079",
+   "cell_id": "NTP-newtaipei-idx13776-0-2",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.71,
+   "L": 50.0,
+   "qp": 41.0,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -22.591,
+     44.355
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-080",
+   "cell_id": "NTP-newtaipei-idx13776-0-2",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.71,
+   "L": 50.0,
+   "qp": 51.3,
+   "x": 30.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -22.591,
+     44.355
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-081",
+   "cell_id": "NTP-newtaipei-idx6919-0-0",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.74,
+   "L": 50.0,
+   "qp": 31.3,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -41.824,
+     -27.309
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-082",
+   "cell_id": "NTP-newtaipei-idx6919-0-0",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.74,
+   "L": 50.0,
+   "qp": 41.8,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -41.824,
+     -27.309
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-083",
+   "cell_id": "NTP-newtaipei-idx6919-0-0",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 1.74,
+   "L": 50.0,
+   "qp": 52.2,
+   "x": 30.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -41.824,
+     -27.309
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-084",
+   "cell_id": "NTP-newtaipei-idx251-0-0",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 2.46,
+   "L": 50.0,
+   "qp": 44.3,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -19.427,
+     -45.809
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-085",
+   "cell_id": "NTP-newtaipei-idx251-0-0",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 2.46,
+   "L": 50.0,
+   "qp": 59.0,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -19.427,
+     -45.809
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-086",
+   "cell_id": "NTP-newtaipei-idx251-0-0",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 2.46,
+   "L": 50.0,
+   "qp": 73.8,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -19.427,
+     -45.809
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-087",
+   "cell_id": "NTP-newtaipei-idx11808-0-1",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 4.98,
+   "L": 50.0,
+   "qp": 89.6,
+   "x": 18.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -47.062,
+     -16.932
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-088",
+   "cell_id": "NTP-newtaipei-idx11808-0-1",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 4.98,
+   "L": 50.0,
+   "qp": 119.5,
+   "x": 24.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -47.062,
+     -16.932
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-089",
+   "cell_id": "NTP-newtaipei-idx11808-0-1",
+   "city": "newtaipei",
+   "city_code": "NTP",
+   "split": "train",
+   "type": "A",
+   "context": "residential",
+   "W": 4.98,
+   "L": 50.0,
+   "qp": 149.4,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -47.062,
+     -16.932
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-090",
+   "cell_id": "SEA-seattle-5441957-0-1",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "C",
+   "context": "commercial",
+   "W": 1.168,
+   "L": 50.0,
+   "qp": 21.0,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     50.05,
+     -0.764
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-091",
+   "cell_id": "SEA-seattle-5441957-0-1",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "C",
+   "context": "commercial",
+   "W": 1.168,
+   "L": 50.0,
+   "qp": 28.0,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     50.05,
+     -0.764
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-092",
+   "cell_id": "SEA-seattle-5441957-0-1",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "C",
+   "context": "commercial",
+   "W": 1.168,
+   "L": 50.0,
+   "qp": 35.0,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     50.05,
+     -0.764
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-093",
+   "cell_id": "SEA-seattle-5439807-0-1",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "C",
+   "context": "residential",
+   "W": 1.524,
+   "L": 50.0,
+   "qp": 27.4,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -1.105,
+     49.693
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-094",
+   "cell_id": "SEA-seattle-5439807-0-1",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "C",
+   "context": "residential",
+   "W": 1.524,
+   "L": 50.0,
+   "qp": 36.6,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -1.105,
+     49.693
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-095",
+   "cell_id": "SEA-seattle-5439807-0-1",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "C",
+   "context": "residential",
+   "W": 1.524,
+   "L": 50.0,
+   "qp": 45.7,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -1.105,
+     49.693
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-096",
+   "cell_id": "SEA-seattle-5432169-0-1",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "A",
+   "context": "residential",
+   "W": 1.651,
+   "L": 50.0,
+   "qp": 29.7,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     50.056,
+     0.04
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-097",
+   "cell_id": "SEA-seattle-5432169-0-1",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "A",
+   "context": "residential",
+   "W": 1.651,
+   "L": 50.0,
+   "qp": 39.6,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     50.056,
+     0.04
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-098",
+   "cell_id": "SEA-seattle-5432169-0-1",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "A",
+   "context": "residential",
+   "W": 1.651,
+   "L": 50.0,
+   "qp": 49.5,
+   "x": 30.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     50.056,
+     0.04
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-099",
+   "cell_id": "SEA-seattle-5434873-0-0",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "A",
+   "context": "commercial",
+   "W": 2.438,
+   "L": 50.0,
+   "qp": 43.9,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -50.055,
+     -0.371
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-100",
+   "cell_id": "SEA-seattle-5434873-0-0",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "A",
+   "context": "commercial",
+   "W": 2.438,
+   "L": 50.0,
+   "qp": 58.5,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -50.055,
+     -0.371
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-101",
+   "cell_id": "SEA-seattle-5434873-0-0",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "A",
+   "context": "commercial",
+   "W": 2.438,
+   "L": 50.0,
+   "qp": 73.1,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -50.055,
+     -0.371
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-102",
+   "cell_id": "SEA-seattle-5445989-0-0",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "A",
+   "context": "commercial",
+   "W": 4.064,
+   "L": 50.0,
+   "qp": 73.2,
+   "x": 18.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.01,
+     49.706
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-103",
+   "cell_id": "SEA-seattle-5445989-0-0",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "A",
+   "context": "commercial",
+   "W": 4.064,
+   "L": 50.0,
+   "qp": 97.5,
+   "x": 24.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.01,
+     49.706
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-104",
+   "cell_id": "SEA-seattle-5445989-0-0",
+   "city": "seattle",
+   "city_code": "SEA",
+   "split": "test",
+   "type": "A",
+   "context": "commercial",
+   "W": 4.064,
+   "L": 50.0,
+   "qp": 121.9,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.01,
+     49.706
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-105",
+   "cell_id": "TAO-taoyuan-idx8762-0-0",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "C",
+   "context": "residential",
+   "W": 0.43,
+   "L": 50.0,
+   "qp": 7.7,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -28.978,
+     -40.529
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-106",
+   "cell_id": "TAO-taoyuan-idx8762-0-0",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "C",
+   "context": "residential",
+   "W": 0.43,
+   "L": 50.0,
+   "qp": 10.3,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -28.978,
+     -40.529
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-107",
+   "cell_id": "TAO-taoyuan-idx8762-0-0",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "C",
+   "context": "residential",
+   "W": 0.43,
+   "L": 50.0,
+   "qp": 12.9,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -28.978,
+     -40.529
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-108",
+   "cell_id": "TAO-taoyuan-idx2361-0-3",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "C",
+   "context": "residential",
+   "W": 0.51,
+   "L": 50.0,
+   "qp": 9.2,
+   "x": 18.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -0.609,
+     -49.702
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-109",
+   "cell_id": "TAO-taoyuan-idx2361-0-3",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "C",
+   "context": "residential",
+   "W": 0.51,
+   "L": 50.0,
+   "qp": 12.2,
+   "x": 24.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -0.609,
+     -49.702
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-110",
+   "cell_id": "TAO-taoyuan-idx2361-0-3",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "C",
+   "context": "residential",
+   "W": 0.51,
+   "L": 50.0,
+   "qp": 15.3,
+   "x": 30.0,
+   "ood_flags": "W<W_min",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -0.609,
+     -49.702
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-111",
+   "cell_id": "TAO-taoyuan-idx10181-0-0",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "A",
+   "context": "residential",
+   "W": 1.8,
+   "L": 50.0,
+   "qp": 32.4,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -49.623,
+     -6.528
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-112",
+   "cell_id": "TAO-taoyuan-idx10181-0-0",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "A",
+   "context": "residential",
+   "W": 1.8,
+   "L": 50.0,
+   "qp": 43.2,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -49.623,
+     -6.528
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-113",
+   "cell_id": "TAO-taoyuan-idx10181-0-0",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "A",
+   "context": "residential",
+   "W": 1.8,
+   "L": 50.0,
+   "qp": 54.0,
+   "x": 30.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -49.623,
+     -6.528
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-114",
+   "cell_id": "TAO-taoyuan-idx3410-0-9",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "A",
+   "context": "residential",
+   "W": 2.4,
+   "L": 50.0,
+   "qp": 43.2,
+   "x": 18.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -37.393,
+     -33.044
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-115",
+   "cell_id": "TAO-taoyuan-idx3410-0-9",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "A",
+   "context": "residential",
+   "W": 2.4,
+   "L": 50.0,
+   "qp": 57.6,
+   "x": 24.0,
+   "ood_flags": "",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -37.393,
+     -33.044
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-116",
+   "cell_id": "TAO-taoyuan-idx3410-0-9",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "A",
+   "context": "residential",
+   "W": 2.4,
+   "L": 50.0,
+   "qp": 72.0,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     -37.393,
+     -33.044
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-117",
+   "cell_id": "TAO-taoyuan-idx6656-0-0",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "A",
+   "context": "commercial",
+   "W": 5.0,
+   "L": 50.0,
+   "qp": 90.0,
+   "x": 18.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     36.073,
+     34.461
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-118",
+   "cell_id": "TAO-taoyuan-idx6656-0-0",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "A",
+   "context": "commercial",
+   "W": 5.0,
+   "L": 50.0,
+   "qp": 120.0,
+   "x": 24.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     36.073,
+     34.461
+    ]
+   ],
+   "sinuosity": 1.0
+  },
+  {
+   "combo_id": "DC-119",
+   "cell_id": "TAO-taoyuan-idx6656-0-0",
+   "city": "taoyuan",
+   "city_code": "TAO",
+   "split": "test",
+   "type": "A",
+   "context": "commercial",
+   "W": 5.0,
+   "L": 50.0,
+   "qp": 150.0,
+   "x": 30.0,
+   "ood_flags": "qp>60",
+   "centerline": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     36.073,
+     34.461
+    ]
+   ],
+   "sinuosity": 1.0
+  }
+ ]
+}

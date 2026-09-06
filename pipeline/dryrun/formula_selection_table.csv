@@ -1,0 +1,6 @@
+model,params,loco_mae,loco_rmse,loco_over,physical,interpretable,note
+A,"{""c"": 32.64848680791532, ""p"": -0.8707138064419195}",1.849,3.414,0.112,check,True,
+A+,"{""c"": 46.111832584466754, ""alpha"": 0.3306679565565247, ""p"": -0.7892829591248456}",1.659,3.234,0.14,check,True,
+L,{},,,,check,True,"L has no variance under the frozen protocol (all cells 50 m; the simulator is length-insensitive by construction: per-minute flows + fixed [15,35] m measure zone). gamma cannot be estimated."
+R,"{""beta"": 0.2, ""x_crit"": 33.333333333333336, ""C_W"": ""final""}",2.025,3.356,0.098,check,True,
+SVR,"{""sv"": 47}",1.668,3.156,0.124,check,True,

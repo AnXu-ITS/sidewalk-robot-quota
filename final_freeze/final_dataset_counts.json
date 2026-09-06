@@ -1,0 +1,47 @@
+{
+  "status": "COMPLETE — final D2 dataset present and verified",
+  "definitions": {
+    "total_d2_rows": "rows in full_reference_dataset.csv = D1 main (280) + decoupled supplement (120)",
+    "baseline_failure_rows": "rows with base_pass == 0 (pedestrian-only baseline fails; mean-based rule, see note)",
+    "in_domain_rows": "rows satisfying the frozen applicability domain (W in [1.6,3.0], qp<=60, x<33.33, type A or B with sinuosity<=1.05)",
+    "ood_rows": "rows outside the applicability domain",
+    "evaluation_denominator": "pooled denominator used by the frozen overprediction chain (all 400 rows)"
+  },
+  "final_d2": {
+    "present_in_checkout": true,
+    "path": "data/final/full_reference_dataset.csv",
+    "source": "D:/quota_experiment/pipeline/cells/full_reference_dataset.csv",
+    "sha256": "b2b6743d22b3fe4496cc11022c65eaf7b80508efa2996cb8f5538049fc4144e9",
+    "rows": 400,
+    "source_counts": {"main": 280, "decoupled": 120},
+    "city_counts": {"amsterdam": 58, "melbourne": 58, "newtaipei": 58, "nyc": 58, "taipei": 58, "seattle": 55, "taoyuan": 55},
+    "type_counts": {"A": 232, "C": 140, "B": 28},
+    "base_pass_pass": 349,
+    "baseline_failure_rows": 51,
+    "qr_star_zero": 194,
+    "qr_star_positive": 206,
+    "in_domain_rows": 164,
+    "ood_rows": 236,
+    "evaluation_denominator": 400
+  },
+  "provenance_rule": {
+    "qr_star": "corrected per-seed >=29/30 rule (independent recompute PASS: 349/349 agree)",
+    "base_pass": "mean-based (mean_density<=1.20 AND 0.90<=flow_ratio<=1.20 over q_r=0 seeds); differs from per-seed >=29/30 in 8/400 decoupled high-qp rows"
+  },
+  "p1b_available_proxy": {
+    "present_in_checkout": true,
+    "path": "pipeline/p1b_reference_dryrun.csv",
+    "rows": 200,
+    "cells": 100,
+    "cities": ["amsterdam", "london", "singapore", "tokyo"],
+    "note": "qr_star only (no base_pass column); superseded by the D2 table for headline counts"
+  },
+  "headline_results_frozen_and_verified": {
+    "overprediction_chain_pct": [25.75, 6.75, 2.75],
+    "max_overprediction_chain": [19, 16, 7],
+    "mean_conservative_loss": 2.623,
+    "median_utilization": 0.25,
+    "loco_mae_model_A": 2.189,
+    "note": "reproduced exactly on the 400-row D2 table (src/reproduce_frozen_chain.py + guardrail_form_audit.py)"
+  }
+}

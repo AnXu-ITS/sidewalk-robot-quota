@@ -1,0 +1,8 @@
+city,split,geom_approx,n_source_features,n_cells,km,n_bin_lt1.6,n_bin_1.6_2.4,n_bin_2.4_3.5,n_bin_ge3.5
+nyc,train,exact,463601,207403,10370.15,21255,61828,84379,39941
+amsterdam,train,chained,206311,4160,208.0,1411,1420,827,502
+seattle,test,exact,34904,53854,2692.7,21399,29919,2064,472
+melbourne,train,chord,24841,14227,711.35,1689,3405,6257,2876
+taipei,train,chord,17728,17622,881.1,6218,3120,3085,5199
+newtaipei,train,chord,13775,13228,661.4,2872,4483,2605,3268
+taoyuan,test,chord,10135,16002,800.1,2195,4805,5198,3804

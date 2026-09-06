@@ -1,131 +1,139 @@
-# 人行道配送机器人配额算法（Sidewalk Robot Quota）
+# 人行道配送机器人配额（Sidewalk Robot Quota）
 
-**一个行人优先（pedestrian-first）的人行道配送机器人道路配额算法。**
+**面向人行道自主配送机器人的「行人优先」配额算法。**
 
-> 给定一段人行道的**行人流量** `q_p` 与**有效宽度** `W`，输出在保持行人服务水平可接受的前提下，
-> **允许进入的最大配送机器人流量** `q̂_r`。
+> 输入人行道的**行人流量** `q_p` 与**有效宽度** `W`，输出在保证行人服务水平可接受的前提下
+> **允许的最大配送机器人流量** `q̂_r`。
 
-[English](README.md) · [研究方向](配送机器人_研究方向_Quota算法更新版.md) ·
-[实验计划书](配送机器人_实验计划书_SUMO_JuPedSim_新加坡.md) ·
-[实验进度与下一步计划](实验进度与下一步计划_2026-08-22.md)
+[English](README.md)
 
 ---
 
-## 项目概述
+## 状态
 
-本仓库包含回答下面这个问题所需的代码、数据管线与结果：
+本仓库是 **2026-09 大规模重构后的权威冻结记录**。此前的合成直线走廊实验与 D2 之前的
+计划/数据已整体归档到 [`archive/2026-09-03_旧实验与旧数据/`](archive/2026-09-03_旧实验与旧数据/)。
+以下内容**全部以本机（这台机器）最终方法与结果为准**。
 
-> **一段人行道到底能容纳多少台配送机器人？**
+## 最终方法（已冻结）
 
-本项目不研究"单台机器人如何在人群中导航"，而是把人行道视为一种稀缺的公共空间，回答一个交通工程问题：
-在不损害行人服务水平的前提下，能把多少通行能力分配给配送机器人。最终产物是一条简单、可解释的配额规则
+科学定律（宽度归一化幂律）：
 
-$$\hat q_r = f(q_p, W)$$
+```
+q_hat_r = 24.37 * W * (q_p / W)^-0.945
+```
 
-可以直接转化为监管工具 —— robot/min 上限、时间窗上限或地理围栏内的车队配额。
+- `c = 24.37`，`p = -0.945`（宽度指数 `α = 0.992 ± 0.154`，置信区间含 1 → 保留 `W^1`）。
+- 加性 Q80 安全裕量 `Δ80 = 3.1068`（正残差的 Q0.80 池化值；实际的 `+Q80` 步骤采用
+  LOCO 按留出城市折式标定的裕量）。
+- 冻结执行顺序：
 
-### 为什么用 SUMO–JuPedSim
+```
+OOD -> base_pass -> zero_guards -> nominal -> -Δ80 -> Q_low -> q_max -> floor
+```
 
-Ground truth 由 **Eclipse SUMO 1.27.1 + JuPedSim**（`--pedestrian.model jupedsim`）生成：
-SUMO 负责路网、需求与输出组织，JuPedSim 提供适合真实人行道可步行区域的二维行人动力学。
-先标定行人-only 基线，再逐级增加机器人流量直到行人服务约束被打破，该临界点即为
-**仿真派生的参考配额（simulation-derived reference quota）** `q_r*`。
+护栏：`W_min = 1.6 m`、`x_crit = 33.33` 人/min/m、`q_max = 20` 机器人/min、以及
+`Q_low(W)` 低流量上限——这四条构成头条链条。冻结配置还规定了部署层护栏：`C(W)` 容量、
+急弯护栏、绝对速度下限（v̄ ≥ 0.8 m/s）。
 
-## 关键结果（SUMO–JuPedSim 主线）
+**头条留出城市过配链条**（LOCO，7 城）：
 
-| 结果 | 数值 |
-|---|---|
-| 参考配额前沿 | 单调：`q_r*` 随 `q_p` 上升而下降、随 `W` 增大而上升（8 宽 × 6 流 × 30 seeds） |
-| Model A（宽度归一化幂律） | `q̂_r = W · 28.22 · (q_p/W)^−0.828` |
-| 硬归零规则 | `x_crit = 33.3` ped/min/m（合成）→ `29.0`（P1 真实场地重标定）；`W_min = 1.6 m`；与宽度相关的容量 `C(W)`；`q_max = 20` robot/min |
-| 训练集 MAE（A / B / A-iso） | 1.54 / 1.19 / 1.31 robot/min |
-| 留出集 MAE（A / B / A-iso） | 2.65 / 2.30 / 2.75 robot/min |
-| 闭环服务违规率（A-floor） | **0.029** —— 安全侧部署规则 |
-| 机器人速度鲁棒性 | ±20 % 速度 → 配额变化 **0** |
+| 变体 | 过配率 | 最大过配 |
+|---|---|---|
+| G0 名义 | **25.75 %** | **19** |
+| G1 + Q80 | **6.75 %** | **16** |
+| G1 + 基线护栏 | **2.75 %** | **7** |
 
-一个超出计划的增量成果是 **行人替代当量 PRE（Pedestrian Replacement Equivalent）**：
-1 台机器人在 1.5 m 宽人行道上约相当于 **95 名行人**，而在 3.0 m 宽人行道上仅约相当于
-**2.3 名行人** —— 说明机器人不能简单当作"多一个行人"。
+LOCO MAE（模型 A）：**2.189**。
 
-真实场地验证锚定在**新加坡 Bendemeer Road**（2026 年 AIDEN 配送机器人豁免区域），并正在扩展至
-伦敦 / 东京 / 阿姆斯特丹做跨城市迁移验证。完整数据与诚实的局限性说明见
-[`experiment_sumo/reports/experiment_report.md`](experiment_sumo/reports/experiment_report.md)。
+**唯一事实来源：** [`final_freeze/final_quota_method_config.yaml`](final_freeze/final_quota_method_config.yaml)
+（及 JSON 孪生文件）。冻结运行时：[`final_freeze/src/operational_quota.py`](final_freeze/src/operational_quota.py)。
+`quota_params/*.json` 是 **D2 之前的旧标定，已被取代，请勿引用**
+（见 `quota_params/SUPERSEDED_DO_NOT_USE.md`）。
+
+### 部署方式
+
+> 离线人行道资格判定 + 在线闭式配额分配
+
+`base_pass` 是每个（细胞、行人流量）上的标志，来自纯行人（`q_r = 0`）SUMO–JuPedSim
+基线。它在**离线**阶段预计算为查找表；**在线**使用先查表、再套用闭式规则。它**不是**
+`(W, q_p)` 的纯闭式函数。
+
+基线判据（30 个种子）：平均密度 ≤ 1.20 人/m² **且** 0.90 ≤ 平均流量比 ≤ 1.20
+（均值判据）。参考配额 `q_r*` 由每种子 `≥ 29/30` 规则定义；部署的 `base_pass` 列遵循均值
+判据，在 8/400 条解耦高 q_p 行上与每种子规则有差异（已记录，不影响头条结果）。
+
+## 数据（D2）
+
+最终参考数据集位于 [`data/final/`](data/final/)：
+
+- `full_reference_dataset.csv` —— 400 条组合（280 主实验 + 120 解耦），7 城。
+- 构成/参考/精化表 + 种子级 baseline/sweep CSV。
+- `SHA256SUMS.txt` —— 不可变哈希（根数据集哈希 `b2b6743d…4144e9`）。
+
+关键事实：`base_pass` 349 通过 / 51 不通过；`q_r*` 194 零 / 206 正；域内 164 / 域外 236；
+池化评估分母 400。溯源链：
+`consolidate_reference.py → refine_boundary.py（64 条改动）→ merge_datasets.py`
+（见 `final_freeze/final_d2_provenance.txt` 与 `final_freeze/D2_RECONSTRUCTION_VERIFICATION.md`）。
+
+7 城人行道几何数据集在 [`train_test_mapdata/`](train_test_mapdata/)
+（GeoJSON，经 **Git LFS** 存储）。
+
+## 复现
+
+```bash
+# 1) 校验冻结运行时（机械自测）
+python final_freeze/src/operational_quota.py
+
+# 2) 校验 D2 数据集（形状 + 计数 + base_pass 规则）
+python final_freeze/src/verify_d2.py data/final/full_reference_dataset.csv
+python final_freeze/src/verify_base_pass.py
+
+# 3) 由 data/final/ 中的 D2 表复现头条链条
+python final_freeze/src/reproduce_frozen_chain.py
+```
+
+预期输出：过配率 `25.75 -> 6.75 -> 2.75 %`，最大过配 `19 -> 16 -> 7`。
+完整审计见 `final_freeze/SHA256SUMS.txt` 与
+`final_freeze/FINAL_REPRODUCIBILITY_FREEZE_REPORT.md`。
 
 ## 仓库结构
 
 ```
 .
-├── experiment/                      # 纯 Python 社会力模型 MVP（独立、全流程）
-│   ├── scripts/                     #   仿真器、ground truth、拟合、验证、绘图
-│   ├── data/processed/              #   拟合预测与指标
-│   ├── models/quota_algorithm/      #   拟合模型参数（JSON）
-│   ├── outputs/                     #   baseline / sweeps / quota_labels / validation / figures
-│   └── reports/                     #   实验报告 + 校准报告
-│
-├── experiment_sumo/                 # SUMO–JuPedSim 主线（主要结果）
-│   ├── scripts/                     #   仿真器、fit_quota、validate、sensitivity、P1 真实场地等
-│   ├── data/processed/              #   拟合指标
-│   ├── models/quota_algorithm/      #   quota_params.json（+ quota_params_p1.json 重标定）
-│   ├── outputs/                     #   quota_labels / validation / figures / p1_real_site / p1_multicity
-│   └── reports/                     #   experiment_report.md、calibration_report.md、p1_real_site_report.md
-│
-├── sumo_jupedsim/                   # 真实场地数据管线（OSM → cells → 流量推算）
-│   ├── scripts/                     #   download_osm、analyze_osm、build_cells、estimate_site_flow
-│   └── data/                        #   cells.json、各城市 cell 表、选址与覆盖说明
-│
-└── （根目录 .md 文档）               # 研究方向、实验计划书、进度与下一步计划
+├── README.md / README.zh-CN.md   # 本说明（EN / 中文）
+├── final_freeze/                 # 冻结方法：配置、运行时、校验文档
+│   ├── final_quota_method_config.{yaml,json}
+│   └── src/                      # operational_quota.py、reproduce_frozen_chain.py、verify_*.py
+├── data/final/                   # D2 数据集 + 哈希（权威）
+├── pipeline/                     # 真实城市标定流水线（cells、POI、SUMO 驱动）
+├── train_test_mapdata/           # 7 城人行道几何（GeoJSON，Git LFS）
+├── quota_params/                 # 已取代的 D2 前参数（勿用）
+├── archive/2026-09-03_旧实验与旧数据/  # 归档的旧实验/计划/数据
+└── (根目录 .md)                  # 研究方向 / 计划 / 迁移说明（2026-09）
 ```
 
-## 快速开始
+## 诚实范围说明
 
-### 环境要求
+- 所有配额参考均为**仿真推导**（SUMO–JuPedSim），并非真实世界实测容量。
+  **不作出任何正式的真实世界安全保证。**
+- 适用域：`1.6 ≤ W ≤ 3.0 m`、`q_p ≤ 60`、`x < 33.33`、直行至轻度弯曲几何
+  （Type A，或 sinuosity ≤ 1.05 的 Type B）。域外输入必须走 **OOD 回退**（无闭式推荐）。
+- 行人流量 `q_p` 为**基于 POI 的先验**，非现场计数（论文中已如实说明）。
+- 参考机器人是容量代理（0.96 × 0.70 m 占地、5 km/h）。
 
-- **Python 3.10+**，依赖 `numpy`、`scipy`、`pandas`、`matplotlib`。
-- **Eclipse SUMO 1.27.1**（含内置 JuPedSim 行人模型）加入 `PATH` —— 仅 `experiment_sumo/` 与
-  `sumo_jupedsim/` 需要；`experiment/` 是自包含的 Python 仿真器，无需 SUMO。
+## 真值引擎
 
-### 复现
+Eclipse SUMO + JuPedSim（`--pedestrian.model jupedsim`）：先纯行人基线，再做机器人流量
+升序扫描（0→20 机器人/min，提前停止）直至行人服务约束被破坏；破坏点即参考配额 `q_r*`。
+协议：30 个种子，每种子 ≥ 29/30 通过为主判据（均值为上界），在评估测试城市之前冻结。
 
-```bash
-# 1) 纯 Python MVP（无需 SUMO）
-cd experiment
-pip install numpy scipy pandas matplotlib
-python scripts/run_all.py --n-procs 16
+## 环境要求
 
-# 2) SUMO–JuPedSim 主线（需 SUMO 1.27.1 + JuPedSim）
-cd experiment_sumo
-python scripts/run_all.py
+- Python 3.10+，含 `numpy`、`scipy`、`pandas`。
+- Eclipse SUMO 1.27.1（含 JuPedSim）置于 `PATH`（`SUMO_HOME`）——仅在重跑真值战役时需要；
+  上面的冻结复现不需要 SUMO。
 
-# 3) 真实场地数据管线
-cd sumo_jupedsim
-python scripts/download_osm.py          # 下载 OSM 数据（不提交）
-python scripts/analyze_osm.py           # 判别 cell 类型（Type A/B/C/D）
-python scripts/build_cells.py           # 切 50 m cell + 分层选取
-python scripts/estimate_site_flow.py    # 依 POI 语境推算 W_eff 与 q_p
-```
+## 许可证
 
-原始 OSM 下载与转换得到的 `bendemeer.net.xml` **有意不提交**（可用上述脚本重新生成）。
-大型 SUMO 运行转储（`outputs/sumo_tmp/`）、批处理临时目录（`outputs/_batch_tmp/`）与日志
-也已通过 `.gitignore` 排除。
-
-## 文档索引
-
-| 文档 | 语言 | 内容 |
-|---|---|---|
-| `配送机器人_研究方向_Quota算法更新版.md` | 中文 | 研究方向：配额问题、研究问题、算法形式、验证指标 |
-| `配送机器人_实验计划书_SUMO_JuPedSim_新加坡.md` | 中文 | 完整实验计划书（阶段划分、ground-truth 定义、验证） |
-| `实验进度与下一步计划_2026-08-22.md` | 中文 | 当前进度快照 + 按优先级排序的下一步计划 |
-| `experiment_sumo/reports/experiment_report.md` | English | 主线结果（前沿、拟合、留出、闭环、敏感性） |
-
-## 状态与诚实边界说明
-
-- **状态：** 进行中的博士研究。合成直线走廊线路已端到端完成；真实场地（Bendemeer）验证已完成重标定；
-  四城外部验证正在运行。
-- 参考机器人采用固定尺寸（0.96 × 0.70 m）与速度（5 km/h），作为**容量代理**，而非完整自主导航栈。
-- JuPedSim 的 `CollisionFreeSpeedModel` 会把每个个体压缩成标量碰撞圆盘，因此机器人各向异性足迹
-  以 0.48 m 圆盘进入仿真；PRE 指标量化了由此产生的机器人当量。
-- 场地宽度 / 流量为**基于 OSM + POI 语境的估计值**（现场调查的桌面替代方案）；报告已明确说明。
-
-## 许可
-
-私有研究仓库 —— 暂无公开许可证，使用前请联系作者。
+私有研究仓库——无公开许可证。复用前请联系作者。

@@ -1,0 +1,47 @@
+FINAL D2 DATASET PROVENANCE
+===========================
+
+Status: RESOLVED — dataset located on this machine and verified (see
+D2_RECONSTRUCTION_VERIFICATION.md for the full record).
+
+Source location
+---------------
+D:\quota_experiment\pipeline\cells\full_reference_dataset.csv   (400 rows)
+D:\quota_experiment\pipeline\cells\main_280_reference_table.csv  (280)
+D:\quota_experiment\pipeline\cells\decoupled_120_reference_table.csv (120)
+D:\quota_experiment\pipeline\sim\outputs\refinement\refined_quota_reference_table.csv
+
+Raw source CSVs (seed-level):
+  pipeline\sim\outputs\p1_multicity\multicity_{baseline,sweep,results}.csv
+  pipeline\sim\outputs\decoupled\decoupled_{baseline,sweep,results}.csv
+  pipeline\sim\outputs\refinement\refinement_sweep.csv
+
+All 11 artifacts were copied into data/final/ of this repo (SHA-256 in
+data/final/SHA256SUMS.txt).
+
+Build chain (merge_datasets.py):
+  consolidate_reference.py  -> main_280 + decoupled_120 (per-seed pass_frac >= 29/30)
+  refine_boundary.py        -> refined_quota_reference_table (127 rows, 64 changed)
+  merge_datasets.py         -> full_reference_dataset (400 rows, qr_star overwritten
+                                by refinement where changed)
+
+Corrected-rule confirmation
+---------------------------
+Independent recomputation from RAW sweep/baseline CSVs (verify_qrstar_provenance.py):
+  VERDICT: PASS
+  - deployed qr_star == independent >=29/30 recompute : 349/349 tags
+  - deployed qr_star == old >0.5 (buggy) recompute    : 134/349 tags
+  - tags where the two rules differ (bug WOULD matter): 215
+  => qr_star is the corrected per-seed >=29/30 rule.
+
+base_pass note
+--------------
+The deployed base_pass column is MEAN-based (mean_density<=1.20 AND
+0.90<=mean_flow_ratio<=1.20 over the q_r=0 seeds), NOT per-seed >=29/30. It
+matches the mean rule on 400/400 rows and differs from the per-seed rule on
+8/400 rows (all decoupled high-q_p cells). qr_star itself is correctly 29/30.
+This does not affect the frozen headline, which uses the deployed column.
+
+SHA-256 (full_reference_dataset.csv)
+------------------------------------
+b2b6743d22b3fe4496cc11022c65eaf7b80508efa2996cb8f5538049fc4144e9

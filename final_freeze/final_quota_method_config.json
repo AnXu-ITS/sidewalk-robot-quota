@@ -1,0 +1,62 @@
+{
+  "method_version": "2026-09-freeze",
+  "dataset_version": "D2 = 280 + 120 = 400 combos (29/30 corrected reference)",
+  "git_commit": "c5bf01def5dcfefe06908ba3f67346e74cf045b6",
+  "nominal_model": {
+    "form": "q_hat_nom = c * W * (q_p / W)^p",
+    "c": 24.37,
+    "p": -0.945,
+    "width_exponent": {"value": 0.992, "se": 0.154, "note": "CI includes 1 -> keep W^1"}
+  },
+  "safety_margin": {
+    "method": "additive",
+    "delta": 3.1068,
+    "note": "delta = pooled Q0.80 of positive residuals (D80_FROZEN). Operational +Q80 applies LOCO fold-calibrated Q80 margins (per held-out city); the pooled value is the representative Delta_80."
+  },
+  "baseline_qualification": {
+    "engine": "Eclipse SUMO + JuPedSim",
+    "seeds": 30,
+    "pass_threshold": ">= 29/30 (>= 0.95)",
+    "density_limit": 1.20,
+    "flow_ratio_min": 0.90,
+    "flow_ratio_max": 1.20,
+    "note": "speed retention is vacuous at q_r = 0 and is excluded. NOTE: deployed base_pass column is MEAN-based (mean_density<=1.20 AND 0.90<=mean_flow_ratio<=1.20 over q_r=0 seeds); it differs from the per-seed >=29/30 rule in 8/400 decoupled high-qp rows. qr_star itself uses 29/30."
+  },
+  "guardrails": {
+    "W_min": 1.6,
+    "x_crit": 33.333333333333336,
+    "q_max": 20.0,
+    "Q_low": {
+      "W": [1.5, 1.6, 1.7, 1.8, 2.1, 2.4, 2.7, 3.0],
+      "Q": [0.0, 5.0, 6.0, 8.0, 10.0, 18.0, 20.0, 20.0]
+    },
+    "C_W": {
+      "W": [1.5, 1.6, 1.7, 1.8, 2.1, 2.4, 2.7, 3.0],
+      "C": [10.0, 35.0, 35.0, 45.0, 45.0, 55.0, 90.0, 90.0]
+    },
+    "sharp_corner_guard": {"max_turn_min_deg": 20.0, "cum_turn_min_deg": 20.0, "concentration_min": 0.6},
+    "absolute_speed_floor": {"vbar_min": 0.8}
+  },
+  "execution_order": ["OOD", "base_pass", "zero_guards", "nominal", "margin", "Q_low", "q_max", "floor"],
+  "applicability_domain": {
+    "W_range": [1.6, 3.0],
+    "q_p_max": 60.0,
+    "x_max": 33.333333333333336,
+    "geometry": "Type A, or Type B with sinuosity <= 1.05; no barriers; no sharp concentrated corners",
+    "ood_rule": "out-of-domain fallback — NO closed-form recommendation"
+  },
+  "dataset": {
+    "path": "data/final/full_reference_dataset.csv",
+    "sha256": "b2b6743d22b3fe4496cc11022c65eaf7b80508efa2996cb8f5538049fc4144e9",
+    "rows": 400,
+    "cities": ["amsterdam", "melbourne", "newtaipei", "nyc", "taipei", "seattle", "taoyuan"]
+  },
+  "code": {"commit": "c5bf01def5dcfefe06908ba3f67346e74cf045b6", "runtime": "final_freeze/src/operational_quota.py"},
+  "headline_results": {
+    "overprediction_chain_pct": [25.75, 6.75, 2.75],
+    "max_overprediction_chain": [19, 16, 7],
+    "mean_conservative_loss": 2.623,
+    "median_utilization": 0.25,
+    "loco_mae_model_A": 2.189
+  }
+}

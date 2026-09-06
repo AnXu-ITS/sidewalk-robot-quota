@@ -1,0 +1,418 @@
+{
+ "n": 39,
+ "plan": [
+  {
+   "tag": "AMS-4480626-0|qp18",
+   "qr_star": 12.0,
+   "next_level": 15,
+   "between": [
+    13,
+    14
+   ],
+   "fail_frac": 0.433,
+   "fail_Rv": 0.9
+  },
+  {
+   "tag": "AMS-4480644-0|qp43",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.067,
+   "fail_Rv": 0.863
+  },
+  {
+   "tag": "AMS-4495978-0|qp30",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.367,
+   "fail_Rv": 0.916
+  },
+  {
+   "tag": "AMS-4495979-0|qp12",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.333,
+   "fail_Rv": 0.891
+  },
+  {
+   "tag": "AMS-4495979-0|qp30",
+   "qr_star": 8.0,
+   "next_level": 10,
+   "between": [
+    9
+   ],
+   "fail_frac": 0.367,
+   "fail_Rv": 0.878
+  },
+  {
+   "tag": "AMS-4496429-0|qp30",
+   "qr_star": 6.0,
+   "next_level": 8,
+   "between": [
+    7
+   ],
+   "fail_frac": 0.433,
+   "fail_Rv": 0.895
+  },
+  {
+   "tag": "AMS-7371505-3|qp60",
+   "qr_star": 8.0,
+   "next_level": 10,
+   "between": [
+    9
+   ],
+   "fail_frac": 0.233,
+   "fail_Rv": 0.878
+  },
+  {
+   "tag": "SIN-1105987650-1|qp50",
+   "qr_star": 6.0,
+   "next_level": 8,
+   "between": [
+    7
+   ],
+   "fail_frac": 0.333,
+   "fail_Rv": 1.071
+  },
+  {
+   "tag": "SIN-139715353-1|qp9",
+   "qr_star": 18.0,
+   "next_level": 20,
+   "between": [
+    19
+   ],
+   "fail_frac": 0.233,
+   "fail_Rv": 0.876
+  },
+  {
+   "tag": "SIN-1464509030-0|qp36",
+   "qr_star": 12.0,
+   "next_level": 15,
+   "between": [
+    13,
+    14
+   ],
+   "fail_frac": 0.0,
+   "fail_Rv": 0.857
+  },
+  {
+   "tag": "SIN-166571436-2|qp10",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.333,
+   "fail_Rv": 0.885
+  },
+  {
+   "tag": "SIN-166571436-3|qp10",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.367,
+   "fail_Rv": 0.885
+  },
+  {
+   "tag": "SIN-170969415-0|qp22",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.367,
+   "fail_Rv": 0.88
+  },
+  {
+   "tag": "SIN-190681368-0|qp10",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.2,
+   "fail_Rv": 0.878
+  },
+  {
+   "tag": "SIN-190681368-0|qp24",
+   "qr_star": 8.0,
+   "next_level": 10,
+   "between": [
+    9
+   ],
+   "fail_frac": 0.467,
+   "fail_Rv": 0.879
+  },
+  {
+   "tag": "SIN-197634752-1|qp10",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.433,
+   "fail_Rv": 0.89
+  },
+  {
+   "tag": "SIN-197634752-1|qp24",
+   "qr_star": 8.0,
+   "next_level": 10,
+   "between": [
+    9
+   ],
+   "fail_frac": 0.467,
+   "fail_Rv": 0.894
+  },
+  {
+   "tag": "SIN-198571185-1|qp10",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.2,
+   "fail_Rv": 0.873
+  },
+  {
+   "tag": "SIN-198571185-1|qp24",
+   "qr_star": 10.0,
+   "next_level": 12,
+   "between": [
+    11
+   ],
+   "fail_frac": 0.233,
+   "fail_Rv": 0.858
+  },
+  {
+   "tag": "SIN-198571185-2|qp10",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.233,
+   "fail_Rv": 0.873
+  },
+  {
+   "tag": "SIN-198571185-2|qp24",
+   "qr_star": 8.0,
+   "next_level": 10,
+   "between": [
+    9
+   ],
+   "fail_frac": 0.4,
+   "fail_Rv": 0.897
+  },
+  {
+   "tag": "SIN-198571185-3|qp10",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.2,
+   "fail_Rv": 0.87
+  },
+  {
+   "tag": "SIN-198571185-3|qp24",
+   "qr_star": 10.0,
+   "next_level": 12,
+   "between": [
+    11
+   ],
+   "fail_frac": 0.233,
+   "fail_Rv": 0.85
+  },
+  {
+   "tag": "SIN-200167221-1|qp10",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.167,
+   "fail_Rv": 0.88
+  },
+  {
+   "tag": "SIN-200167221-1|qp24",
+   "qr_star": 8.0,
+   "next_level": 10,
+   "between": [
+    9
+   ],
+   "fail_frac": 0.367,
+   "fail_Rv": 0.887
+  },
+  {
+   "tag": "SIN-200171268-0|qp10",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.267,
+   "fail_Rv": 0.887
+  },
+  {
+   "tag": "SIN-200171268-0|qp24",
+   "qr_star": 10.0,
+   "next_level": 12,
+   "between": [
+    11
+   ],
+   "fail_frac": 0.4,
+   "fail_Rv": 0.88
+  },
+  {
+   "tag": "SIN-200171268-4|qp10",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.4,
+   "fail_Rv": 0.888
+  },
+  {
+   "tag": "SIN-22811726-0|qp27",
+   "qr_star": 6.0,
+   "next_level": 8,
+   "between": [
+    7
+   ],
+   "fail_frac": 0.3,
+   "fail_Rv": 0.879
+  },
+  {
+   "tag": "SIN-22811727-0|qp27",
+   "qr_star": 6.0,
+   "next_level": 8,
+   "between": [
+    7
+   ],
+   "fail_frac": 0.3,
+   "fail_Rv": 0.867
+  },
+  {
+   "tag": "SIN-22811728-0|qp27",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.5,
+   "fail_Rv": 0.901
+  },
+  {
+   "tag": "SIN-22928582-0|qp9",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.333,
+   "fail_Rv": 0.894
+  },
+  {
+   "tag": "SIN-22928582-1|qp22",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.333,
+   "fail_Rv": 0.873
+  },
+  {
+   "tag": "SIN-546209379-0|qp36",
+   "qr_star": 6.0,
+   "next_level": 8,
+   "between": [
+    7
+   ],
+   "fail_frac": 0.3,
+   "fail_Rv": 0.876
+  },
+  {
+   "tag": "SIN-546209379-1|qp36",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.433,
+   "fail_Rv": 0.885
+  },
+  {
+   "tag": "SIN-546209379-2|qp36",
+   "qr_star": 15.0,
+   "next_level": 18,
+   "between": [
+    16,
+    17
+   ],
+   "fail_frac": 0.367,
+   "fail_Rv": 0.883
+  },
+  {
+   "tag": "SIN-74587409-1|qp22",
+   "qr_star": 8.0,
+   "next_level": 10,
+   "between": [
+    9
+   ],
+   "fail_frac": 0.2,
+   "fail_Rv": 0.858
+  },
+  {
+   "tag": "SIN-74587409-1|qp9",
+   "qr_star": 12.0,
+   "next_level": 15,
+   "between": [
+    13,
+    14
+   ],
+   "fail_frac": 0.367,
+   "fail_Rv": 0.895
+  },
+  {
+   "tag": "SIN-74587409-2|qp22",
+   "qr_star": 8.0,
+   "next_level": 10,
+   "between": [
+    9
+   ],
+   "fail_frac": 0.3,
+   "fail_Rv": 0.874
+  }
+ ],
+ "total_scenarios": 1830
+}

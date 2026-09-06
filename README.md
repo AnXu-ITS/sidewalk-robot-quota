@@ -5,133 +5,142 @@
 > Given a sidewalk's **pedestrian flow** `q_p` and **effective width** `W`, output the
 > **maximum admissible delivery-robot flow** `q̂_r` that keeps pedestrian service acceptable.
 
-[中文说明](README.zh-CN.md) · [Research direction](配送机器人_研究方向_Quota算法更新版.md) ·
-[Experiment plan](配送机器人_实验计划书_SUMO_JuPedSim_新加坡.md) ·
-[Progress & next steps](实验进度与下一步计划_2026-08-22.md)
+[中文说明](README.zh-CN.md)
 
 ---
 
-## Overview
+## Status
 
-This repository holds the code, data pipeline and results behind the question
+This repository is the **authoritative, frozen** record of the refactored experiment
+(2026-09). All earlier synthetic straight-corridor work and pre-D2 plans/data have been
+moved to [`archive/2026-09-03_旧实验与旧数据/`](archive/2026-09-03_旧实验与旧数据/).
+Everything below reflects **this machine's** final method and results.
 
-> **How many delivery robots can a sidewalk handle?**
+## Final method (frozen)
 
-Instead of modelling how a single robot navigates a crowd, the project treats the sidewalk as a
-scarce public space and asks a traffic-engineering question: how much of that capacity can be
-allocated to delivery robots **without degrading pedestrian level of service**. The end product is a
-simple, interpretable quota rule
+Scientific law (width-normalized power law):
 
-$$\hat q_r = f(q_p, W)$$
+```
+q_hat_r = 24.37 * W * (q_p / W)^-0.945
+```
 
-that a regulator can apply directly — robot/min caps, time-window caps, or geofenced fleet quotas.
+- `c = 24.37`, `p = -0.945` (width exponent `α = 0.992 ± 0.154`; CI includes 1 → keep `W^1`).
+- Additive Q80 safety margin `Δ80 = 3.1068` (pooled Q0.80 of positive residuals; the
+  operational `+Q80` step uses LOCO fold-calibrated margins per held-out city).
+- Frozen execution order:
 
-### Why SUMO–JuPedSim
+```
+OOD -> base_pass -> zero_guards -> nominal -> -Δ80 -> Q_low -> q_max -> floor
+```
 
-The ground truth is generated with **Eclipse SUMO 1.27.1 + JuPedSim**
-(`--pedestrian.model jupedsim`): SUMO manages the network, demand and outputs while JuPedSim
-provides the two-dimensional pedestrian dynamics suited to real sidewalk walkable areas. A
-pedestrian-only baseline is calibrated first, then robot flow is swept upward until the
-pedestrian-service constraints break; that breaking point is the **simulation-derived reference
-quota** `q_r*`.
+Guardrails: `W_min = 1.6 m`, `x_crit = 33.33` ped/min/m, `q_max = 20` robot/min, and the
+`Q_low(W)` low-flow ceiling — these four produce the headline chain. The frozen config
+additionally specifies deployment-layer guards: `C(W)` capacity, sharp-corner guard, and
+an absolute speed floor (v̄ ≥ 0.8 m/s).
 
-## Key results (SUMO–JuPedSim main line)
+**Headline held-out-city overprediction chain** (LOCO, 7 cities):
 
-| Result | Value |
-|---|---|
-| Reference quota frontier | monotone — `q_r*` ↓ with `q_p`, ↑ with `W` (8 widths × 6 flows × 30 seeds) |
-| Model A (width-normalized power law) | `q̂_r = W · 28.22 · (q_p/W)^−0.828` |
-| Hard-zero rules | `x_crit = 33.3` ped/min/m (synthetic) → `29.0` (P1 real-site recalibration); `W_min = 1.6 m`; W-dependent capacity `C(W)`; `q_max = 20` robot/min |
-| Training MAE (A / B / A-iso) | 1.54 / 1.19 / 1.31 robot/min |
-| Held-out MAE (A / B / A-iso) | 2.65 / 2.30 / 2.75 robot/min |
-| Closed-loop service violation rate (A-floor) | **0.029** — the safe-side deployment rule |
-| Robot-speed robustness | ±20 % speed → quota change **0** |
+| Variant | Overprediction | Max overprediction |
+|---|---|---|
+| G0 nominal | **25.75 %** | **19** |
+| G1 + Q80 | **6.75 %** | **16** |
+| G1 + baseline guard | **2.75 %** | **7** |
 
-A headline extra is the **Pedestrian Replacement Equivalent (PRE)**: one robot "costs" as much as
-≈ **95 pedestrians** on a 1.5 m-wide sidewalk but only ≈ **2.3 pedestrians** on a 3.0 m-wide one —
-so the robot is *not* simply "one more pedestrian".
+LOCO MAE (model A): **2.189**.
 
-Real-site validation is anchored on **Bendemeer Road, Singapore** (the 2026 AIDEN delivery-robot
-exemption area) and is being extended to London / Tokyo / Amsterdam for cross-city transfer. Full
-numbers and honest limitations: [`experiment_sumo/reports/experiment_report.md`](experiment_sumo/reports/experiment_report.md).
+**Single source of truth:** [`final_freeze/final_quota_method_config.yaml`](final_freeze/final_quota_method_config.yaml)
+(+ JSON twin). Frozen runtime: [`final_freeze/src/operational_quota.py`](final_freeze/src/operational_quota.py).
+The `quota_params/*.json` files are **superseded pre-D2 calibration** — do not cite
+(see `quota_params/SUPERSEDED_DO_NOT_USE.md`).
 
-## Repository structure
+### Deployment model
+
+> offline sidewalk qualification + online closed-form quota assignment
+
+`base_pass` is a per-(cell, pedestrian-flow) flag from a pedestrian-only (`q_r = 0`)
+SUMO–JuPedSim baseline. It is precomputed **offline** as a lookup table; **online** use
+queries it, then applies the closed-form rule. It is **not** a closed-form function of
+`(W, q_p)` alone.
+
+Baseline criterion (over 30 seeds): mean density ≤ 1.20 ped/m² **and**
+0.90 ≤ mean flow ratio ≤ 1.20 (mean-based). The per-seed `≥ 29/30` rule defines the
+reference quota `q_r*`; the deployed `base_pass` column follows the mean-based rule and
+differs from the per-seed rule in 8/400 decoupled high-q_p rows (documented, no headline
+impact).
+
+## Data (D2)
+
+The final reference dataset lives in [`data/final/`](data/final/):
+
+- `full_reference_dataset.csv` — 400 combos (280 main + 120 decoupled), 7 cities.
+- Constituent / reference / refinement tables + seed-level baseline/sweep CSVs.
+- `SHA256SUMS.txt` — immutable hashes (root dataset hash `b2b6743d…4144e9`).
+
+Key facts: `base_pass` 349 pass / 51 fail; `q_r*` 194 zero / 206 positive; in-domain 164 /
+OOD 236; pooled evaluation denominator 400. Provenance chain:
+`consolidate_reference.py → refine_boundary.py (64 changed) → merge_datasets.py`
+(see `final_freeze/final_d2_provenance.txt` and `final_freeze/D2_RECONSTRUCTION_VERIFICATION.md`).
+
+The 7-city sidewalk geometry dataset is in [`train_test_mapdata/`](train_test_mapdata/)
+(GeoJSON, stored via **Git LFS**).
+
+## Reproduction
+
+```bash
+# 1) verify the frozen runtime (mechanical self-test)
+python final_freeze/src/operational_quota.py
+
+# 2) verify the D2 dataset (shape + counts + base_pass rule)
+python final_freeze/src/verify_d2.py data/final/full_reference_dataset.csv
+python final_freeze/src/verify_base_pass.py
+
+# 3) reproduce the headline chain from the D2 table in data/final/
+python final_freeze/src/reproduce_frozen_chain.py
+```
+
+Expected: overprediction `25.75 -> 6.75 -> 2.75 %`, max `19 -> 16 -> 7`.
+See `final_freeze/SHA256SUMS.txt` for immutable hashes and
+`final_freeze/FINAL_REPRODUCIBILITY_FREEZE_REPORT.md` for the full audit.
+
+## Repository layout
 
 ```
 .
-├── experiment/                      # Pure-Python social-force MVP (standalone, full pipeline)
-│   ├── scripts/                     #   simulator, ground truth, fitting, validation, figures
-│   ├── data/processed/              #   fitted predictions & metrics
-│   ├── models/quota_algorithm/      #   fitted model parameters (JSON)
-│   ├── outputs/                     #   baseline / sweeps / quota_labels / validation / figures
-│   └── reports/                     #   experiment + calibration report
-│
-├── experiment_sumo/                 # SUMO–JuPedSim main line (primary results)
-│   ├── scripts/                     #   simulator, fit_quota, validate, sensitivity, P1 real-site, ...
-│   ├── data/processed/              #   fit metrics
-│   ├── models/quota_algorithm/      #   quota_params.json (+ quota_params_p1.json recalibration)
-│   ├── outputs/                     #   quota_labels / validation / figures / p1_real_site / p1_multicity
-│   └── reports/                     #   experiment_report.md, calibration_report.md, p1_real_site_report.md
-│
-├── sumo_jupedsim/                   # Real-site data pipeline (OSM → cells → flow estimates)
-│   ├── scripts/                     #   download_osm, analyze_osm, build_cells, estimate_site_flow
-│   └── data/                        #   cells.json, per-city cell tables, site selection & coverage docs
-│
-└── (root .md files)                 # Research direction, experiment plan, progress & next steps
+├── README.md / README.zh-CN.md   # this guide (EN / 中文)
+├── final_freeze/                 # FROZEN method: config, runtime, verification docs
+│   ├── final_quota_method_config.{yaml,json}
+│   └── src/                      # operational_quota.py, reproduce_frozen_chain.py, verify_*.py
+├── data/final/                   # D2 dataset + hashes (authoritative)
+├── pipeline/                     # real-city calibration pipeline (cells, POI, SUMO driver)
+├── train_test_mapdata/           # 7-city sidewalk geometry (GeoJSON via Git LFS)
+├── quota_params/                 # superseded pre-D2 params (do not use)
+├── archive/2026-09-03_旧实验与旧数据/  # archived prior experiments/plans/data
+└── (root .md)                    # research direction / plan / migration notes (2026-09)
 ```
 
-## Getting started
+## Honest scope notes
 
-### Requirements
+- All quota references are **simulation-derived** (SUMO–JuPedSim), not real-world
+  measured capacity. **No formal real-world safety guarantee is made.**
+- Applicability domain: `1.6 ≤ W ≤ 3.0 m`, `q_p ≤ 60`, `x < 33.33`,
+  straight-to-mildly-curved geometry (Type A, or Type B with sinuosity ≤ 1.05).
+  Out-of-domain inputs require the **OOD fallback** (no closed-form recommendation).
+- Pedestrian flows `q_p` are **POI-based priors**, not field counts (stated as such in the papers).
+- The reference robot is a capacity proxy (0.96 × 0.70 m footprint, 5 km/h).
 
-- **Python 3.10+** with `numpy`, `scipy`, `pandas`, `matplotlib`.
-- **Eclipse SUMO 1.27.1** (with the integrated JuPedSim pedestrian model) on `PATH` — required only
-  for `experiment_sumo/` and `sumo_jupedsim/`. `experiment/` is a self-contained Python simulator.
+## Ground truth engine
 
-### Reproduce
+Eclipse SUMO + JuPedSim (`--pedestrian.model jupedsim`): pedestrian-only baseline, then an
+ascending robot-flow sweep (0→20 robot/min, early stop) until pedestrian-service
+constraints break; the breaking point is the reference quota `q_r*`. Protocol: 30 seeds,
+per-seed ≥ 29/30 pass as the primary criterion (mean as upper bound), frozen before test
+cities are evaluated.
 
-```bash
-# 1) Pure-Python MVP (no SUMO required)
-cd experiment
-pip install numpy scipy pandas matplotlib
-python scripts/run_all.py --n-procs 16
+## Requirements
 
-# 2) SUMO–JuPedSim main line (requires SUMO 1.27.1 + JuPedSim)
-cd experiment_sumo
-python scripts/run_all.py
-
-# 3) Real-site data pipeline
-cd sumo_jupedsim
-python scripts/download_osm.py          # download OSM extracts (not committed)
-python scripts/analyze_osm.py           # classify cells (Type A/B/C/D)
-python scripts/build_cells.py           # cut 50 m cells + stratified selection
-python scripts/estimate_site_flow.py    # estimate W_eff and q_p from POI context
-```
-
-Raw OSM downloads and the converted `bendemeer.net.xml` are intentionally **not committed**
-(regenerate with the scripts above). Large SUMO run dumps (`outputs/sumo_tmp/`), batch scratch
-(`outputs/_batch_tmp/`) and logs are also excluded via `.gitignore`.
-
-## Documentation
-
-| Document | Language | Content |
-|---|---|---|
-| `配送机器人_研究方向_Quota算法更新版.md` | 中文 | Research direction: the quota problem, research questions, algorithm form, validation metrics |
-| `配送机器人_实验计划书_SUMO_JuPedSim_新加坡.md` | 中文 | Full experiment plan (phases, ground-truth definition, validation) |
-| `实验进度与下一步计划_2026-08-22.md` | 中文 | Current progress snapshot + prioritized next steps |
-| `experiment_sumo/reports/experiment_report.md` | English | Main-line results (frontier, fit, held-out, closed-loop, sensitivity) |
-
-## Status & honest scope notes
-
-- **Status:** in-progress PhD research. The synthetic straight-corridor line is complete end-to-end;
-  real-site (Bendemeer) validation is recalibrated; 4-city external validation is running.
-- The reference robot uses a fixed footprint (0.96 × 0.70 m) and speed (5 km/h) as a **capacity
-  proxy**, not a full autonomy stack.
-- JuPedSim's `CollisionFreeSpeedModel` reduces each agent to a scalar collision disc, so the robot's
-  anisotropic footprint enters as a 0.48 m disc; the PRE metric quantifies the resulting
-  robot-equivalent.
-- Field width / flow are **estimates from OSM + POI context** (a desktop substitute for site
-  surveys); the reports state this explicitly.
+- Python 3.10+ with `numpy`, `scipy`, `pandas`.
+- Eclipse SUMO 1.27.1 (with JuPedSim) on `PATH` (`SUMO_HOME`) — only for re-running the
+  ground-truth campaign; the frozen reproduction above needs no SUMO.
 
 ## License
 
