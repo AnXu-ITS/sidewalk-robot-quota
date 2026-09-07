@@ -29,3 +29,10 @@ desktop.ini
 .idea/
 .vscode/
 *.swp
+
+# ---- External validation: raw GIS source data (large / external provenance) ----
+# 317 MB geojson + 40 MB zip + extracted FGDB; provenance recorded in sites/
+# and manifests/, not committed (GitHub 100 MB/file hard limit + redistribution).
+external_validation/hong_kong/data/raw/
+external_validation/hong_kong/data/processed/
+external_validation/hong_kong/scenarios/

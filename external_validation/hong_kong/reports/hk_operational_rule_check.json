@@ -1,0 +1,121 @@
+{
+  "constants": {
+    "c": 24.374155890965095,
+    "p": -0.9454494315945483,
+    "delta": 3.1068
+  },
+  "constants_match_frozen": true,
+  "config_cities": [
+    "amsterdam",
+    "melbourne",
+    "newtaipei",
+    "nyc",
+    "taipei",
+    "seattle",
+    "taoyuan"
+  ],
+  "hongkong_absent": true,
+  "dataset_ref": {
+    "path": "data/final/full_reference_dataset.csv",
+    "sha256": "b2b6743d22b3fe4496cc11022c65eaf7b80508efa2996cb8f5538049fc4144e9",
+    "rows": 400
+  },
+  "baseline_qualification_frozen": {
+    "engine": "Eclipse SUMO + JuPedSim",
+    "seeds": 30,
+    "pass_threshold": ">= 29/30 (>= 0.95)",
+    "density_limit": 1.2,
+    "flow_ratio": [
+      0.9,
+      1.2
+    ]
+  },
+  "cells": {
+    "HK-ST-01": {
+      "W": 2.331,
+      "qp": 20.0,
+      "x": 8.58,
+      "in_domain": true,
+      "quota_base_pass_1": 4.0,
+      "quota_base_pass_0": 0.0
+    },
+    "HK-ST-02": {
+      "W": 2.657,
+      "qp": 20.0,
+      "x": 7.5273,
+      "in_domain": true,
+      "quota_base_pass_1": 6.0,
+      "quota_base_pass_0": 0.0
+    },
+    "HK-ST-03": {
+      "W": 0.921,
+      "qp": 20.0,
+      "x": 21.7155,
+      "in_domain": false,
+      "quota_base_pass_1": null,
+      "quota_base_pass_0": null
+    }
+  },
+  "execution_order_frozen": "OOD -> base_pass -> zero_guards -> nominal -> margin -> Q_low -> q_max -> floor",
+  "guardrails_frozen": {
+    "W_min": 1.6,
+    "x_crit": 33.333333333333336,
+    "q_max": 20.0,
+    "Q_low_W": [
+      1.5,
+      1.6,
+      1.7,
+      1.8,
+      2.1,
+      2.4,
+      2.7,
+      3.0
+    ],
+    "Q_low_Q": [
+      0.0,
+      5.0,
+      6.0,
+      8.0,
+      10.0,
+      18.0,
+      20.0,
+      20.0
+    ],
+    "C_W": [
+      1.5,
+      1.6,
+      1.7,
+      1.8,
+      2.1,
+      2.4,
+      2.7,
+      3.0
+    ],
+    "C_C": [
+      10.0,
+      35.0,
+      35.0,
+      45.0,
+      45.0,
+      55.0,
+      90.0,
+      90.0
+    ],
+    "sharp": {
+      "max_turn_min_deg": 20.0,
+      "cum_turn_min_deg": 20.0,
+      "concentration_min": 0.6
+    },
+    "vbar_min": 0.8,
+    "W_domain": [
+      1.6,
+      3.0
+    ],
+    "qp_max": 60.0,
+    "type_in_domain": [
+      "A",
+      "B"
+    ],
+    "type_b_sinuosity_max": 1.05
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "method_version": "2026-09-freeze-v2",
+  "parent": "2026-09-freeze (final_freeze/final_quota_method_config.json)",
+  "changes_from_v1": [
+    "width_resolution: wide W>3.0 -> clamp W_eff=3.0 (A/B) / bottleneck width_p10 (C), no abstention",
+    "safety_margin: global additive delta 3.1068 replaced by per-width-bin delta fitted on D2 train cities",
+    "applicability_domain: W upper bound removed (clamped); C type admitted via bottleneck width"
+  ],
+  "nominal_model": {
+    "form": "q_hat_nom = c * W_eff * (q_p / W_eff)^p",
+    "c": 24.374155890965095,
+    "p": -0.9454494315945483,
+    "note": "c and p UNCHANGED from frozen v1"
+  },
+  "width_resolution": {
+    "type_A_or_B": "W_eff = min(W, 3.0)",
+    "type_C": "W_eff = min(width_p10, 3.0)",
+    "narrow_lower_bound": "W_eff < 1.6 -> OOD (abstain)",
+    "width_p10_def": "10th percentile of perpendicular cross-section width along the OBB long axis",
+    "note": "wedge/tapered A/B cells are treated by the OBB clamp (not the bottleneck); accepted overprediction tradeoff"
+  },
+  "safety_margin": {
+    "method": "additive constant (zero)",
+    "delta": 0.00,
+    "note": "research-owner decision: utilization-priority. delta=0 for ALL widths; the margin was redundant with Q_low/C(W)/floor which already bound overprediction to <= +3 on D2.",
+    "rationale": "D2 full-rule sweep (n=192): delta=0 -> util_med 68.4%, overpred 7.8% (max +3, total +20); delta=3.1 -> util_med 20.0%, overpred 0%. HK 13 valid: delta=0 -> util_med 56%, overpred 2 cells (+2,+1)."
+  },
+  "baseline_qualification": {
+    "engine": "Eclipse SUMO + JuPedSim",
+    "seeds": 30,
+    "pass_threshold": ">= 29/30 (>= 0.95)",
+    "base_pass_rule": "MEAN-based: mean_density<=1.20 AND 0.90<=mean_flow_ratio<=1.20 over q_r=0 seeds",
+    "density_limit": 1.20,
+    "flow_ratio_min": 0.90,
+    "flow_ratio_max": 1.20
+  },
+  "guardrails": {
+    "W_min": 1.6,
+    "x_crit": 33.333333333333336,
+    "q_max": 20.0,
+    "Q_low": {
+      "W": [1.5, 1.6, 1.7, 1.8, 2.1, 2.4, 2.7, 3.0],
+      "Q": [0.0, 5.0, 6.0, 8.0, 10.0, 18.0, 20.0, 20.0]
+    },
+    "C_W": {
+      "W": [1.5, 1.6, 1.7, 1.8, 2.1, 2.4, 2.7, 3.0],
+      "C": [10.0, 35.0, 35.0, 45.0, 45.0, 55.0, 90.0, 90.0]
+    },
+    "sharp_corner_guard": {"max_turn_min_deg": 20.0, "cum_turn_min_deg": 20.0, "concentration_min": 0.6},
+    "absolute_speed_floor": {"vbar_min": 0.8}
+  },
+  "execution_order": ["width_resolution", "OOD(narrow)", "base_pass", "zero_guards", "nominal", "segmented_margin", "Q_low", "q_max", "floor"],
+  "applicability_domain": {
+    "W_eff_range": [1.6, 3.0],
+    "q_p_max": 60.0,
+    "x_max": 33.333333333333336,
+    "type_in_domain": ["A", "B", "C"],
+    "type_b_sinuosity_max": 1.05,
+    "type_C_resolution": "bottleneck width (width_p10), clamped to 3.0",
+    "ood_rule": "W_eff < 1.6 -> out-of-domain fallback (abstain)"
+  },
+  "dataset": {
+    "path": "data/final/full_reference_dataset.csv",
+    "rows": 400,
+    "cities": ["amsterdam", "melbourne", "newtaipei", "nyc", "taipei", "seattle", "taoyuan"],
+    "train_cities_for_margin_fit": ["amsterdam", "melbourne", "newtaipei", "nyc", "taipei"],
+    "heldout_cities": ["seattle", "taoyuan", "hongkong"]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "n_combos": 32,
+  "n_in_domain": 18,
+  "n_ood": 14,
+  "ped_flows": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60
+  ],
+  "robot_flows_base": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+  ],
+  "robot_flows_extended": [
+    12,
+    15,
+    18,
+    20
+  ],
+  "n_seeds_baseline": 30,
+  "n_seeds_sweep": 30,
+  "matrix_sha256": "8D25E5F63749E33001693D466D4C9C483D143E8FEDBE44E33091812C7ED8F5B6",
+  "demand_label": "synthetic experimental demand"
+}

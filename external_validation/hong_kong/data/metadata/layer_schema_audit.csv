@@ -1,0 +1,13 @@
+layer,column,dtype,null_rate,n_unique,sample
+INV_PG,OBJECTID,int32,0.0,1174,np.int32(16692)
+INV_PG,PG_UID,str,0.0,1173,'PG20E0711'
+INV_PG,FEAT_TYPE,str,0.0,5,'Carriageway'
+INV_PG,SUR_TYPE_1,str,0.0,5,'Flexible (without Colour / Anti-skid Dressing)'
+INV_PG,PAVER_TYPE,str,0.313458262350937,2,'Clay'
+INV_PG,LVL,str,0.0,2,'Ground level'
+INV_PG,Shape_Length,float64,0.0,1173,np.float64(148.66202707819562)
+INV_PG,Shape_Area,float64,0.0,1173,np.float64(392.11242003116007)
+INV_PG,geometry,geometry,0.0,1173,"<POLYGON ((114.178 22.377, 114.178 22.377, 114.178 22.377, 114.178 22.377, 1...>"
+INV_PG,is_footway,bool,0.0,2,np.False_
+INV_PG,is_ground,bool,0.0,2,np.True_
+INV_PG,is_ground_public_footway,bool,0.0,2,np.False_

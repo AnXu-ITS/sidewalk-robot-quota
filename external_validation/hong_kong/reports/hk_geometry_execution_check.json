@@ -1,0 +1,52 @@
+{
+  "HK-ST-01": {
+    "cell": "HK-ST-01",
+    "L": 50.0,
+    "gis_area": 116.571,
+    "sumo_area": 116.55,
+    "area_ratio": 0.999822,
+    "gis_bounds": [
+      0.0,
+      -1.171,
+      50.0,
+      1.174
+    ],
+    "sumo_bounds": [
+      0.0,
+      -1.171,
+      50.0,
+      1.174
+    ],
+    "gis_n_vertices": 6,
+    "sumo_n_vertices": 6,
+    "sumo_is_rectangle": false,
+    "sym_diff_area": 0.0302,
+    "edge_eA": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.5,
+        0.0
+      ]
+    ],
+    "edge_eB": [
+      [
+        49.5,
+        0.0
+      ],
+      [
+        50.0,
+        0.0
+      ]
+    ],
+    "sym_diff_ratio": 0.000259
+  },
+  "HK-ST-02": {
+    "note": "no scenario dir found (not yet simulated)"
+  },
+  "HK-ST-03": {
+    "note": "no scenario dir found (not yet simulated)"
+  }
+}

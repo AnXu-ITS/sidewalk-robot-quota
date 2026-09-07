@@ -1,0 +1,42 @@
+{
+  "n_cells": 32,
+  "freeze_csv_sha256": "D9A08685D8B16BF2D1768A100DA4DEAC91090B703CA19683D59A371A6F3F7938",
+  "target": 32,
+  "bins": [
+    {
+      "label": "ood_narrow",
+      "lo": 1.2,
+      "hi": 1.6,
+      "target": 4,
+      "in_domain": false
+    },
+    {
+      "label": "narrow",
+      "lo": 1.6,
+      "hi": 2.0,
+      "target": 7,
+      "in_domain": true
+    },
+    {
+      "label": "mid",
+      "lo": 2.0,
+      "hi": 2.4,
+      "target": 9,
+      "in_domain": true
+    },
+    {
+      "label": "wide",
+      "lo": 2.4,
+      "hi": 3.0,
+      "target": 10,
+      "in_domain": true
+    },
+    {
+      "label": "ood_wide",
+      "lo": 3.0,
+      "hi": 3.5,
+      "target": 2,
+      "in_domain": false
+    }
+  ]
+}

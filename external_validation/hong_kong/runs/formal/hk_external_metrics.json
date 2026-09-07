@@ -1,0 +1,179 @@
+{
+  "metrics": {
+    "mae": {
+      "estimate": 4.8462,
+      "ci95": [
+        3.075,
+        6.6923
+      ]
+    },
+    "rmse": {
+      "estimate": 5.955,
+      "ci95": [
+        4.2238,
+        7.4058
+      ]
+    },
+    "median_abs_err": {
+      "estimate": 6.0,
+      "ci95": [
+        2.0,
+        6.0
+      ]
+    },
+    "overprediction_rate": {
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "mean_positive_overpred": {
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "max_positive_overpred": {
+      "estimate": 0.0,
+      "ci95": [
+        -2.0,
+        0.0
+      ]
+    },
+    "mean_conservative_loss": {
+      "estimate": 6.3,
+      "ci95": [
+        4.6667,
+        7.8889
+      ]
+    },
+    "median_utilization": {
+      "estimate": 0.1667,
+      "ci95": [
+        0.0,
+        0.2508
+      ]
+    },
+    "feasible_zeroing_rate": {
+      "estimate": 0.4615,
+      "ci95": [
+        0.2308,
+        0.6923
+      ]
+    }
+  },
+  "nominal": {
+    "mae": 3.0,
+    "overpred_rate": 0.3077
+  },
+  "feasibility": {
+    "baseline_fail": 0,
+    "zero_guard": 6,
+    "n_spawn_excluded": 5,
+    "n_in_domain": 13,
+    "n_ood": 14,
+    "n_total": 32
+  },
+  "per_group": {
+    "width": [
+      {
+        "wbin": "narrow(1.6-2.0)",
+        "n": 4.0,
+        "mae": 2.5,
+        "rmse": 3.605551275463989,
+        "over_rate": 0.0,
+        "mean_oper": 0.5,
+        "mean_ref": 3.0
+      },
+      {
+        "wbin": "mid(2.0-2.4)",
+        "n": 5.0,
+        "mae": 3.6,
+        "rmse": 4.2895221179054435,
+        "over_rate": 0.0,
+        "mean_oper": 3.0,
+        "mean_ref": 6.6
+      },
+      {
+        "wbin": "wide(2.4-3.0)",
+        "n": 4.0,
+        "mae": 8.75,
+        "rmse": 8.902246907382429,
+        "over_rate": 0.0,
+        "mean_oper": 1.25,
+        "mean_ref": 10.0
+      }
+    ],
+    "x": [
+      {
+        "xbin": "x<8",
+        "n": 1.0,
+        "mae": 2.0,
+        "rmse": 2.0,
+        "over_rate": 0.0,
+        "mean_oper": 10.0,
+        "mean_ref": 12.0
+      },
+      {
+        "xbin": "8-15",
+        "n": 5.0,
+        "mae": 7.2,
+        "rmse": 7.58946638440411,
+        "over_rate": 0.0,
+        "mean_oper": 2.2,
+        "mean_ref": 9.4
+      },
+      {
+        "xbin": "15-22",
+        "n": 5.0,
+        "mae": 5.0,
+        "rmse": 5.813776741499453,
+        "over_rate": 0.0,
+        "mean_oper": 0.2,
+        "mean_ref": 5.2
+      },
+      {
+        "xbin": "22-33",
+        "n": 2.0,
+        "mae": 0.0,
+        "rmse": 0.0,
+        "over_rate": 0.0,
+        "mean_oper": 0.0,
+        "mean_ref": 0.0
+      }
+    ],
+    "geometry": [
+      {
+        "geometry_type": "A",
+        "n": 8.0,
+        "mae": 5.5,
+        "rmse": 6.4031242374328485,
+        "over_rate": 0.0,
+        "mean_oper": 2.625,
+        "mean_ref": 8.125
+      },
+      {
+        "geometry_type": "B",
+        "n": 5.0,
+        "mae": 3.8,
+        "rmse": 5.157518783291051,
+        "over_rate": 0.0,
+        "mean_oper": 0.2,
+        "mean_ref": 4.0
+      }
+    ]
+  },
+  "d2_transfer": {
+    "d2_in_domain_n": 164,
+    "d2_mae": 4.4939,
+    "d2_rmse": 5.6574,
+    "d2_overpred": 0.0,
+    "hk_mae": 4.8462,
+    "hk_rmse": 5.955,
+    "hk_overpred": 0.0,
+    "mae_gap": 0.3523,
+    "rmse_gap": 0.2976
+  }
+}

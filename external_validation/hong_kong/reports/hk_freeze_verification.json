@@ -1,0 +1,82 @@
+{
+  "d2_cities": [
+    "amsterdam",
+    "melbourne",
+    "newtaipei",
+    "nyc",
+    "taipei",
+    "seattle",
+    "taoyuan"
+  ],
+  "hongkong_absent": true,
+  "d2_dataset": {
+    "path": "data/final/full_reference_dataset.csv",
+    "claimed_sha": "b2b6743d22b3fe4496cc11022c65eaf7b80508efa2996cb8f5538049fc4144e9",
+    "actual_sha": "b2b6743d22b3fe4496cc11022c65eaf7b80508efa2996cb8f5538049fc4144e9",
+    "sha_match": true,
+    "rows": 400
+  },
+  "constants": {
+    "c": 24.374155890965095,
+    "p": -0.9454494315945483,
+    "delta": 3.1068,
+    "c_match": true,
+    "p_match": true,
+    "delta_match": true
+  },
+  "execution_order": [
+    "OOD",
+    "base_pass",
+    "zero_guards",
+    "nominal",
+    "margin",
+    "Q_low",
+    "q_max",
+    "floor"
+  ],
+  "baseline_qualification": {
+    "engine": "Eclipse SUMO + JuPedSim",
+    "seeds": 30,
+    "pass_threshold": ">= 29/30 (>= 0.95)",
+    "density_limit": 1.2,
+    "flow_ratio_min": 0.9,
+    "flow_ratio_max": 1.2,
+    "note": "speed retention is vacuous at q_r = 0 and is excluded. NOTE: deployed base_pass column is MEAN-based (mean_density<=1.20 AND 0.90<=mean_flow_ratio<=1.20 over q_r=0 seeds); it differs from the per-seed >=29/30 rule in 8/400 decoupled high-qp rows. qr_star itself uses 29/30."
+  },
+  "base_pass_note": "speed retention is vacuous at q_r = 0 and is excluded. NOTE: deployed base_pass column is MEAN-based (mean_density<=1.20 AND 0.90<=mean_flow_ratio<=1.20 over q_r=0 seeds); it differs from the per-seed >=29/30 rule in 8/400 decoupled high-qp rows. qr_star itself uses 29/30.",
+  "method_version": "2026-09-freeze",
+  "git_commit": "c5bf01def5dcfefe06908ba3f67346e74cf045b6",
+  "frozen_file_sha": [
+    {
+      "file": "final_quota_method_config.json",
+      "actual": "74d7ba7450e1e75d9736e57e869dcdba52f28105f7f3813eeb321055eb151375",
+      "claimed": "9502c22acbc3c5e8679db1ed96817c4f45eda3a7720fc9633b4a4d50d7800d11",
+      "match": false
+    },
+    {
+      "file": "final_quota_method_config.yaml",
+      "actual": "62f48addf06453aee64b431cc03cc6393ae754e0452a190510d524b405a61c8b",
+      "claimed": "72d54b8de77d54af30a76c6add864d33a48d65189753f97cd855167d4b19495c",
+      "match": false
+    },
+    {
+      "file": "src/operational_quota.py",
+      "actual": "7cdefa965f5a9a12b31b03bdc67c6648048d79ff0b8c5dcbab9adc87d3a183be",
+      "claimed": "e3c4fc6a814fbbab216f975cf86cf9d064943003f4bf9f6241541eb749ba6481",
+      "match": false
+    },
+    {
+      "file": "final_operational_rule.md",
+      "actual": "040e56adae6adf8cfc3081d68ed67509f229be07957f855e9fe52c344b10338c",
+      "claimed": "040e56adae6adf8cfc3081d68ed67509f229be07957f855e9fe52c344b10338c",
+      "match": true
+    },
+    {
+      "file": "base_pass_deployment_final.md",
+      "actual": "8b2f334a249ee1c4cf7f022868fc811970829aea70f892983a9b4064da78414c",
+      "claimed": "8b2f334a249ee1c4cf7f022868fc811970829aea70f892983a9b4064da78414c",
+      "match": true
+    }
+  ],
+  "runtime_selftest_ok": true
+}
