@@ -1,0 +1,52 @@
+[
+  {
+    "key": "VirginiaPDD",
+    "agency": "Virginia General Assembly",
+    "year": "2020",
+    "title": "Personal delivery devices",
+    "section": "Code of Virginia, Section 46.2-908.1:1",
+    "date_basis": "Last amendment listed: 2020, chapter 1269; first enacted 2017",
+    "url": "https://law.lis.virginia.gov/vacode/title46.2/chapter8/section46.2-908.1:1/",
+    "accessed": "2026-09-17"
+  },
+  {
+    "key": "WashingtonPDD",
+    "agency": "Washington State Legislature",
+    "year": "2019",
+    "title": "Operation---Requirements",
+    "section": "RCW 46.75.020",
+    "date_basis": "2019 chapter 214, section 2",
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=46.75.020",
+    "accessed": "2026-09-17"
+  },
+  {
+    "key": "LTAExemptions",
+    "agency": "Land Transport Authority",
+    "year": "2022",
+    "title": "Exemption request for active mobility devices",
+    "section": "Application to exempt active mobility devices or events/trials",
+    "date_basis": "Page last updated 18 March 2022",
+    "url": "https://www.lta.gov.sg/content/ltagov/en/industry_innovations/industry_matters/regulations_licensing/active_mobility/exemption_request_for_active_mobility_devices.html",
+    "accessed": "2026-09-17"
+  },
+  {
+    "key": "IMDAPunggol",
+    "agency": "Infocomm Media Development Authority",
+    "year": "2021",
+    "title": "Autonomous robots trial to provide on-demand parcel and grocery delivery to Punggol residents",
+    "section": "Press release, March 11",
+    "date_basis": "Release dated 11 March 2021; official search-index text confirms safety-officer accompaniment",
+    "url": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2021/autonomous%20robots%20trial%20to%20provide%20on-demand%20parcel%20and%20grocery%20delivery%20to%20punggol%20residents",
+    "accessed": "2026-09-17"
+  },
+  {
+    "key": "DDOTPDD",
+    "agency": "District Department of Transportation",
+    "year": "2026",
+    "title": "District Department of Transportation issues two additional permits for personal delivery devices",
+    "section": "Press release, July 16",
+    "date_basis": "Release dated 16 July 2026",
+    "url": "https://ddot.dc.gov/release/district-department-transportation-issues-two-additional-permits-personal-delivery-devices",
+    "accessed": "2026-09-17"
+  }
+]

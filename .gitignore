@@ -1,38 +1,35 @@
-# ---- Python ----
+# Publication tree only. Original research workspace and raw evidence stay local.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/README.zh-CN.md
+!/CITATION.cff
+!/requirements.txt
+!/.github/
+!/paper/
+!/src/
+!/scripts/
+!/configs/
+!/code/
+!/docs/
+!/tests/
+!/data/
+/data/*
+!/data/submission/
+!/data/diagnostics/
+!/data/geometry/
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.venv/
-venv/
-env/
-build/
-dist/
-*.egg-info/
-
-# ---- Logs & error streams ----
+*.aux
+*.bbl
+*.blg
 *.log
-*.err
-
-# ---- SUMO temporary run directories (large FCD / error dumps) ----
-pipeline/sim/outputs/
-*_tmp/
-sumo_tmp/
-
-# ---- Migration snapshot (redundant; contents live in data/final + repo) ----
-quota_law_experiment_kit_*.zip
-
-# ---- OS / editor / IDE ----
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
 .DS_Store
 Thumbs.db
-desktop.ini
-.idea/
-.vscode/
-*.swp
-
-# ---- External validation: raw GIS source data (large / external provenance) ----
-# 317 MB geojson + 40 MB zip + extracted FGDB; provenance recorded in sites/
-# and manifests/, not committed (GitHub 100 MB/file hard limit + redistribution).
-external_validation/hong_kong/data/raw/
-external_validation/hong_kong/data/processed/
-external_validation/hong_kong/scenarios/
+.env
+.env.*

@@ -1,4 +1,0 @@
-cell_id,source_id,city,W,L,qp,x,width_min,width_median,width_p10,width_method,geometry_type,sinuosity,rect_fill,source_crs,source_date,applicability_status,x_hk1980,y_hk1980,lon0,lat0,lon1,lat1,centerline_local
-HK-ST-01,PG4019702R0312,hongkong,2.331,50.0,,,2.32,2.331,2.322,perpendicular-cross-section (centerline normal),A,1.0,0.992,EPSG:2326,2026-08-14,in-domain,837506.933,826705.008,114.188905,22.379552,114.188583,22.379214,"[[0.0, 0.0], [50.0, 0.0]]"
-HK-ST-02,PG4019703R0312,hongkong,2.657,50.0,,,2.627,2.657,2.633,perpendicular-cross-section (centerline normal),A,1.0,0.963,EPSG:2326,2026-08-14,in-domain,837449.659,826940.426,114.188349,22.381678,114.188668,22.382018,"[[0.0, 0.0], [50.0, 0.0]]"
-HK-ST-03,PG4019765R0312,hongkong,0.921,35.0,,,0.81,0.921,0.835,perpendicular-cross-section (centerline normal),C,1.0176,0.334,EPSG:2326,2026-08-14,OOD/fallback,836968.641,826999.682,114.183678,22.382214,114.183705,22.381899,"[[0.0, 0.0], [35.0, 0.0]]"

@@ -1,0 +1,9 @@
+dataset,scope,method,tag,quota,q_star,reference_exceedance,configuration,passing,n,exact_flow_status,baseline_n,exact_flow_status_before
+Development,LOCO,M0,MEL-melbourne-1434605-0-0|qp11,7.0,14.0,False,historical,30,30,PASS,30,UNTESTED
+Development,LOCO,M1,MEL-melbourne-1389823-0-3|qp14,13.0,20.0,False,historical,30,30,PASS,30,UNTESTED
+Development,LOCO,M3,MEL-melbourne-1434605-0-0|qp11,7.0,14.0,False,historical,30,30,PASS,30,UNTESTED
+Development,LOCO,M3,NYC-nyc-214464-0-0|qp13,9.0,20.0,False,historical,30,30,PASS,30,UNTESTED
+Development,LOCO,M0,TAO-taoyuan-idx3430-0-3|qp10,7.0,9.0,False,historical,30,30,PASS,30,UNTESTED
+Development,LOCO,M1,TAO-taoyuan-idx5379-0-4|qp13,13.0,20.0,False,historical,30,30,PASS,30,UNTESTED
+Development,LOCO,M1,TAO-taoyuan-idx158-0-0|qp36,7.0,11.0,False,historical,30,30,PASS,30,UNTESTED
+Development,LOCO,M3,TAO-taoyuan-idx3430-0-3|qp10,7.0,9.0,False,historical,30,30,PASS,30,UNTESTED

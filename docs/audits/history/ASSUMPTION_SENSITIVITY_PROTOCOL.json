@@ -1,0 +1,49 @@
+{
+  "version": "development-assumptions-v1",
+  "selection_rule": "Sort eligible development scenarios by width then nominal demand; take 25th and 75th percentile positions using floor((n-1)*p); no HK or new service outcomes used",
+  "tags": [
+    "TPE-taipei-idx12521-0-5|qp21",
+    "DC-114|qp43.2"
+  ],
+  "flow": 4,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "settings": [
+    "assumption-reference-v1",
+    "assumption-size080-v1",
+    "assumption-size120-v1",
+    "assumption-direction075-v1"
+  ],
+  "interpretation": "Hypothesis sensitivity only: scale both robot dimensions and thus actual JuPedSim radius by 0.8 or 1.2; separately change bidirectional split from .5 to .75. No claim of calibrated physical range. Every configuration has its own complete 30-seed baseline.",
+  "planned_runs": 480
+}

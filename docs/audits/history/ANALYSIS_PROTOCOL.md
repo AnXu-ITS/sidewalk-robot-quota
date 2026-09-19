@@ -1,0 +1,3 @@
+# Frozen analysis protocol
+
+JSON-compatible YAML in analysis_protocol.yaml is frozen before new simulations and baseline predictions. This is a session protocol, not preregistration or a new blinded HK test. Raw arrival evidence is missing historically; archival LOCO is provisional and must not be presented as a certified corrected model. Exact qualification and reference exceedance are separate. All positive references, including zero recommendations, enter utilization; no clipping. Shared gates are fixed; fit/margin use training data only. All planned flow groups retain 30 seeds. Maximum four workers and eight hours cumulative new simulation wall time. Measure pilot time and memory before bulk execution.

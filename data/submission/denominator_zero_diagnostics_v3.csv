@@ -1,0 +1,5 @@
+dataset,flow_group,rows,denominator_zero,planned_pedestrians,observed_pedestrians,never_observed
+Development,baseline,11850,1370,1459920,1414320,64770
+Development,mixed,65671,2116,7507512,7506852,660
+Hong Kong,baseline,540,60,63600,63600,0
+Hong Kong,mixed,4770,307,638400,638400,0

@@ -1,3 +1,0 @@
-scope,changed,n,n_positive,n_over,over_pct,max_over,mae,zero_pct,mean_loss_all,mean_loss_positive,median_util_positive,positive_reference_zero_pct
-all,1,400,206,13,3.25,7.0,2.675,61.5,2.5925,5.033980582524272,0.25,26.699029126213592
-in_domain,0,164,141,2,1.2195121951219512,1.0,4.469512195121951,36.58536585365854,4.4573170731707314,5.184397163120567,0.2,26.24113475177305

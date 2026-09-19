@@ -1,147 +1,52 @@
-# 人行道配送机器人配额（Sidewalk Robot Quota）
+# 行人服务与机器人准入之间的取舍
 
-**面向人行道自主配送机器人的「行人优先」配额算法。**
+**Balancing Pedestrian Service and Robot Access: An Interpretable Admission Framework for Sidewalk Delivery Robots**
 
-> 输入人行道的**行人流量** `q_p` 与**有效宽度** `W`，输出在保证行人服务水平可接受的前提下
-> **允许的最大配送机器人流量** `q̂_r`。
+作者：An Xu、Yunfei Yin，哈尔滨工业大学。**论文已提交至 [CICTP 2027](https://cictp2027.tsinghua.edu.cn/)**（投稿状态由作者提供；不表示已录用）。
 
-[English](README.md)
+[最终论文 PDF](paper/ascexmpl-new.pdf) · [英文首页与结果表](README.md) · [复现说明](docs/REPRODUCIBILITY.md) · [研究演变](docs/RESEARCH_EVOLUTION.md)
 
----
+## 做了什么
 
-## 状态
+给定人行道几何、行人需求和服务目标，判断哪里可以评估、每分钟建议放入多少机器人、在该具体流率下行人服务是否达标。框架区分无法建议、零准入和正的候选入口流率，不把公式输出当作普适容量或所有较低流率的保证。
 
-本仓库是 **2026-09 大规模重构后的权威冻结记录**。此前的合成直线走廊实验与 D2 之前的
-计划/数据已整体归档到 [`archive/2026-09-03_旧实验与旧数据/`](archive/2026-09-03_旧实验与旧数据/)。
-以下内容**全部以本机（这台机器）最终方法与结果为准**。
+开发样本为 7 城、140 个单元、400 个场景；共同评价为 64 个单元、164 个场景。所有正推荐均完成主种子 0–29 的直接测试，零准入不算通过。
 
-## 最终方法（已冻结）
+| 方法 | 正推荐 | 零准入 | PASS | FAIL | 利用率中位数 |
+|---|---:|---:|---:|---:|---:|
+| M0 | 98 | 66 | 98 | 0 | 16.7% |
+| M1 | 136 | 28 | 118 | 18 | 75.0% |
+| M2 | 59 | 105 | 59 | 0 | 0.0% |
+| M3 | 98 | 66 | 96 | 2 | 18.2% |
 
-科学定律（宽度归一化幂律）：
+M0 为带裕度的宽度—需求估计；M1 去除裕度；M2 为宽度单变量估计；M3 放松宽度—需求指数约束。M2/M3 各自校准裕度。利用率以 139 个正参考值场景为分母，保留零推荐。
 
-```
-q_hat_r = 24.37 * W * (q_p / W)^-0.945
-```
+**结论：**裕度既降低共同准入场景的推荐流率，也取消部分场景的准入。去除裕度新增 38 个机会，其中 32 个通过、6 个失败；不能只讲减少失败而忽略牺牲的可用机会。M0 与 M3 聚合表现接近，不等于统计等效。香港 13 个原始配置和 5 个修复入口配置分开报告，属于仿真几何迁移，不是现场验证。
 
-- `c = 24.37`，`p = -0.945`（宽度指数 `α = 0.992 ± 0.154`，置信区间含 1 → 保留 `W^1`）。
-- 加性 Q80 安全裕量 `Δ80 = 3.1068`（正残差的 Q0.80 池化值；实际的 `+Q80` 步骤采用
-  LOCO 按留出城市折式标定的裕量）。
-- 冻结执行顺序：
+## 经历了什么变化
 
-```
-OOD -> base_pass -> zero_guards -> nominal -> -Δ80 -> Q_low -> q_max -> floor
-```
+1. 早期聚焦紧凑配额公式和参考值拟合。
+2. 重建原始证据，明确几何排除、技术无效、零推荐和测试分母。
+3. 分离主种子与独立复验；吞吐分母为零改为未定义并失败；重新计算参考值和下游校准。
+4. 主线转为“准入量—行人服务—适用范围”的取舍。
+5. 最终补测 6 组唯一流率、180 次种子运行，并复用另一组已有日志；冻结最终参考值、参数与推荐，UNTESTED 全部归零。
 
-护栏：`W_min = 1.6 m`、`x_crit = 33.33` 人/min/m、`q_max = 20` 机器人/min、以及
-`Q_low(W)` 低流量上限——这四条构成头条链条。冻结配置还规定了部署层护栏：`C(W)` 容量、
-急弯护栏、绝对速度下限（v̄ ≥ 0.8 m/s）。
+旧 GitHub 目录保留在 `efc05fe` 提交历史，不能替代当前论文数据。
 
-**留出城市过配链条** —— 两种口径如实并列
-（2026-09-06 独立审计回应：见 [`final_freeze/AUDIT_RESPONSE_2026-09-06.md`](final_freeze/AUDIT_RESPONSE_2026-09-06.md)）：
+## 目录与复现
 
-| 口径 | G0 名义 | G1 + Q80 | G1 + 基线护栏 | 最大过配 |
-|---|---|---|---|---|
-| **严格 LOCO**（每折重拟合 `c,p`）—— *主口径* | **26.25 %** | **7.50 %** | **3.50 %** | 19 → 16 → 7 |
-| 池化拟合 + 折裕量 —— *诊断值* | 25.75 % | 6.75 % | 2.75 % | 19 → 16 → 7 |
-
-- **严格 LOCO** 才是诚实的「独立留出城市」数字：每折在其余 6 城重拟合 `c,p`，再在这 6 城
-  标定 Q80 裕量。
-- **池化**行用的是全 7 城最终系数（Seattle / Taoyuan 参与拟合），是诊断值，**不是**严格 LOCO。
-- 两行的分母都是**池化 400 条**（164 域内 + 236 域外）——**并非**「域内」数字。
-
-LOCO MAE（模型 A，每折重拟合）：**2.189**。
-
-**唯一事实来源：** [`final_freeze/final_quota_method_config.yaml`](final_freeze/final_quota_method_config.yaml)
-（及 JSON 孪生文件）。冻结运行时：[`final_freeze/src/operational_quota.py`](final_freeze/src/operational_quota.py)。
-`quota_params/*.json` 是 **D2 之前的旧标定，已被取代，请勿引用**
-（见 `quota_params/SUPERSEDED_DO_NOT_USE.md`）。
-
-### 部署方式
-
-> 离线人行道资格判定 + 在线闭式配额分配
-
-`base_pass` 是每个（细胞、行人流量）上的标志，来自纯行人（`q_r = 0`）SUMO–JuPedSim
-基线。它在**离线**阶段预计算为查找表；**在线**使用先查表、再套用闭式规则。它**不是**
-`(W, q_p)` 的纯闭式函数。
-
-基线判据（30 个种子）：平均密度 ≤ 1.20 人/m² **且** 0.90 ≤ 平均流量比 ≤ 1.20
-（均值判据）。参考配额 `q_r*` 由每种子 `≥ 29/30` 规则定义；部署的 `base_pass` 列遵循均值
-判据，在 8/400 条解耦高 q_p 行上与每种子规则有差异（已记录，不影响头条结果）。
-
-## 数据（D2）
-
-最终参考数据集位于 [`data/final/`](data/final/)：
-
-- `full_reference_dataset.csv` —— 400 条组合（280 主实验 + 120 解耦），7 城。
-- 构成/参考/精化表 + 种子级 baseline/sweep CSV。
-- `SHA256SUMS.txt` —— 不可变哈希（根数据集哈希 `b2b6743d…4144e9`）。
-
-关键事实：`base_pass` 349 通过 / 51 不通过；`q_r*` 194 零 / 206 正；域内 164 / 域外 236；
-池化评估分母 400。溯源链：
-`consolidate_reference.py → refine_boundary.py（64 条改动）→ merge_datasets.py`
-（见 `final_freeze/final_d2_provenance.txt` 与 `final_freeze/D2_RECONSTRUCTION_VERIFICATION.md`）。
-
-7 城人行道几何数据集在 [`train_test_mapdata/`](train_test_mapdata/)
-（GeoJSON，经 **Git LFS** 存储）。
-
-## 复现
+- `paper/`：12 页论文、完整源码、三幅图、表格和宏。
+- `data/submission/`：最终结果、参考值、参数、预测与逐种子指标。
+- `src/sidewalk_admission/`：可移植核心规则和服务判定。
+- `scripts/`：复核、绘图、编译和单次仿真入口，输出到 `outputs/`。
+- `configs/`：冻结阈值和 467 个基线/正流率配置。
+- `docs/`：研究演变、数据说明和最终 QA。
+- `code/`：原始仿真及分析代码，历史路径依赖另有说明。
 
 ```bash
-# 1) 校验冻结运行时（机械自测）
-python final_freeze/src/operational_quota.py
-
-# 2) 校验 D2 数据集（形状 + 计数 + base_pass 规则）
-python final_freeze/src/verify_d2.py data/final/full_reference_dataset.csv
-python final_freeze/src/verify_base_pass.py
-
-# 3) 由 data/final/ 中的 D2 表复现头条链条
-python final_freeze/src/reproduce_frozen_chain.py
-python final_freeze/src/reproduce_metrics.py
-python final_freeze/src/strict_loco.py      # 两种口径并列
+python -m pip install -r requirements.txt
+python scripts/verify_results.py
+python -m unittest discover -s tests
 ```
 
-预期输出：严格 LOCO `26.25 -> 7.50 -> 3.50 %`，池化 `25.75 -> 6.75 -> 2.75 %`，
-最大过配 `19 -> 16 -> 7`。完整审计见 `final_freeze/SHA256SUMS.txt`、
-`final_freeze/FINAL_REPRODUCIBILITY_FREEZE_REPORT.md`，独立审计修正见
-`final_freeze/AUDIT_RESPONSE_2026-09-06.md`。
-
-## 仓库结构
-
-```
-.
-├── README.md / README.zh-CN.md   # 本说明（EN / 中文）
-├── final_freeze/                 # 冻结方法：配置、运行时、校验文档
-│   ├── final_quota_method_config.{yaml,json}
-│   └── src/                      # operational_quota.py、reproduce_frozen_chain.py、verify_*.py
-├── data/final/                   # D2 数据集 + 哈希（权威）
-├── pipeline/                     # 真实城市标定流水线（cells、POI、SUMO 驱动）
-├── train_test_mapdata/           # 7 城人行道几何（GeoJSON，Git LFS）
-├── quota_params/                 # 已取代的 D2 前参数（勿用）
-├── archive/2026-09-03_旧实验与旧数据/  # 归档的旧实验/计划/数据
-└── (根目录 .md)                  # 研究方向 / 计划 / 迁移说明（2026-09）
-```
-
-## 诚实范围说明
-
-- 所有配额参考均为**仿真推导**（SUMO–JuPedSim），并非真实世界实测容量。
-  **不作出任何正式的真实世界安全保证。**
-- 适用域：`1.6 ≤ W ≤ 3.0 m`、`q_p ≤ 60`、`x < 33.33`、直行至轻度弯曲几何
-  （Type A，或 sinuosity ≤ 1.05 的 Type B）。域外输入必须走 **OOD 回退**（无闭式推荐）。
-- 行人流量 `q_p` 为**基于 POI 的先验**，非现场计数（论文中已如实说明）。
-- 参考机器人是容量代理（0.96 × 0.70 m 占地、5 km/h）。
-
-## 真值引擎
-
-Eclipse SUMO + JuPedSim（`--pedestrian.model jupedsim`）：先纯行人基线，再做机器人流量
-升序扫描（0→20 机器人/min，提前停止）直至行人服务约束被破坏；破坏点即参考配额 `q_r*`。
-协议：30 个种子，每种子 ≥ 29/30 通过为主判据（均值为上界），在评估测试城市之前冻结。
-
-## 环境要求
-
-- Python 3.10+，含 `numpy`、`scipy`、`pandas`。
-- Eclipse SUMO 1.27.1（含 JuPedSim）置于 `PATH`（`SUMO_HOME`）——仅在重跑真值战役时需要；
-  上面的冻结复现不需要 SUMO。
-
-## 许可证
-
-私有研究仓库——无公开许可证。复用前请联系作者。
+无需运行 SUMO，即可重算 1,600 条推荐并核对 315 组唯一正流率测试、9,450 条种子记录。原始轨迹/XML 和外部原始 GIS 档案未上传 Git，但保留在本地，未作为缓存删除。模型简化、指定需求、完成行程指标、有限种子/流率与缺少现场验证仍是研究限制。

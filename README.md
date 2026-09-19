@@ -1,157 +1,78 @@
-# Sidewalk Robot Quota
+# Balancing Pedestrian Service and Robot Access
 
-**A pedestrian-priority quota algorithm for autonomous delivery robots on sidewalks.**
+**An Interpretable Admission Framework for Sidewalk Delivery Robots**
+An Xu and Yunfei Yin · Harbin Institute of Technology
 
-> Given a sidewalk's **pedestrian flow** `q_p` and **effective width** `W`, output the
-> **maximum admissible delivery-robot flow** `q̂_r` that keeps pedestrian service acceptable.
+**Submitted to [CICTP 2027](https://cictp2027.tsinghua.edu.cn/).** Submission status is reported by the authors; this does not claim acceptance.
 
-[中文说明](README.zh-CN.md)
+[12-page paper](paper/ascexmpl-new.pdf) · [中文说明](README.zh-CN.md) · [Reproduce](docs/REPRODUCIBILITY.md) · [Research evolution](docs/RESEARCH_EVOLUTION.md) · [Final QA](docs/audits/FINAL_SUBMISSION_QA.md)
 
----
+## Research question
 
-## Status
+Operating permission and fleet-size limits do not determine a robot entry rate for an individual sidewalk. We ask: **where can a rule be applied, what candidate rate does it offer, and how does pedestrian service perform at that rate?** Inputs are geometry and pedestrian demand; outputs distinguish abstention, zero admission and a positive candidate entry rate (robots/min).
 
-This repository is the **authoritative, frozen** record of the refactored experiment
-(2026-09). All earlier synthetic straight-corridor work and pre-D2 plans/data have been
-moved to [`archive/2026-09-03_旧实验与旧数据/`](archive/2026-09-03_旧实验与旧数据/).
-Everything below reflects **this machine's** final method and results.
+![Admission framework](paper/figures/figure1.png)
 
-## Final method (frozen)
+The framework combines applicability checks, a pedestrian-service gate, a width–demand estimate, a conservative margin and fixed bounds. Positive recommendations are tested at their specified configuration and flow. They are not universal capacities or guarantees for every lower flow.
 
-Scientific law (width-normalized power law):
+## Final results
 
-```
-q_hat_r = 24.37 * W * (q_p / W)^-0.945
-```
+The sample contains **400 scenarios / 140 cells / seven cities**. Common evaluation: **164 scenarios / 64 cells**. All positive recommendations were directly tested with seeds 0–29; zero admission is not a service pass.
 
-- `c = 24.37`, `p = -0.945` (width exponent `α = 0.992 ± 0.154`; CI includes 1 → keep `W^1`).
-- Additive Q80 safety margin `Δ80 = 3.1068` (pooled Q0.80 of positive residuals; the
-  operational `+Q80` step uses LOCO fold-calibrated margins per held-out city).
-- Frozen execution order:
+| Method | Positive | Zero | PASS | FAIL | Median utilization |
+|---|---:|---:|---:|---:|---:|
+| M0 | 98 | 66 | 98 | 0 | 16.7% |
+| M1 | 136 | 28 | 118 | 18 | 75.0% |
+| M2 | 59 | 105 | 59 | 0 | 0.0% |
+| M3 | 98 | 66 | 96 | 2 | 18.2% |
 
-```
-OOD -> base_pass -> zero_guards -> nominal -> -Δ80 -> Q_low -> q_max -> floor
-```
+- **M0:** width–demand with margin; **M1:** without margin; **M2:** width-only with its own margin; **M3:** unconstrained width–demand with its own margin.
+- Removing the margin creates **38 additional opportunities: 32 PASS, 6 FAIL**. In **98 common-positive scenarios**, M0 has **98 PASS/0 FAIL**, M1 **86 PASS/12 FAIL**; mean rates are **4.81 versus 7.55 robots/min**.
+- Conservativeness lowers offered rates and removes access in some scenarios. Some withheld opportunities would pass.
+- M3 is close to M0 in aggregate; this does **not** establish equivalence or no performance loss.
+- Hong Kong separates **13 original / 5 entrance-repaired configurations**. Original M0: **7 PASS/0 FAIL**, M1: **10 PASS/1 FAIL**; repaired M0: **4 PASS/0 FAIL**, M1: **5 PASS/0 FAIL**. Zeros remain outside PASS counts.
 
-Guardrails: `W_min = 1.6 m`, `x_crit = 33.33` ped/min/m, `q_max = 20` robot/min, and the
-`Q_low(W)` low-flow ceiling — these four produce the headline chain. The frozen config
-additionally specifies deployment-layer guards: `C(W)` capacity, sharp-corner guard, and
-an absolute speed floor (v̄ ≥ 0.8 m/s).
+![Access and tested service](paper/figures/figure2.png)
 
-**Held-out-city overprediction chain** — two scopes, reported honestly
-(2026-09-06 independent audit response: [`final_freeze/AUDIT_RESPONSE_2026-09-06.md`](final_freeze/AUDIT_RESPONSE_2026-09-06.md)):
+Utilization is the median candidate/reference ratio over **139 positive-reference scenarios**, including zero recommendations and eight censored references. Service requires **29/30 seeds** satisfying speed retention ≥0.90, density ≤1.20 ped/m² and completed-trip ratio in [0.90, 1.20]. A zero denominator is undefined and fails that component.
 
-| Scope | G0 nominal | G1 + Q80 | G1 + baseline guard | Max overprediction |
-|---|---|---|---|---|
-| **Strict LOCO** (per-fold refit of `c,p`) — *primary* | **26.25 %** | **7.50 %** | **3.50 %** | 19 → 16 → 7 |
-| Pooled fit + fold margin — *diagnostic* | 25.75 % | 6.75 % | 2.75 % | 19 → 16 → 7 |
+## Research evolution
 
-- **Strict LOCO** is the honest "independent held-out city" number: `c,p` are re-fit on the
-  other 6 cities per fold, then the Q80 margin is calibrated on those 6.
-- The **pooled** row uses the final all-7-city coefficients (Seattle / Taoyuan included in the
-  fit) and is a diagnostic, **not** a strict LOCO.
-- Both denominators are the **pooled 400 rows** (164 in-domain + 236 OOD) — these are **not**
-  in-domain-only numbers.
+Early work emphasized a compact formula and reference-fit error. Evidence review shifted the question to **access, pedestrian service and applicability together**. Primary and independent seed blocks were separated, zero-denominator scoring corrected, and downstream calibration regenerated. Finally, **6 unique flow groups / 180 seed runs** were completed without changing final frozen recommendations. One further missing group was resolved from existing logs. **UNTESTED = 0**.
 
-LOCO MAE (model A, per-fold refit): **2.189**.
+[The timeline](docs/RESEARCH_EVOLUTION.md) distinguishes historical results from the submitted analysis. The previous GitHub tree is preserved at commit `efc05fe`; it is not the authority for current numbers.
 
-**Single source of truth:** [`final_freeze/final_quota_method_config.yaml`](final_freeze/final_quota_method_config.yaml)
-(+ JSON twin). Frozen runtime: [`final_freeze/src/operational_quota.py`](final_freeze/src/operational_quota.py).
-The `quota_params/*.json` files are **superseded pre-D2 calibration** — do not cite
-(see `quota_params/SUPERSEDED_DO_NOT_USE.md`).
+## Repository map
 
-### Deployment model
+| Directory | Contents |
+|---|---|
+| `paper/` | Submitted PDF, LaTeX/BibTeX, three figures and generated tables |
+| `src/sidewalk_admission/` | Portable candidate-rate rule and service test |
+| `scripts/` | Verification, figures, paper build and single-run entry point |
+| `configs/` | Frozen gates and 467 baseline/positive-flow specifications |
+| `data/submission/` | References, parameters, predictions and seed evidence |
+| `data/diagnostics/` | Exclusions, replication and sensitivity |
+| `data/geometry/` | Development cells and Hong Kong polygon metadata |
+| `code/` | Original simulator and historical analysis scripts |
+| `docs/` | Evolution, reproducibility, data dictionary and audits |
+| `tests/` | Service-boundary and exclusion checks |
 
-> offline sidewalk qualification + online closed-form quota assignment
-
-`base_pass` is a per-(cell, pedestrian-flow) flag from a pedestrian-only (`q_r = 0`)
-SUMO–JuPedSim baseline. It is precomputed **offline** as a lookup table; **online** use
-queries it, then applies the closed-form rule. It is **not** a closed-form function of
-`(W, q_p)` alone.
-
-Baseline criterion (over 30 seeds): mean density ≤ 1.20 ped/m² **and**
-0.90 ≤ mean flow ratio ≤ 1.20 (mean-based). The per-seed `≥ 29/30` rule defines the
-reference quota `q_r*`; the deployed `base_pass` column follows the mean-based rule and
-differs from the per-seed rule in 8/400 decoupled high-q_p rows (documented, no headline
-impact).
-
-## Data (D2)
-
-The final reference dataset lives in [`data/final/`](data/final/):
-
-- `full_reference_dataset.csv` — 400 combos (280 main + 120 decoupled), 7 cities.
-- Constituent / reference / refinement tables + seed-level baseline/sweep CSVs.
-- `SHA256SUMS.txt` — immutable hashes (root dataset hash `b2b6743d…4144e9`).
-
-Key facts: `base_pass` 349 pass / 51 fail; `q_r*` 194 zero / 206 positive; in-domain 164 /
-OOD 236; pooled evaluation denominator 400. Provenance chain:
-`consolidate_reference.py → refine_boundary.py (64 changed) → merge_datasets.py`
-(see `final_freeze/final_d2_provenance.txt` and `final_freeze/D2_RECONSTRUCTION_VERIFICATION.md`).
-
-The 7-city sidewalk geometry dataset is in [`train_test_mapdata/`](train_test_mapdata/)
-(GeoJSON, stored via **Git LFS**).
-
-## Reproduction
+## Quick verification
 
 ```bash
-# 1) verify the frozen runtime (mechanical self-test)
-python final_freeze/src/operational_quota.py
-
-# 2) verify the D2 dataset (shape + counts + base_pass rule)
-python final_freeze/src/verify_d2.py data/final/full_reference_dataset.csv
-python final_freeze/src/verify_base_pass.py
-
-# 3) reproduce the headline chain from the D2 table in data/final/
-python final_freeze/src/reproduce_frozen_chain.py
-python final_freeze/src/reproduce_metrics.py
-python final_freeze/src/strict_loco.py      # both scopes side by side
+python -m pip install -r requirements.txt
+python scripts/verify_results.py
+python -m unittest discover -s tests
+python scripts/build_figures_v2.py
+python scripts/build_paper.py
 ```
 
-Expected: strict LOCO `26.25 -> 7.50 -> 3.50 %`, pooled `25.75 -> 6.75 -> 2.75 %`,
-max `19 -> 16 -> 7`. See `final_freeze/SHA256SUMS.txt` for immutable hashes,
-`final_freeze/FINAL_REPRODUCIBILITY_FREEZE_REPORT.md` for the full freeze audit, and
-`final_freeze/AUDIT_RESPONSE_2026-09-06.md` for the independent-audit corrections.
+Verification recomputes **1,600 recommendations**, **315 unique positive-flow tests** and **9,450 seed decisions**, without SUMO. Outputs go to ignored `outputs/`. Paper compilation needs LaTeX; exact figure typography uses Arial.
 
-## Repository layout
+## Scope and data coverage
 
-```
-.
-├── README.md / README.zh-CN.md   # this guide (EN / 中文)
-├── final_freeze/                 # FROZEN method: config, runtime, verification docs
-│   ├── final_quota_method_config.{yaml,json}
-│   └── src/                      # operational_quota.py, reproduce_frozen_chain.py, verify_*.py
-├── data/final/                   # D2 dataset + hashes (authoritative)
-├── pipeline/                     # real-city calibration pipeline (cells, POI, SUMO driver)
-├── train_test_mapdata/           # 7-city sidewalk geometry (GeoJSON via Git LFS)
-├── quota_params/                 # superseded pre-D2 params (do not use)
-├── archive/2026-09-03_旧实验与旧数据/  # archived prior experiments/plans/data
-└── (root .md)                    # research direction / plan / migration notes (2026-09)
-```
+This simulation uses simplified interactions, specified regular demand, finite seeds and a finite flow scan. Hong Kong is geometry transfer, not field validation or a new blind test. Completed-trip counts are not actual model-entry throughput. The extreme M1 speed retention (0.071) is retained with its evidence audit.
 
-## Honest scope notes
+Core code, paper, per-seed metrics, diagnostics, geometry and hashes are included. **Full trajectory/XML logs and external raw GIS archives are retained locally, not included in Git, and not deleted during cleanup.** [Data coverage](docs/DATA_DICTIONARY.md) distinguishes lightweight verification from full raw reconstruction.
 
-- All quota references are **simulation-derived** (SUMO–JuPedSim), not real-world
-  measured capacity. **No formal real-world safety guarantee is made.**
-- Applicability domain: `1.6 ≤ W ≤ 3.0 m`, `q_p ≤ 60`, `x < 33.33`,
-  straight-to-mildly-curved geometry (Type A, or Type B with sinuosity ≤ 1.05).
-  Out-of-domain inputs require the **OOD fallback** (no closed-form recommendation).
-- Pedestrian flows `q_p` are **POI-based priors**, not field counts (stated as such in the papers).
-- The reference robot is a capacity proxy (0.96 × 0.70 m footprint, 5 km/h).
-
-## Ground truth engine
-
-Eclipse SUMO + JuPedSim (`--pedestrian.model jupedsim`): pedestrian-only baseline, then an
-ascending robot-flow sweep (0→20 robot/min, early stop) until pedestrian-service
-constraints break; the breaking point is the reference quota `q_r*`. Protocol: 30 seeds,
-per-seed ≥ 29/30 pass as the primary criterion (mean as upper bound), frozen before test
-cities are evaluated.
-
-## Requirements
-
-- Python 3.10+ with `numpy`, `scipy`, `pandas`.
-- Eclipse SUMO 1.27.1 (with JuPedSim) on `PATH` (`SUMO_HOME`) — only for re-running the
-  ground-truth campaign; the frozen reproduction above needs no SUMO.
-
-## License
-
-Private research repository — no public license. Please contact the author before reuse.
+No new blanket license is asserted for third-party data or the conference template. Existing source rights apply; contact the authors for permissions not explicitly granted.

@@ -1,0 +1,316 @@
+dataset,tag,configuration,quota,passing,n,exact_flow_status,baseline_n
+Development,AMS-amsterdam-chain-141619-0|qp10,historical,1.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-141619-0|qp10,historical,8.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-141619-0|qp10,historical,9.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-141619-0|qp25,historical,1.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-141619-0|qp25,historical,4.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-166482-0|qp11,historical,1.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-166482-0|qp11,historical,9.0,29,30,PASS,30
+Development,AMS-amsterdam-chain-166482-0|qp11,historical,12.0,25,30,FAIL,30
+Development,AMS-amsterdam-chain-166482-0|qp27,historical,1.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-166482-0|qp27,historical,2.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-166482-0|qp27,historical,5.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-32802-0|qp13,historical,2.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-32802-0|qp13,historical,10.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-32802-0|qp13,historical,13.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-32802-0|qp31,historical,2.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-32802-0|qp31,historical,3.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-32802-0|qp31,historical,5.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-44642-0|qp12,historical,1.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-44642-0|qp12,historical,10.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-44642-0|qp12,historical,13.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-44642-0|qp30,historical,1.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-44642-0|qp30,historical,2.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-44642-0|qp30,historical,5.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-45268-50|qp11,historical,1.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-45268-50|qp11,historical,8.0,29,30,PASS,30
+Development,AMS-amsterdam-chain-45268-50|qp11,historical,11.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-45268-50|qp26,historical,1.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-45268-50|qp26,historical,2.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-45268-50|qp26,historical,4.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-79104-0|qp20,historical,3.0,30,30,PASS,30
+Development,AMS-amsterdam-chain-79104-0|qp8,historical,5.0,30,30,PASS,30
+Development,DC-006|qp30.2,historical,2.0,28,30,FAIL,30
+Development,DC-009|qp30.7,historical,2.0,29,30,PASS,30
+Development,DC-012|qp43.3,historical,1.0,30,30,PASS,30
+Development,DC-012|qp43.3,historical,3.0,30,30,PASS,30
+Development,DC-042|qp30.5,historical,2.0,27,30,FAIL,30
+Development,DC-045|qp31.5,historical,2.0,26,30,FAIL,30
+Development,DC-048|qp49.0,historical,2.0,30,30,PASS,30
+Development,DC-048|qp49.0,historical,4.0,30,30,PASS,30
+Development,DC-060|qp31.5,historical,2.0,29,30,PASS,30
+Development,DC-063|qp35.3,historical,3.0,29,30,PASS,30
+Development,DC-066|qp44.6,historical,1.0,30,30,PASS,30
+Development,DC-066|qp44.6,historical,4.0,30,30,PASS,30
+Development,DC-067|qp59.5,historical,1.0,30,30,PASS,30
+Development,DC-067|qp59.5,historical,3.0,27,30,FAIL,30
+Development,DC-078|qp30.8,historical,2.0,29,30,PASS,30
+Development,DC-081|qp31.3,historical,2.0,29,30,PASS,30
+Development,DC-084|qp44.3,historical,1.0,30,30,PASS,30
+Development,DC-084|qp44.3,historical,3.0,30,30,PASS,30
+Development,DC-085|qp59.0,historical,1.0,30,30,PASS,30
+Development,DC-085|qp59.0,historical,2.0,30,30,PASS,30
+Development,DC-096|qp29.7,historical,2.0,29,30,PASS,30
+Development,DC-099|qp43.9,historical,1.0,30,30,PASS,30
+Development,DC-099|qp43.9,historical,4.0,30,30,PASS,30
+Development,DC-100|qp58.5,historical,1.0,30,30,PASS,30
+Development,DC-100|qp58.5,historical,3.0,29,30,PASS,30
+Development,DC-111|qp32.4,historical,2.0,28,30,FAIL,30
+Development,DC-112|qp43.2,historical,2.0,16,30,FAIL,30
+Development,MEL-melbourne-1389612-0-2|qp20,historical,4.0,30,30,PASS,30
+Development,MEL-melbourne-1389612-0-2|qp8,historical,5.0,30,30,PASS,30
+Development,MEL-melbourne-1389823-0-3|qp14,historical,2.0,30,30,PASS,30
+Development,MEL-melbourne-1389823-0-3|qp14,historical,10.0,30,30,PASS,30
+Development,MEL-melbourne-1389823-0-3|qp14,historical,13.0,30,30,PASS,30
+Development,MEL-melbourne-1389823-0-3|qp33,historical,2.0,30,30,PASS,30
+Development,MEL-melbourne-1389823-0-3|qp33,historical,6.0,30,30,PASS,30
+Development,MEL-melbourne-1434605-0-0|qp11,historical,7.0,30,30,PASS,30
+Development,MEL-melbourne-1434605-0-0|qp11,historical,11.0,29,30,PASS,30
+Development,MEL-melbourne-1434605-0-0|qp26,historical,1.0,30,30,PASS,30
+Development,MEL-melbourne-1434605-0-0|qp26,historical,5.0,30,30,PASS,30
+Development,MEL-melbourne-1465622-0-2|qp21,historical,4.0,30,30,PASS,30
+Development,MEL-melbourne-1465622-0-2|qp9,historical,5.0,30,30,PASS,30
+Development,MEL-melbourne-1465622-0-2|qp9,historical,6.0,29,30,PASS,30
+Development,MEL-melbourne-1465759-0-1|qp12,historical,1.0,30,30,PASS,30
+Development,MEL-melbourne-1465759-0-1|qp12,historical,8.0,30,30,PASS,30
+Development,MEL-melbourne-1465759-0-1|qp12,historical,12.0,30,30,PASS,30
+Development,MEL-melbourne-1465759-0-1|qp28,historical,1.0,30,30,PASS,30
+Development,MEL-melbourne-1465759-0-1|qp28,historical,2.0,30,30,PASS,30
+Development,MEL-melbourne-1465759-0-1|qp28,historical,5.0,30,30,PASS,30
+Development,MEL-melbourne-1477330-0-0|qp22,historical,4.0,30,30,PASS,30
+Development,MEL-melbourne-1477330-0-0|qp9,historical,6.0,29,30,PASS,30
+Development,MEL-melbourne-1477330-0-0|qp9,historical,8.0,29,30,PASS,30
+Development,MEL-melbourne-RPSP02B11034-0-0|qp22,historical,4.0,30,30,PASS,30
+Development,MEL-melbourne-RPSP02B11034-0-0|qp9,historical,6.0,30,30,PASS,30
+Development,MEL-melbourne-RPSP02B11034-0-0|qp9,historical,8.0,30,30,PASS,30
+Development,NTP-newtaipei-idx11901-0-0|qp21,historical,4.0,30,30,PASS,30
+Development,NTP-newtaipei-idx11901-0-0|qp9,historical,6.0,30,30,PASS,30
+Development,NTP-newtaipei-idx11901-0-0|qp9,historical,7.0,28,30,FAIL,30
+Development,NTP-newtaipei-idx13763-0-2|qp22,historical,4.0,30,30,PASS,30
+Development,NTP-newtaipei-idx13763-0-2|qp9,historical,6.0,29,30,PASS,30
+Development,NTP-newtaipei-idx13763-0-2|qp9,historical,8.0,28,30,FAIL,30
+Development,NTP-newtaipei-idx13776-0-2|qp20,historical,4.0,30,30,PASS,30
+Development,NTP-newtaipei-idx13776-0-2|qp9,historical,5.0,30,30,PASS,30
+Development,NTP-newtaipei-idx13776-0-2|qp9,historical,6.0,29,30,PASS,30
+Development,NTP-newtaipei-idx251-0-0|qp12,historical,1.0,30,30,PASS,30
+Development,NTP-newtaipei-idx251-0-0|qp12,historical,10.0,30,30,PASS,30
+Development,NTP-newtaipei-idx251-0-0|qp12,historical,14.0,29,30,PASS,30
+Development,NTP-newtaipei-idx251-0-0|qp30,historical,1.0,30,30,PASS,30
+Development,NTP-newtaipei-idx251-0-0|qp30,historical,2.0,30,30,PASS,30
+Development,NTP-newtaipei-idx251-0-0|qp30,historical,5.0,30,30,PASS,30
+Development,NTP-newtaipei-idx4423-0-0|qp15,historical,2.0,30,30,PASS,30
+Development,NTP-newtaipei-idx4423-0-0|qp15,historical,13.0,30,30,PASS,30
+Development,NTP-newtaipei-idx4423-0-0|qp15,historical,17.0,30,30,PASS,30
+Development,NTP-newtaipei-idx4423-0-0|qp36,historical,2.0,30,30,PASS,30
+Development,NTP-newtaipei-idx4423-0-0|qp36,historical,3.0,30,30,PASS,30
+Development,NTP-newtaipei-idx4423-0-0|qp36,historical,7.0,30,30,PASS,30
+Development,NTP-newtaipei-idx5617-0-0|qp12,historical,1.0,30,30,PASS,30
+Development,NTP-newtaipei-idx5617-0-0|qp12,historical,9.0,30,30,PASS,30
+Development,NTP-newtaipei-idx5617-0-0|qp12,historical,13.0,30,30,PASS,30
+Development,NTP-newtaipei-idx5617-0-0|qp28,historical,1.0,30,30,PASS,30
+Development,NTP-newtaipei-idx5617-0-0|qp28,historical,5.0,30,30,PASS,30
+Development,NTP-newtaipei-idx6820-0-0|qp13,historical,1.0,30,30,PASS,30
+Development,NTP-newtaipei-idx6820-0-0|qp13,historical,11.0,30,30,PASS,30
+Development,NTP-newtaipei-idx6820-0-0|qp13,historical,15.0,30,30,PASS,30
+Development,NTP-newtaipei-idx6820-0-0|qp31,historical,1.0,30,30,PASS,30
+Development,NTP-newtaipei-idx6820-0-0|qp31,historical,2.0,30,30,PASS,30
+Development,NTP-newtaipei-idx6820-0-0|qp31,historical,6.0,30,30,PASS,30
+Development,NTP-newtaipei-idx6919-0-0|qp21,historical,4.0,30,30,PASS,30
+Development,NTP-newtaipei-idx6919-0-0|qp9,historical,5.0,30,30,PASS,30
+Development,NTP-newtaipei-idx6919-0-0|qp9,historical,6.0,27,30,FAIL,30
+Development,NTP-newtaipei-idx7317-0-1|qp21,historical,4.0,29,30,PASS,30
+Development,NTP-newtaipei-idx7317-0-1|qp9,historical,5.0,30,30,PASS,30
+Development,NTP-newtaipei-idx7317-0-1|qp9,historical,6.0,28,30,FAIL,30
+Development,NTP-newtaipei-idx7804-0-0|qp14,historical,1.0,30,30,PASS,30
+Development,NTP-newtaipei-idx7804-0-0|qp14,historical,13.0,30,30,PASS,30
+Development,NTP-newtaipei-idx7804-0-0|qp14,historical,17.0,30,30,PASS,30
+Development,NTP-newtaipei-idx7804-0-0|qp35,historical,1.0,30,30,PASS,30
+Development,NTP-newtaipei-idx7804-0-0|qp35,historical,3.0,30,30,PASS,30
+Development,NTP-newtaipei-idx7804-0-0|qp35,historical,6.0,30,30,PASS,30
+Development,NTP-newtaipei-idx9858-0-0|qp10,historical,6.0,30,30,PASS,30
+Development,NTP-newtaipei-idx9858-0-0|qp10,historical,8.0,30,30,PASS,30
+Development,NTP-newtaipei-idx9858-0-0|qp23,historical,4.0,29,30,PASS,30
+Development,NYC-nyc-110605-0-2|qp20,historical,4.0,30,30,PASS,30
+Development,NYC-nyc-110605-0-2|qp8,historical,6.0,30,30,PASS,30
+Development,NYC-nyc-17655-0-0|qp12,historical,1.0,30,30,PASS,30
+Development,NYC-nyc-17655-0-0|qp12,historical,9.0,30,30,PASS,30
+Development,NYC-nyc-17655-0-0|qp12,historical,12.0,30,30,PASS,30
+Development,NYC-nyc-17655-0-0|qp29,historical,1.0,30,30,PASS,30
+Development,NYC-nyc-17655-0-0|qp29,historical,2.0,30,30,PASS,30
+Development,NYC-nyc-17655-0-0|qp29,historical,5.0,30,30,PASS,30
+Development,NYC-nyc-199805-0-0|qp10,historical,8.0,30,30,PASS,30
+Development,NYC-nyc-199805-0-0|qp10,historical,9.0,29,30,PASS,30
+Development,NYC-nyc-199805-0-0|qp25,historical,1.0,30,30,PASS,30
+Development,NYC-nyc-199805-0-0|qp25,historical,4.0,30,30,PASS,30
+Development,NYC-nyc-214464-0-0|qp13,historical,1.0,30,30,PASS,30
+Development,NYC-nyc-214464-0-0|qp13,historical,9.0,30,30,PASS,30
+Development,NYC-nyc-214464-0-0|qp13,historical,10.0,30,30,PASS,30
+Development,NYC-nyc-214464-0-0|qp13,historical,13.0,30,30,PASS,30
+Development,NYC-nyc-214464-0-0|qp31,historical,1.0,30,30,PASS,30
+Development,NYC-nyc-214464-0-0|qp31,historical,2.0,30,30,PASS,30
+Development,NYC-nyc-214464-0-0|qp31,historical,5.0,30,30,PASS,30
+Development,NYC-nyc-267383-0-0|qp35,historical,1.0,30,30,PASS,30
+Development,NYC-nyc-267383-0-0|qp35,historical,4.0,30,30,PASS,30
+Development,NYC-nyc-27695-0-3|qp12,historical,1.0,30,30,PASS,30
+Development,NYC-nyc-27695-0-3|qp12,historical,9.0,30,30,PASS,30
+Development,NYC-nyc-27695-0-3|qp12,historical,12.0,30,30,PASS,30
+Development,NYC-nyc-27695-0-3|qp28,historical,1.0,30,30,PASS,30
+Development,NYC-nyc-27695-0-3|qp28,historical,2.0,30,30,PASS,30
+Development,NYC-nyc-27695-0-3|qp28,historical,5.0,30,30,PASS,30
+Development,NYC-nyc-31649-0-0|qp28,historical,3.0,29,30,PASS,30
+Development,NYC-nyc-46079-0-1|qp20,historical,3.0,30,30,PASS,30
+Development,NYC-nyc-46079-0-1|qp8,historical,5.0,30,30,PASS,30
+Development,NYC-nyc-98749-0-2|qp32,historical,3.0,30,30,PASS,30
+Development,SEA-seattle-5426480-0-0|qp22,historical,1.0,30,30,PASS,30
+Development,SEA-seattle-5426480-0-0|qp22,historical,4.0,30,30,PASS,30
+Development,SEA-seattle-5426480-0-0|qp9,historical,6.0,30,30,PASS,30
+Development,SEA-seattle-5426480-0-0|qp9,historical,8.0,28,30,FAIL,30
+Development,SEA-seattle-5426595-0-0|qp38,historical,1.0,30,30,PASS,30
+Development,SEA-seattle-5426595-0-0|qp38,historical,4.0,30,30,PASS,30
+Development,SEA-seattle-5432169-0-1|qp20,historical,3.0,30,30,PASS,30
+Development,SEA-seattle-5432169-0-1|qp8,historical,5.0,30,30,PASS,30
+Development,SEA-seattle-5433778-0-0|qp22,historical,1.0,30,30,PASS,30
+Development,SEA-seattle-5433778-0-0|qp22,historical,4.0,30,30,PASS,30
+Development,SEA-seattle-5433778-0-0|qp9,historical,6.0,29,30,PASS,30
+Development,SEA-seattle-5433778-0-0|qp9,historical,8.0,28,30,FAIL,30
+Development,SEA-seattle-5434873-0-0|qp37,historical,1.0,30,30,PASS,30
+Development,SEA-seattle-5434873-0-0|qp37,historical,4.0,30,30,PASS,30
+Development,SEA-seattle-5438086-0-1|qp22,historical,1.0,30,30,PASS,30
+Development,SEA-seattle-5438086-0-1|qp22,historical,4.0,30,30,PASS,30
+Development,SEA-seattle-5438086-0-1|qp9,historical,6.0,29,30,PASS,30
+Development,SEA-seattle-5438086-0-1|qp9,historical,8.0,29,30,PASS,30
+Development,SEA-seattle-5449118-0-0|qp22,historical,1.0,30,30,PASS,30
+Development,SEA-seattle-5449118-0-0|qp22,historical,4.0,30,30,PASS,30
+Development,SEA-seattle-5449118-0-0|qp9,historical,6.0,30,30,PASS,30
+Development,SEA-seattle-5449118-0-0|qp9,historical,8.0,27,30,FAIL,30
+Development,SEA-seattle-5449903-0-0|qp22,historical,1.0,30,30,PASS,30
+Development,SEA-seattle-5449903-0-0|qp22,historical,4.0,29,30,PASS,30
+Development,SEA-seattle-5449903-0-0|qp9,historical,6.0,29,30,PASS,30
+Development,SEA-seattle-5449903-0-0|qp9,historical,8.0,29,30,PASS,30
+Development,SEA-seattle-5452128-0-1|qp12,historical,1.0,30,30,PASS,30
+Development,SEA-seattle-5452128-0-1|qp12,historical,9.0,30,30,PASS,30
+Development,SEA-seattle-5452128-0-1|qp12,historical,13.0,30,30,PASS,30
+Development,SEA-seattle-5452128-0-1|qp29,historical,1.0,30,30,PASS,30
+Development,SEA-seattle-5452128-0-1|qp29,historical,2.0,30,30,PASS,30
+Development,SEA-seattle-5452128-0-1|qp29,historical,5.0,30,30,PASS,30
+Development,SEA-seattle-5453813-0-0|qp22,historical,1.0,30,30,PASS,30
+Development,SEA-seattle-5453813-0-0|qp22,historical,4.0,30,30,PASS,30
+Development,SEA-seattle-5453813-0-0|qp9,historical,6.0,30,30,PASS,30
+Development,SEA-seattle-5453813-0-0|qp9,historical,8.0,29,30,PASS,30
+Development,SEA-seattle-5454776-0-1|qp13,historical,1.0,30,30,PASS,30
+Development,SEA-seattle-5454776-0-1|qp13,historical,10.0,30,30,PASS,30
+Development,SEA-seattle-5454776-0-1|qp13,historical,13.0,30,30,PASS,30
+Development,SEA-seattle-5454776-0-1|qp31,historical,1.0,30,30,PASS,30
+Development,SEA-seattle-5454776-0-1|qp31,historical,2.0,30,30,PASS,30
+Development,SEA-seattle-5454776-0-1|qp31,historical,6.0,30,30,PASS,30
+Development,TAO-taoyuan-idx10181-0-0|qp22,historical,4.0,30,30,PASS,30
+Development,TAO-taoyuan-idx10181-0-0|qp9,historical,6.0,29,30,PASS,30
+Development,TAO-taoyuan-idx10181-0-0|qp9,historical,8.0,27,30,FAIL,30
+Development,TAO-taoyuan-idx158-0-0|qp15,historical,2.0,30,30,PASS,30
+Development,TAO-taoyuan-idx158-0-0|qp15,historical,12.0,30,30,PASS,30
+Development,TAO-taoyuan-idx158-0-0|qp15,historical,15.0,30,30,PASS,30
+Development,TAO-taoyuan-idx158-0-0|qp36,historical,2.0,30,30,PASS,30
+Development,TAO-taoyuan-idx158-0-0|qp36,historical,3.0,30,30,PASS,30
+Development,TAO-taoyuan-idx158-0-0|qp36,historical,7.0,30,30,PASS,30
+Development,TAO-taoyuan-idx3410-0-9|qp12,historical,1.0,30,30,PASS,30
+Development,TAO-taoyuan-idx3410-0-9|qp12,historical,9.0,30,30,PASS,30
+Development,TAO-taoyuan-idx3410-0-9|qp12,historical,12.0,30,30,PASS,30
+Development,TAO-taoyuan-idx3410-0-9|qp29,historical,1.0,30,30,PASS,30
+Development,TAO-taoyuan-idx3410-0-9|qp29,historical,2.0,30,30,PASS,30
+Development,TAO-taoyuan-idx3410-0-9|qp29,historical,5.0,30,30,PASS,30
+Development,TAO-taoyuan-idx3430-0-3|qp10,historical,7.0,30,30,PASS,30
+Development,TAO-taoyuan-idx3430-0-3|qp10,historical,9.0,30,30,PASS,30
+Development,TAO-taoyuan-idx3430-0-3|qp24,historical,1.0,30,30,PASS,30
+Development,TAO-taoyuan-idx3430-0-3|qp24,historical,4.0,30,30,PASS,30
+Development,TAO-taoyuan-idx5160-0-0|qp22,historical,1.0,30,30,PASS,30
+Development,TAO-taoyuan-idx5160-0-0|qp22,historical,4.0,28,30,FAIL,30
+Development,TAO-taoyuan-idx5160-0-0|qp9,historical,6.0,30,30,PASS,30
+Development,TAO-taoyuan-idx5160-0-0|qp9,historical,8.0,30,30,PASS,30
+Development,TAO-taoyuan-idx5379-0-4|qp13,historical,1.0,30,30,PASS,30
+Development,TAO-taoyuan-idx5379-0-4|qp13,historical,10.0,30,30,PASS,30
+Development,TAO-taoyuan-idx5379-0-4|qp13,historical,13.0,30,30,PASS,30
+Development,TAO-taoyuan-idx5379-0-4|qp31,historical,1.0,30,30,PASS,30
+Development,TAO-taoyuan-idx5379-0-4|qp31,historical,2.0,30,30,PASS,30
+Development,TAO-taoyuan-idx5379-0-4|qp31,historical,6.0,30,30,PASS,30
+Development,TAO-taoyuan-idx578-0-8|qp34,historical,1.0,30,30,PASS,30
+Development,TAO-taoyuan-idx578-0-8|qp34,historical,4.0,30,30,PASS,30
+Development,TAO-taoyuan-idx6720-0-3|qp12,historical,1.0,30,30,PASS,30
+Development,TAO-taoyuan-idx6720-0-3|qp12,historical,8.0,30,30,PASS,30
+Development,TAO-taoyuan-idx6720-0-3|qp12,historical,11.0,30,30,PASS,30
+Development,TAO-taoyuan-idx6720-0-3|qp28,historical,1.0,30,30,PASS,30
+Development,TAO-taoyuan-idx6720-0-3|qp28,historical,5.0,30,30,PASS,30
+Development,TAO-taoyuan-idx7044-0-7|qp11,historical,8.0,30,30,PASS,30
+Development,TAO-taoyuan-idx7044-0-7|qp11,historical,12.0,28,30,FAIL,30
+Development,TAO-taoyuan-idx7044-0-7|qp27,historical,1.0,30,30,PASS,30
+Development,TAO-taoyuan-idx7044-0-7|qp27,historical,5.0,30,30,PASS,30
+Development,TAO-taoyuan-idx718-0-1|qp10,historical,7.0,30,30,PASS,30
+Development,TAO-taoyuan-idx718-0-1|qp10,historical,9.0,29,30,PASS,30
+Development,TAO-taoyuan-idx718-0-1|qp24,historical,1.0,30,30,PASS,30
+Development,TAO-taoyuan-idx718-0-1|qp24,historical,4.0,30,30,PASS,30
+Development,TPE-taipei-idx11047-0-0|qp40,historical,1.0,30,30,PASS,30
+Development,TPE-taipei-idx11047-0-0|qp40,historical,2.0,30,30,PASS,30
+Development,TPE-taipei-idx11047-0-0|qp40,historical,5.0,30,30,PASS,30
+Development,TPE-taipei-idx12521-0-5|qp9,historical,5.0,30,30,PASS,30
+Development,TPE-taipei-idx12521-0-5|qp9,historical,7.0,28,30,FAIL,30
+Development,TPE-taipei-idx14193-0-0|qp10,historical,6.0,30,30,PASS,30
+Development,TPE-taipei-idx14193-0-0|qp10,historical,9.0,29,30,PASS,30
+Development,TPE-taipei-idx14193-0-0|qp24,historical,1.0,30,30,PASS,30
+Development,TPE-taipei-idx14193-0-0|qp24,historical,4.0,30,30,PASS,30
+Development,TPE-taipei-idx15074-0-0|qp12,historical,1.0,30,30,PASS,30
+Development,TPE-taipei-idx15074-0-0|qp12,historical,8.0,30,30,PASS,30
+Development,TPE-taipei-idx15074-0-0|qp12,historical,12.0,30,30,PASS,30
+Development,TPE-taipei-idx15074-0-0|qp28,historical,1.0,30,30,PASS,30
+Development,TPE-taipei-idx15074-0-0|qp28,historical,2.0,30,30,PASS,30
+Development,TPE-taipei-idx15074-0-0|qp28,historical,5.0,30,30,PASS,30
+Development,TPE-taipei-idx15608-0-1|qp37,historical,1.0,30,30,PASS,30
+Development,TPE-taipei-idx15608-0-1|qp37,historical,4.0,30,30,PASS,30
+Development,TPE-taipei-idx1592-0-2|qp10,historical,6.0,30,30,PASS,30
+Development,TPE-taipei-idx1592-0-2|qp10,historical,9.0,29,30,PASS,30
+Development,TPE-taipei-idx1592-0-2|qp24,historical,4.0,30,30,PASS,30
+Development,TPE-taipei-idx326-0-1|qp10,historical,7.0,30,30,PASS,30
+Development,TPE-taipei-idx326-0-1|qp10,historical,9.0,29,30,PASS,30
+Development,TPE-taipei-idx326-0-1|qp25,historical,1.0,30,30,PASS,30
+Development,TPE-taipei-idx326-0-1|qp25,historical,4.0,30,30,PASS,30
+Development,TPE-taipei-idx674-0-1|qp10,historical,7.0,30,30,PASS,30
+Development,TPE-taipei-idx674-0-1|qp10,historical,9.0,29,30,PASS,30
+Development,TPE-taipei-idx674-0-1|qp25,historical,1.0,30,30,PASS,30
+Development,TPE-taipei-idx674-0-1|qp25,historical,4.0,30,30,PASS,30
+Development,TPE-taipei-idx813-0-1|qp45,historical,2.0,30,30,PASS,30
+Development,TPE-taipei-idx813-0-1|qp45,historical,5.0,30,30,PASS,30
+Development,TPE-taipei-idx9590-0-0|qp31,historical,3.0,30,30,PASS,30
+Hong Kong,HK-ST-05,nearest-safe-anchor-v1,3.0,30,30,PASS,30
+Hong Kong,HK-ST-08,historical,2.0,26,30,FAIL,30
+Hong Kong,HK-ST-09,historical,3.0,30,30,PASS,30
+Hong Kong,HK-ST-11,historical,2.0,30,30,PASS,30
+Hong Kong,HK-ST-11,historical,5.0,30,30,PASS,30
+Hong Kong,HK-ST-12,historical,1.0,30,30,PASS,30
+Hong Kong,HK-ST-12,historical,4.0,30,30,PASS,30
+Hong Kong,HK-ST-15,historical,1.0,30,30,PASS,30
+Hong Kong,HK-ST-15,historical,3.0,30,30,PASS,30
+Hong Kong,HK-ST-16,nearest-safe-anchor-v1,2.0,30,30,PASS,30
+Hong Kong,HK-ST-16,nearest-safe-anchor-v1,5.0,30,30,PASS,30
+Hong Kong,HK-ST-18,historical,1.0,30,30,PASS,30
+Hong Kong,HK-ST-18,historical,9.0,30,30,PASS,30
+Hong Kong,HK-ST-18,historical,13.0,29,30,PASS,30
+Hong Kong,HK-ST-19,nearest-safe-anchor-v1,2.0,30,30,PASS,30
+Hong Kong,HK-ST-19,nearest-safe-anchor-v1,6.0,30,30,PASS,30
+Hong Kong,HK-ST-21,historical,1.0,30,30,PASS,30
+Hong Kong,HK-ST-21,historical,2.0,30,30,PASS,30
+Hong Kong,HK-ST-21,historical,5.0,30,30,PASS,30
+Hong Kong,HK-ST-22,nearest-safe-anchor-v1,1.0,30,30,PASS,30
+Hong Kong,HK-ST-22,nearest-safe-anchor-v1,4.0,30,30,PASS,30
+Hong Kong,HK-ST-22,nearest-safe-anchor-v1,5.0,30,30,PASS,30
+Hong Kong,HK-ST-22,nearest-safe-anchor-v1,8.0,30,30,PASS,30
+Hong Kong,HK-ST-24,nearest-safe-anchor-v1,1.0,30,30,PASS,30
+Hong Kong,HK-ST-24,nearest-safe-anchor-v1,12.0,30,30,PASS,30
+Hong Kong,HK-ST-24,nearest-safe-anchor-v1,16.0,30,30,PASS,30
+Hong Kong,HK-ST-25,historical,1.0,30,30,PASS,30
+Hong Kong,HK-ST-25,historical,4.0,29,30,PASS,30
+Hong Kong,HK-ST-27,historical,1.0,30,30,PASS,30
+Hong Kong,HK-ST-27,historical,4.0,30,30,PASS,30
+Hong Kong,HK-ST-27,historical,7.0,30,30,PASS,30
+Hong Kong,HK-ST-28,historical,1.0,30,30,PASS,30
+Hong Kong,HK-ST-28,historical,4.0,30,30,PASS,30
+Hong Kong,HK-ST-30,historical,1.0,30,30,PASS,30
+Hong Kong,HK-ST-30,historical,2.0,30,30,PASS,30
+Hong Kong,HK-ST-30,historical,6.0,30,30,PASS,30

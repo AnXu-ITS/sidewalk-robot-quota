@@ -1,0 +1,6 @@
+cell_id,qp,W,base_pass,vbar,qr_star,integrity
+HK-ST-05,20,1.613,1,0.0,,simulation-invalid (inflow=0)
+HK-ST-16,20,2.068,1,1.3495280915954688,,spawn-degraded (inflow 40/80)
+HK-ST-19,20,2.077,1,1.3332544715378176,,spawn-degraded (inflow 38/80)
+HK-ST-22,20,2.475,1,1.2445278093520664,,spawn-degraded (inflow 54/80)
+HK-ST-24,10,2.472,1,1.2766347083215892,,simulation-invalid (inflow=0)

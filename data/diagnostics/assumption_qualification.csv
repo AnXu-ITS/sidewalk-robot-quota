@@ -1,0 +1,9 @@
+tag,configuration,W,qp,qr,robot_radius_requested,robot_radius_actual,actual_radius_factor,direction_larger_share,baseline_n,positive_n,baseline_speed,baseline_service_qualified,passing,status,complete,configuration_verified
+DC-114|qp43.2,assumption-direction075-v1,2.4,43.2,4.0,0.48,0.48,1.0,0.75,30,30,1.146553045061424,True,29,PASS,True,True
+DC-114|qp43.2,assumption-reference-v1,2.4,43.2,4.0,0.48,0.48,1.0,0.5,30,30,1.1991294274407147,True,30,PASS,True,True
+DC-114|qp43.2,assumption-size080-v1,2.4,43.2,4.0,0.384,0.385,0.8020833333333334,0.5,30,30,1.1991294274407147,True,30,PASS,True,True
+DC-114|qp43.2,assumption-size120-v1,2.4,43.2,4.0,0.576,0.575,1.1979166666666665,0.5,30,30,1.1991294274407147,True,30,PASS,True,True
+TPE-taipei-idx12521-0-5|qp21,assumption-direction075-v1,1.75,21.0,4.0,0.48,0.48,1.0,0.75,30,30,1.267900706686037,True,28,FAIL,True,True
+TPE-taipei-idx12521-0-5|qp21,assumption-reference-v1,1.75,21.0,4.0,0.48,0.48,1.0,0.5,30,30,1.2460698990828996,True,30,PASS,True,True
+TPE-taipei-idx12521-0-5|qp21,assumption-size080-v1,1.75,21.0,4.0,0.384,0.385,0.8020833333333334,0.5,30,30,1.2460698990828998,True,30,PASS,True,True
+TPE-taipei-idx12521-0-5|qp21,assumption-size120-v1,1.75,21.0,4.0,0.576,0.575,1.1979166666666665,0.5,30,30,1.2460698990828998,True,0,FAIL,True,True

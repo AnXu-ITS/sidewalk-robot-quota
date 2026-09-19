@@ -1,0 +1,316 @@
+dataset,scenario,configuration,flow,simulation_config,seed_block,methods_using_this_flow,baseline_available,mixed_flow_available,required_runs
+Development,AMS-amsterdam-chain-141619-0|qp10,historical,1.0,7bdc5cb15f546af051643441211e69f94d7a5246d18e113150c6571248ea3809,0-29,M2,30,30,0
+Development,AMS-amsterdam-chain-141619-0|qp10,historical,8.0,7bdc5cb15f546af051643441211e69f94d7a5246d18e113150c6571248ea3809,0-29,M0|M3,30,30,0
+Development,AMS-amsterdam-chain-141619-0|qp10,historical,9.0,7bdc5cb15f546af051643441211e69f94d7a5246d18e113150c6571248ea3809,0-29,M1,30,30,0
+Development,AMS-amsterdam-chain-141619-0|qp25,historical,1.0,ef5b1eb59b58d7d8e9315faa4c23557e76c891d3bc5b74bd2e9e1898649d389b,0-29,M0|M2|M3,30,30,0
+Development,AMS-amsterdam-chain-141619-0|qp25,historical,4.0,ef5b1eb59b58d7d8e9315faa4c23557e76c891d3bc5b74bd2e9e1898649d389b,0-29,M1,30,30,0
+Development,AMS-amsterdam-chain-166482-0|qp11,historical,1.0,8b73b3373d7548b2fa4e8cfbc819926a5a3df3c50c7667e83af65b150470515a,0-29,M2,30,30,0
+Development,AMS-amsterdam-chain-166482-0|qp11,historical,9.0,8b73b3373d7548b2fa4e8cfbc819926a5a3df3c50c7667e83af65b150470515a,0-29,M0|M3,30,30,0
+Development,AMS-amsterdam-chain-166482-0|qp11,historical,12.0,8b73b3373d7548b2fa4e8cfbc819926a5a3df3c50c7667e83af65b150470515a,0-29,M1,30,30,0
+Development,AMS-amsterdam-chain-166482-0|qp27,historical,1.0,85efc7dea1ad81e594bf21320f4f5c4b052c8ef9b6697d8cda605251fd1db5a5,0-29,M2,30,30,0
+Development,AMS-amsterdam-chain-166482-0|qp27,historical,2.0,85efc7dea1ad81e594bf21320f4f5c4b052c8ef9b6697d8cda605251fd1db5a5,0-29,M0|M3,30,30,0
+Development,AMS-amsterdam-chain-166482-0|qp27,historical,5.0,85efc7dea1ad81e594bf21320f4f5c4b052c8ef9b6697d8cda605251fd1db5a5,0-29,M1,30,30,0
+Development,AMS-amsterdam-chain-32802-0|qp13,historical,2.0,97b85f75ba5d82559ed30e2a67af0377118a797f6922232716d8c356958b38ba,0-29,M2,30,30,0
+Development,AMS-amsterdam-chain-32802-0|qp13,historical,10.0,97b85f75ba5d82559ed30e2a67af0377118a797f6922232716d8c356958b38ba,0-29,M0|M3,30,30,0
+Development,AMS-amsterdam-chain-32802-0|qp13,historical,13.0,97b85f75ba5d82559ed30e2a67af0377118a797f6922232716d8c356958b38ba,0-29,M1,30,30,0
+Development,AMS-amsterdam-chain-32802-0|qp31,historical,2.0,7bb250eea07a13da86b1f356d2a3ac4796013e41b8ed21986dfb09b8e3e25165,0-29,M2|M3,30,30,0
+Development,AMS-amsterdam-chain-32802-0|qp31,historical,3.0,7bb250eea07a13da86b1f356d2a3ac4796013e41b8ed21986dfb09b8e3e25165,0-29,M0,30,30,0
+Development,AMS-amsterdam-chain-32802-0|qp31,historical,5.0,7bb250eea07a13da86b1f356d2a3ac4796013e41b8ed21986dfb09b8e3e25165,0-29,M1,30,30,0
+Development,AMS-amsterdam-chain-44642-0|qp12,historical,1.0,bf6b04178ca5605b6d5e187904c259909d2ac062552efb0bba906e25d8f1649c,0-29,M2,30,30,0
+Development,AMS-amsterdam-chain-44642-0|qp12,historical,10.0,bf6b04178ca5605b6d5e187904c259909d2ac062552efb0bba906e25d8f1649c,0-29,M0|M3,30,30,0
+Development,AMS-amsterdam-chain-44642-0|qp12,historical,13.0,bf6b04178ca5605b6d5e187904c259909d2ac062552efb0bba906e25d8f1649c,0-29,M1,30,30,0
+Development,AMS-amsterdam-chain-44642-0|qp30,historical,1.0,b298a6ad6d7b7af1c4c306d503b1195535cd202bf68f138c1b5a9cac1f183b5b,0-29,M2,30,30,0
+Development,AMS-amsterdam-chain-44642-0|qp30,historical,2.0,b298a6ad6d7b7af1c4c306d503b1195535cd202bf68f138c1b5a9cac1f183b5b,0-29,M0|M3,30,30,0
+Development,AMS-amsterdam-chain-44642-0|qp30,historical,5.0,b298a6ad6d7b7af1c4c306d503b1195535cd202bf68f138c1b5a9cac1f183b5b,0-29,M1,30,30,0
+Development,AMS-amsterdam-chain-45268-50|qp11,historical,1.0,5d629989f168afaf35f9af04d10c378db03993997f0440d1b287959f122d0b60,0-29,M2,30,30,0
+Development,AMS-amsterdam-chain-45268-50|qp11,historical,8.0,5d629989f168afaf35f9af04d10c378db03993997f0440d1b287959f122d0b60,0-29,M0|M3,30,30,0
+Development,AMS-amsterdam-chain-45268-50|qp11,historical,11.0,5d629989f168afaf35f9af04d10c378db03993997f0440d1b287959f122d0b60,0-29,M1,30,30,0
+Development,AMS-amsterdam-chain-45268-50|qp26,historical,1.0,7c5da0f504bf38ca1ba04c6ec7b027fb6bb4a2d814e4bec78f68df0a00c28fe4,0-29,M2,30,30,0
+Development,AMS-amsterdam-chain-45268-50|qp26,historical,2.0,7c5da0f504bf38ca1ba04c6ec7b027fb6bb4a2d814e4bec78f68df0a00c28fe4,0-29,M0|M3,30,30,0
+Development,AMS-amsterdam-chain-45268-50|qp26,historical,4.0,7c5da0f504bf38ca1ba04c6ec7b027fb6bb4a2d814e4bec78f68df0a00c28fe4,0-29,M1,30,30,0
+Development,AMS-amsterdam-chain-79104-0|qp20,historical,3.0,17566399276e3f453d7227f016d1b96e7840130388f1bd106a7a1d590cb6994f,0-29,M1,30,30,0
+Development,AMS-amsterdam-chain-79104-0|qp8,historical,5.0,483900251cf55a9f4d53f718182627af80e9b69dfdb6e6be68cd4cbf5827aa54,0-29,M0|M1|M3,30,30,0
+Development,DC-006|qp30.2,historical,2.0,3d70cc311d113ef6af4cbef23f2bad35be7cb242e88d3770355e4a6fff205d44,0-29,M1,30,30,0
+Development,DC-009|qp30.7,historical,2.0,4c7fd6c9307fee979cfd74e4103ff1cae8b3988dfd342991393c2157344b6576,0-29,M1,30,30,0
+Development,DC-012|qp43.3,historical,1.0,b05db1ae3a1577c13d02eee00ec98f51cafdaebc1d5e02bf91cc98f256912e6e,0-29,M2,30,30,0
+Development,DC-012|qp43.3,historical,3.0,b05db1ae3a1577c13d02eee00ec98f51cafdaebc1d5e02bf91cc98f256912e6e,0-29,M1,30,30,0
+Development,DC-042|qp30.5,historical,2.0,cb7b4de91d7c44a19f6d3065a2b10e27ed534e7fec5116913019ea34ebd9ea56,0-29,M1,30,30,0
+Development,DC-045|qp31.5,historical,2.0,fbf7290c9746b5c7eb1f7bf73e41f8dc8bb6d1a9d97b3904d4fcf4477279a7e5,0-29,M1,30,30,0
+Development,DC-048|qp49.0,historical,2.0,f19571100f9fcf405ff1120db2709f8e1dc112b5fefdcc25739e9fc1c87e089f,0-29,M2,30,30,0
+Development,DC-048|qp49.0,historical,4.0,f19571100f9fcf405ff1120db2709f8e1dc112b5fefdcc25739e9fc1c87e089f,0-29,M1,30,30,0
+Development,DC-060|qp31.5,historical,2.0,67ad7734c728bdbbbb0c00b06228330c01c418f32e1643a838bc64e3b37b1881,0-29,M1,30,30,0
+Development,DC-063|qp35.3,historical,3.0,b667c6bba6dbe448829b973b166f4c8b889ca5034e1dd5fca8c66bb7d0058c76,0-29,M1,30,30,0
+Development,DC-066|qp44.6,historical,1.0,915fc13a10433b04d47a6654140b9066a292fadc05be4285562d9b71cde48459,0-29,M2,30,30,0
+Development,DC-066|qp44.6,historical,4.0,915fc13a10433b04d47a6654140b9066a292fadc05be4285562d9b71cde48459,0-29,M1,30,30,0
+Development,DC-067|qp59.5,historical,1.0,7e0f42f955487742abecad48135bbee8eb765f463ddd2c172487d7dc72520438,0-29,M2,30,30,0
+Development,DC-067|qp59.5,historical,3.0,7e0f42f955487742abecad48135bbee8eb765f463ddd2c172487d7dc72520438,0-29,M1,30,30,0
+Development,DC-078|qp30.8,historical,2.0,a8ecac558032e0dc20dd696c2daac98669e049b2e8c44cdd38309c45426500ac,0-29,M1,30,30,0
+Development,DC-081|qp31.3,historical,2.0,3d36b69d878163d2e7df764f26ddee576a609b988bd8cbee4e43ea37b1e6c081,0-29,M1,30,30,0
+Development,DC-084|qp44.3,historical,1.0,4b450f455f63d9a6efae02ed99b730274e193cec4f1ad49e531f6f96f0f5fd8c,0-29,M2,30,30,0
+Development,DC-084|qp44.3,historical,3.0,4b450f455f63d9a6efae02ed99b730274e193cec4f1ad49e531f6f96f0f5fd8c,0-29,M1,30,30,0
+Development,DC-085|qp59.0,historical,1.0,41de47a69d2c883be43f49e4c8abdc70bfbb749b59d6ce374341be9acb2c05cb,0-29,M2,30,30,0
+Development,DC-085|qp59.0,historical,2.0,41de47a69d2c883be43f49e4c8abdc70bfbb749b59d6ce374341be9acb2c05cb,0-29,M1,30,30,0
+Development,DC-096|qp29.7,historical,2.0,73ca79a9847f2196876c94f9f23c4d3a642efa8e08389c7fd9e457fd88ce2ff2,0-29,M1,30,30,0
+Development,DC-099|qp43.9,historical,1.0,2fe7648ed0160d75d5f604ecf3d700964ee5e897b35efc5490ea70fb451ef119,0-29,M2,30,30,0
+Development,DC-099|qp43.9,historical,4.0,2fe7648ed0160d75d5f604ecf3d700964ee5e897b35efc5490ea70fb451ef119,0-29,M1,30,30,0
+Development,DC-100|qp58.5,historical,1.0,89d743a25ba48c158ef0c97fed072431be688fbec08cd8438095d7aedaa621a3,0-29,M2,30,30,0
+Development,DC-100|qp58.5,historical,3.0,89d743a25ba48c158ef0c97fed072431be688fbec08cd8438095d7aedaa621a3,0-29,M1,30,30,0
+Development,DC-111|qp32.4,historical,2.0,b97adb7cb70fc172095f4ee66b861c73074af060a55b1c87bbdcdc6e6e42ac9c,0-29,M1,30,30,0
+Development,DC-112|qp43.2,historical,2.0,f0c908d6855edaa828d846cd44af86dd22b1b18c5d029de5c0ee8d820e719340,0-29,M1,30,30,0
+Development,MEL-melbourne-1389612-0-2|qp20,historical,4.0,6b7201a2761e00d9a6cfba3091f6725ce965bc4df1174618a71b537b8b6822d7,0-29,M1,30,30,0
+Development,MEL-melbourne-1389612-0-2|qp8,historical,5.0,9c29408909aef672ee8335606ad0e5adf82b7f4049996e86cf20615ba94771e1,0-29,M0|M1|M3,30,30,0
+Development,MEL-melbourne-1389823-0-3|qp14,historical,2.0,6e773646f2d53e19078ce72c9dc36c5042bd9a5574299e139f57d216e0a10c8f,0-29,M2,30,30,0
+Development,MEL-melbourne-1389823-0-3|qp14,historical,10.0,6e773646f2d53e19078ce72c9dc36c5042bd9a5574299e139f57d216e0a10c8f,0-29,M0|M3,30,30,0
+Development,MEL-melbourne-1389823-0-3|qp14,historical,13.0,6e773646f2d53e19078ce72c9dc36c5042bd9a5574299e139f57d216e0a10c8f,0-29,M1,30,0,30
+Development,MEL-melbourne-1389823-0-3|qp33,historical,2.0,2c46c3fc48671dc7ff02b79c4545ca195696246f2df5efeaaf0345de922010e4,0-29,M0|M2|M3,30,30,0
+Development,MEL-melbourne-1389823-0-3|qp33,historical,6.0,2c46c3fc48671dc7ff02b79c4545ca195696246f2df5efeaaf0345de922010e4,0-29,M1,30,30,0
+Development,MEL-melbourne-1434605-0-0|qp11,historical,7.0,90c56c15d9228608148d528aeed4a4c006eba16ca195f1f64624bbc86cb83f34,0-29,M0|M3,30,30,0
+Development,MEL-melbourne-1434605-0-0|qp11,historical,11.0,90c56c15d9228608148d528aeed4a4c006eba16ca195f1f64624bbc86cb83f34,0-29,M1,30,30,0
+Development,MEL-melbourne-1434605-0-0|qp26,historical,1.0,5a2ef9145f64352a45a30cabed065772b06469f68d99b6b674c0368d31df9d3c,0-29,M0|M3,30,30,0
+Development,MEL-melbourne-1434605-0-0|qp26,historical,5.0,5a2ef9145f64352a45a30cabed065772b06469f68d99b6b674c0368d31df9d3c,0-29,M1,30,30,0
+Development,MEL-melbourne-1465622-0-2|qp21,historical,4.0,0bec83eabc9ca6c98870f0e1ee91d4ac1cbb605cb1106947e787b9f284c671ea,0-29,M1,30,30,0
+Development,MEL-melbourne-1465622-0-2|qp9,historical,5.0,2506baac0a7c01ac25536683336f886d8682397a315151bd9a70ce64a96f58c2,0-29,M0|M3,30,30,0
+Development,MEL-melbourne-1465622-0-2|qp9,historical,6.0,2506baac0a7c01ac25536683336f886d8682397a315151bd9a70ce64a96f58c2,0-29,M1,30,30,0
+Development,MEL-melbourne-1465759-0-1|qp12,historical,1.0,6f98d12e398855c7ec21c37f006737197d7c69d6f83e1b52df70b23826cf8f91,0-29,M2,30,30,0
+Development,MEL-melbourne-1465759-0-1|qp12,historical,8.0,6f98d12e398855c7ec21c37f006737197d7c69d6f83e1b52df70b23826cf8f91,0-29,M0|M3,30,30,0
+Development,MEL-melbourne-1465759-0-1|qp12,historical,12.0,6f98d12e398855c7ec21c37f006737197d7c69d6f83e1b52df70b23826cf8f91,0-29,M1,30,30,0
+Development,MEL-melbourne-1465759-0-1|qp28,historical,1.0,837ff5abfb80fbf413a9e1270845949a2c41a62d28d2c05b91c40d9b7caa3d4c,0-29,M0|M2,30,30,0
+Development,MEL-melbourne-1465759-0-1|qp28,historical,2.0,837ff5abfb80fbf413a9e1270845949a2c41a62d28d2c05b91c40d9b7caa3d4c,0-29,M3,30,30,0
+Development,MEL-melbourne-1465759-0-1|qp28,historical,5.0,837ff5abfb80fbf413a9e1270845949a2c41a62d28d2c05b91c40d9b7caa3d4c,0-29,M1,30,30,0
+Development,MEL-melbourne-1477330-0-0|qp22,historical,4.0,a08a2ac6fb807acb37af5ea02ee5e1e42e24bca008a5e71ecdfe62cac9c725e9,0-29,M1,30,30,0
+Development,MEL-melbourne-1477330-0-0|qp9,historical,6.0,089a9e0d463388494a79e0f07d8bf71350bd00d323757c828c5b71db3bf8166f,0-29,M0|M3,30,30,0
+Development,MEL-melbourne-1477330-0-0|qp9,historical,8.0,089a9e0d463388494a79e0f07d8bf71350bd00d323757c828c5b71db3bf8166f,0-29,M1,30,30,0
+Development,MEL-melbourne-RPSP02B11034-0-0|qp22,historical,4.0,9670145f308dbfd6ee761f373ccb4d66a23e0995232c03fd89f49f74643205dc,0-29,M1,30,30,0
+Development,MEL-melbourne-RPSP02B11034-0-0|qp9,historical,6.0,e0f940c8c643d85937e78604d9827a91d64058474ea970827dcf55e77e453e19,0-29,M0|M3,30,30,0
+Development,MEL-melbourne-RPSP02B11034-0-0|qp9,historical,8.0,e0f940c8c643d85937e78604d9827a91d64058474ea970827dcf55e77e453e19,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx11901-0-0|qp21,historical,4.0,dac5397e387d42e0aeabcfd4daa12cb4d386237e233132fffbe408f006696f06,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx11901-0-0|qp9,historical,6.0,2bc8b96e59ba9fb6974989c6a5edc8be6b07d8f96925d5c0c825ddaf4e3fd3b2,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx11901-0-0|qp9,historical,7.0,2bc8b96e59ba9fb6974989c6a5edc8be6b07d8f96925d5c0c825ddaf4e3fd3b2,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx13763-0-2|qp22,historical,4.0,c2ebc59295d4c7f84c144417d198d792f7f9dc1ccc40231de0766bf6b70cef09,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx13763-0-2|qp9,historical,6.0,e8ac4998da90b3b1678c1cc8c2af34eedbc1c190e3d7bd1a6177e44dae2c5bba,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx13763-0-2|qp9,historical,8.0,e8ac4998da90b3b1678c1cc8c2af34eedbc1c190e3d7bd1a6177e44dae2c5bba,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx13776-0-2|qp20,historical,4.0,dec5f7c35f67d1e3e773108ea95e5bbed4aa50687c287cb00e55214d7fd42202,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx13776-0-2|qp9,historical,5.0,71920613caa076bc44e67d7b1cca6605115e070da7814ddec8b9dcd91f156670,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx13776-0-2|qp9,historical,6.0,71920613caa076bc44e67d7b1cca6605115e070da7814ddec8b9dcd91f156670,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx251-0-0|qp12,historical,1.0,6e721f1fd90e67554c05e939e6b36fc272b54d53def03d6c03f28238a6490b1d,0-29,M2,30,30,0
+Development,NTP-newtaipei-idx251-0-0|qp12,historical,10.0,6e721f1fd90e67554c05e939e6b36fc272b54d53def03d6c03f28238a6490b1d,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx251-0-0|qp12,historical,14.0,6e721f1fd90e67554c05e939e6b36fc272b54d53def03d6c03f28238a6490b1d,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx251-0-0|qp30,historical,1.0,b7ac7c05ff4c8f1c0cf9d71c831cd1a442b8b43fd955142efd60640602bc3370,0-29,M2,30,30,0
+Development,NTP-newtaipei-idx251-0-0|qp30,historical,2.0,b7ac7c05ff4c8f1c0cf9d71c831cd1a442b8b43fd955142efd60640602bc3370,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx251-0-0|qp30,historical,5.0,b7ac7c05ff4c8f1c0cf9d71c831cd1a442b8b43fd955142efd60640602bc3370,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx4423-0-0|qp15,historical,2.0,803a72145733d683e52a296f4d93b6a4b97884e6b31ebfacae5792a21d1a0133,0-29,M2,30,30,0
+Development,NTP-newtaipei-idx4423-0-0|qp15,historical,13.0,803a72145733d683e52a296f4d93b6a4b97884e6b31ebfacae5792a21d1a0133,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx4423-0-0|qp15,historical,17.0,803a72145733d683e52a296f4d93b6a4b97884e6b31ebfacae5792a21d1a0133,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx4423-0-0|qp36,historical,2.0,29d3945ccb2bfea33894f9b4d87a4ad4797d37d76023917259e1ac733f5b4028,0-29,M2,30,30,0
+Development,NTP-newtaipei-idx4423-0-0|qp36,historical,3.0,29d3945ccb2bfea33894f9b4d87a4ad4797d37d76023917259e1ac733f5b4028,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx4423-0-0|qp36,historical,7.0,29d3945ccb2bfea33894f9b4d87a4ad4797d37d76023917259e1ac733f5b4028,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx5617-0-0|qp12,historical,1.0,32d4ed7cce63eb922288a28cf9998d58939332a384e0d0c84f58b39bd2ff1026,0-29,M2,30,30,0
+Development,NTP-newtaipei-idx5617-0-0|qp12,historical,9.0,32d4ed7cce63eb922288a28cf9998d58939332a384e0d0c84f58b39bd2ff1026,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx5617-0-0|qp12,historical,13.0,32d4ed7cce63eb922288a28cf9998d58939332a384e0d0c84f58b39bd2ff1026,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx5617-0-0|qp28,historical,1.0,29ee5a7bb3e6a4e81d68fe1b76ba8dcb5d87b50f5a59fedb1d0c9a380966a1dc,0-29,M0|M2|M3,30,30,0
+Development,NTP-newtaipei-idx5617-0-0|qp28,historical,5.0,29ee5a7bb3e6a4e81d68fe1b76ba8dcb5d87b50f5a59fedb1d0c9a380966a1dc,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx6820-0-0|qp13,historical,1.0,fd41eb30c47314d65af619fe15860adb68bb9203ba7c6a0f141fd376664d9cd5,0-29,M2,30,30,0
+Development,NTP-newtaipei-idx6820-0-0|qp13,historical,11.0,fd41eb30c47314d65af619fe15860adb68bb9203ba7c6a0f141fd376664d9cd5,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx6820-0-0|qp13,historical,15.0,fd41eb30c47314d65af619fe15860adb68bb9203ba7c6a0f141fd376664d9cd5,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx6820-0-0|qp31,historical,1.0,ab08d410f57eada075d94d05dc1c83837fc41aa3b99eeb6b2a92604544b87154,0-29,M2,30,30,0
+Development,NTP-newtaipei-idx6820-0-0|qp31,historical,2.0,ab08d410f57eada075d94d05dc1c83837fc41aa3b99eeb6b2a92604544b87154,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx6820-0-0|qp31,historical,6.0,ab08d410f57eada075d94d05dc1c83837fc41aa3b99eeb6b2a92604544b87154,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx6919-0-0|qp21,historical,4.0,d02b5bfcfb6109e00e775165a069ae3047946f7965416c9b5d46d20087b37eb3,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx6919-0-0|qp9,historical,5.0,60cb573fe1399deba7610a57bd3d6dc584080f855953feeade582a2b0757bb00,0-29,M0,30,30,0
+Development,NTP-newtaipei-idx6919-0-0|qp9,historical,6.0,60cb573fe1399deba7610a57bd3d6dc584080f855953feeade582a2b0757bb00,0-29,M1|M3,30,30,0
+Development,NTP-newtaipei-idx7317-0-1|qp21,historical,4.0,b998d26aac4211ebd413a9b44e0dcd875014f8c93cb4e54c2c68a1fb33bc01f5,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx7317-0-1|qp9,historical,5.0,c0d4e1ac22cd40203df001effe7aa610ebf8e96626227931d8775a7ff4ddab67,0-29,M0,30,30,0
+Development,NTP-newtaipei-idx7317-0-1|qp9,historical,6.0,c0d4e1ac22cd40203df001effe7aa610ebf8e96626227931d8775a7ff4ddab67,0-29,M1|M3,30,30,0
+Development,NTP-newtaipei-idx7804-0-0|qp14,historical,1.0,0ff9d74f6cbdf0de4155e350ebd07f6867abd985ecdf9fa7a3f5542be6c28422,0-29,M2,30,30,0
+Development,NTP-newtaipei-idx7804-0-0|qp14,historical,13.0,0ff9d74f6cbdf0de4155e350ebd07f6867abd985ecdf9fa7a3f5542be6c28422,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx7804-0-0|qp14,historical,17.0,0ff9d74f6cbdf0de4155e350ebd07f6867abd985ecdf9fa7a3f5542be6c28422,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx7804-0-0|qp35,historical,1.0,37ce56d27228d3e210fc5571361328fc8d53758cb2d536a3fc508e384a91bee0,0-29,M2,30,30,0
+Development,NTP-newtaipei-idx7804-0-0|qp35,historical,3.0,37ce56d27228d3e210fc5571361328fc8d53758cb2d536a3fc508e384a91bee0,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx7804-0-0|qp35,historical,6.0,37ce56d27228d3e210fc5571361328fc8d53758cb2d536a3fc508e384a91bee0,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx9858-0-0|qp10,historical,6.0,fdd05caed0cd9b0f2ea3173c94966b1c5ec615a32d5c4b9a08784b2d85048493,0-29,M0|M3,30,30,0
+Development,NTP-newtaipei-idx9858-0-0|qp10,historical,8.0,fdd05caed0cd9b0f2ea3173c94966b1c5ec615a32d5c4b9a08784b2d85048493,0-29,M1,30,30,0
+Development,NTP-newtaipei-idx9858-0-0|qp23,historical,4.0,b3992f338e6d5faa6b64133964531835bce08e9e7f835130349d91807402c4fd,0-29,M1,30,30,0
+Development,NYC-nyc-110605-0-2|qp20,historical,4.0,2103c2dbb3aa118c666b280470a03c5d44da5719ba04006521791ae20e8aae7f,0-29,M1,30,30,0
+Development,NYC-nyc-110605-0-2|qp8,historical,6.0,90e07d9f28f6ee27330081e40f26a6c1aecb60e09a4e969565886dfc34739a9d,0-29,M0|M1|M3,30,30,0
+Development,NYC-nyc-17655-0-0|qp12,historical,1.0,7b5377fcd1569610904e37084cbc89b5794b3d4732124aea685cb7756cf88464,0-29,M2,30,30,0
+Development,NYC-nyc-17655-0-0|qp12,historical,9.0,7b5377fcd1569610904e37084cbc89b5794b3d4732124aea685cb7756cf88464,0-29,M0|M3,30,30,0
+Development,NYC-nyc-17655-0-0|qp12,historical,12.0,7b5377fcd1569610904e37084cbc89b5794b3d4732124aea685cb7756cf88464,0-29,M1,30,30,0
+Development,NYC-nyc-17655-0-0|qp29,historical,1.0,4d48ad4c96c3b6ae18ab6ed305b373dcf4a4340c21679b2cd9334cad2c53638f,0-29,M2,30,30,0
+Development,NYC-nyc-17655-0-0|qp29,historical,2.0,4d48ad4c96c3b6ae18ab6ed305b373dcf4a4340c21679b2cd9334cad2c53638f,0-29,M0|M3,30,30,0
+Development,NYC-nyc-17655-0-0|qp29,historical,5.0,4d48ad4c96c3b6ae18ab6ed305b373dcf4a4340c21679b2cd9334cad2c53638f,0-29,M1,30,30,0
+Development,NYC-nyc-199805-0-0|qp10,historical,8.0,8858c8a9db3347136ad44a86d6322c1e65e5fc495ebfffe82baadd346f4f7c05,0-29,M0|M3,30,30,0
+Development,NYC-nyc-199805-0-0|qp10,historical,9.0,8858c8a9db3347136ad44a86d6322c1e65e5fc495ebfffe82baadd346f4f7c05,0-29,M1,30,30,0
+Development,NYC-nyc-199805-0-0|qp25,historical,1.0,bc272d5b26214278df38653f40b715a6dabdea0dd0d508b37cee4749ad9f6227,0-29,M0|M3,30,30,0
+Development,NYC-nyc-199805-0-0|qp25,historical,4.0,bc272d5b26214278df38653f40b715a6dabdea0dd0d508b37cee4749ad9f6227,0-29,M1,30,30,0
+Development,NYC-nyc-214464-0-0|qp13,historical,1.0,0efb316a4060d3df59277f5944de453a420a04e4c2449f209c7b0b093c8cf88f,0-29,M2,30,30,0
+Development,NYC-nyc-214464-0-0|qp13,historical,9.0,0efb316a4060d3df59277f5944de453a420a04e4c2449f209c7b0b093c8cf88f,0-29,M3,30,0,30
+Development,NYC-nyc-214464-0-0|qp13,historical,10.0,0efb316a4060d3df59277f5944de453a420a04e4c2449f209c7b0b093c8cf88f,0-29,M0,30,30,0
+Development,NYC-nyc-214464-0-0|qp13,historical,13.0,0efb316a4060d3df59277f5944de453a420a04e4c2449f209c7b0b093c8cf88f,0-29,M1,30,30,0
+Development,NYC-nyc-214464-0-0|qp31,historical,1.0,3d6be704b2bdda5469d0ab7556f2aa1c27d932cd78012aa4b4a351ad99e1ca3c,0-29,M2,30,30,0
+Development,NYC-nyc-214464-0-0|qp31,historical,2.0,3d6be704b2bdda5469d0ab7556f2aa1c27d932cd78012aa4b4a351ad99e1ca3c,0-29,M0|M3,30,30,0
+Development,NYC-nyc-214464-0-0|qp31,historical,5.0,3d6be704b2bdda5469d0ab7556f2aa1c27d932cd78012aa4b4a351ad99e1ca3c,0-29,M1,30,30,0
+Development,NYC-nyc-267383-0-0|qp35,historical,1.0,f52a8e14d10d3a044630f7299d343e1f768b881ebb6e3ac68888cadd8b167207,0-29,M0|M2|M3,30,30,0
+Development,NYC-nyc-267383-0-0|qp35,historical,4.0,f52a8e14d10d3a044630f7299d343e1f768b881ebb6e3ac68888cadd8b167207,0-29,M1,30,30,0
+Development,NYC-nyc-27695-0-3|qp12,historical,1.0,acbfe9f2b150beb7d521ee1edb424ceb40bbf977be62190fe32de0a8a42d2d21,0-29,M2,30,30,0
+Development,NYC-nyc-27695-0-3|qp12,historical,9.0,acbfe9f2b150beb7d521ee1edb424ceb40bbf977be62190fe32de0a8a42d2d21,0-29,M0|M3,30,30,0
+Development,NYC-nyc-27695-0-3|qp12,historical,12.0,acbfe9f2b150beb7d521ee1edb424ceb40bbf977be62190fe32de0a8a42d2d21,0-29,M1,30,30,0
+Development,NYC-nyc-27695-0-3|qp28,historical,1.0,30ca846c84d52c6af85752d1f079bdda722527552bfa8436d24ee7b7d7b44da6,0-29,M2,30,30,0
+Development,NYC-nyc-27695-0-3|qp28,historical,2.0,30ca846c84d52c6af85752d1f079bdda722527552bfa8436d24ee7b7d7b44da6,0-29,M0|M3,30,30,0
+Development,NYC-nyc-27695-0-3|qp28,historical,5.0,30ca846c84d52c6af85752d1f079bdda722527552bfa8436d24ee7b7d7b44da6,0-29,M1,30,30,0
+Development,NYC-nyc-31649-0-0|qp28,historical,3.0,6fa5542b84a59c7c623b127ebe97ccba6595b76ef07b543ada26cc1865df53bb,0-29,M1,30,30,0
+Development,NYC-nyc-46079-0-1|qp20,historical,3.0,1764d75b183ca0901ed51a5787c0a71c17392ebe47be0fee3ef0aba225eb8401,0-29,M1,30,30,0
+Development,NYC-nyc-46079-0-1|qp8,historical,5.0,fcbe27f21906e43ffb41df933f7ad83046917c23049dfb1dd20fcf912a66aeb5,0-29,M0|M1|M3,30,30,0
+Development,NYC-nyc-98749-0-2|qp32,historical,3.0,7c07f6508c2af218f67cc8685f7a068c0a50a506d3006c83c0003abb48cacecf,0-29,M1,30,30,0
+Development,SEA-seattle-5426480-0-0|qp22,historical,1.0,d0aacfd263439565a012077eef253fc27770abc7eab6526df0dd033d8368badf,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5426480-0-0|qp22,historical,4.0,d0aacfd263439565a012077eef253fc27770abc7eab6526df0dd033d8368badf,0-29,M1,30,30,0
+Development,SEA-seattle-5426480-0-0|qp9,historical,6.0,5a1119b6ea8e8d6c1906c89fcffbfba1eec5fdd10d9896507175496b666ce84b,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5426480-0-0|qp9,historical,8.0,5a1119b6ea8e8d6c1906c89fcffbfba1eec5fdd10d9896507175496b666ce84b,0-29,M1,30,30,0
+Development,SEA-seattle-5426595-0-0|qp38,historical,1.0,ee258bcc2b47885258f525e42b848eab21279fef91a917c17232be39155a4a84,0-29,M0|M2|M3,30,30,0
+Development,SEA-seattle-5426595-0-0|qp38,historical,4.0,ee258bcc2b47885258f525e42b848eab21279fef91a917c17232be39155a4a84,0-29,M1,30,30,0
+Development,SEA-seattle-5432169-0-1|qp20,historical,3.0,23044bfa9c98732378bf8ce455b0ed61fbc5a1a2a0e053193d332546efe98296,0-29,M1,30,30,0
+Development,SEA-seattle-5432169-0-1|qp8,historical,5.0,48191f39d9f4b0e22cb114e0bc9f16b5a21cc95e5d5584b71e99a2968c23f470,0-29,M0|M1|M3,30,30,0
+Development,SEA-seattle-5433778-0-0|qp22,historical,1.0,b8a0b55dff82e4fe7cc33c651d91324dc580efadabe3617ea6836f894c8eed6e,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5433778-0-0|qp22,historical,4.0,b8a0b55dff82e4fe7cc33c651d91324dc580efadabe3617ea6836f894c8eed6e,0-29,M1,30,30,0
+Development,SEA-seattle-5433778-0-0|qp9,historical,6.0,1b25956310de259a9d409ae932209630b49a6b69841bcccb0f6ebc317f834ca6,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5433778-0-0|qp9,historical,8.0,1b25956310de259a9d409ae932209630b49a6b69841bcccb0f6ebc317f834ca6,0-29,M1,30,30,0
+Development,SEA-seattle-5434873-0-0|qp37,historical,1.0,86990fdf477dde75bd1eb0b01d73ed2babd2a8d1c4a2d86f611ebe1b8705718d,0-29,M0|M2|M3,30,30,0
+Development,SEA-seattle-5434873-0-0|qp37,historical,4.0,86990fdf477dde75bd1eb0b01d73ed2babd2a8d1c4a2d86f611ebe1b8705718d,0-29,M1,30,30,0
+Development,SEA-seattle-5438086-0-1|qp22,historical,1.0,15177dacd9ec2d75969ac0d746edc438a21c9e6414e61d3224254c9442840e12,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5438086-0-1|qp22,historical,4.0,15177dacd9ec2d75969ac0d746edc438a21c9e6414e61d3224254c9442840e12,0-29,M1,30,30,0
+Development,SEA-seattle-5438086-0-1|qp9,historical,6.0,79e9b3ea1c5226232e7db9bb4692d1c91edb5c503f50fb6fdad75dc7281f7772,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5438086-0-1|qp9,historical,8.0,79e9b3ea1c5226232e7db9bb4692d1c91edb5c503f50fb6fdad75dc7281f7772,0-29,M1,30,30,0
+Development,SEA-seattle-5449118-0-0|qp22,historical,1.0,9e9098eab634edc86756e68cad9cf49170ffff6a7bafff7a223fcdb96375a2b6,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5449118-0-0|qp22,historical,4.0,9e9098eab634edc86756e68cad9cf49170ffff6a7bafff7a223fcdb96375a2b6,0-29,M1,30,30,0
+Development,SEA-seattle-5449118-0-0|qp9,historical,6.0,86e7af12d7433f6dc3b7e2725fdf5608d172076a18ac47cb41f0ba6ec2429c01,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5449118-0-0|qp9,historical,8.0,86e7af12d7433f6dc3b7e2725fdf5608d172076a18ac47cb41f0ba6ec2429c01,0-29,M1,30,30,0
+Development,SEA-seattle-5449903-0-0|qp22,historical,1.0,c20a2d29a69dbe6fa6e333a94aae0dc8df59bb86e027436b9b6a04181df84efb,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5449903-0-0|qp22,historical,4.0,c20a2d29a69dbe6fa6e333a94aae0dc8df59bb86e027436b9b6a04181df84efb,0-29,M1,30,30,0
+Development,SEA-seattle-5449903-0-0|qp9,historical,6.0,ad55b6e12f61f4ebb1e8770769fa7812ab831ec9c75f9d4a76a889ba04997d6b,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5449903-0-0|qp9,historical,8.0,ad55b6e12f61f4ebb1e8770769fa7812ab831ec9c75f9d4a76a889ba04997d6b,0-29,M1,30,30,0
+Development,SEA-seattle-5452128-0-1|qp12,historical,1.0,639014a38db23f93a32074869c3d54895506915bdf5e3ae2c97abc23717ecdf8,0-29,M2,30,30,0
+Development,SEA-seattle-5452128-0-1|qp12,historical,9.0,639014a38db23f93a32074869c3d54895506915bdf5e3ae2c97abc23717ecdf8,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5452128-0-1|qp12,historical,13.0,639014a38db23f93a32074869c3d54895506915bdf5e3ae2c97abc23717ecdf8,0-29,M1,30,30,0
+Development,SEA-seattle-5452128-0-1|qp29,historical,1.0,f4fd2b6f263b167dbd148b9fc3a5b62cbb45288c4a6fce15560113f08da86658,0-29,M2,30,30,0
+Development,SEA-seattle-5452128-0-1|qp29,historical,2.0,f4fd2b6f263b167dbd148b9fc3a5b62cbb45288c4a6fce15560113f08da86658,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5452128-0-1|qp29,historical,5.0,f4fd2b6f263b167dbd148b9fc3a5b62cbb45288c4a6fce15560113f08da86658,0-29,M1,30,30,0
+Development,SEA-seattle-5453813-0-0|qp22,historical,1.0,41c8f53f407a42874da8fb7237ff24a4294e872bbfaa5b48e65b9ea5adcea4bd,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5453813-0-0|qp22,historical,4.0,41c8f53f407a42874da8fb7237ff24a4294e872bbfaa5b48e65b9ea5adcea4bd,0-29,M1,30,30,0
+Development,SEA-seattle-5453813-0-0|qp9,historical,6.0,da719b8b0c0b0d34f0301df4947157a3dfa054b1ee0af6b0f237c08487d86567,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5453813-0-0|qp9,historical,8.0,da719b8b0c0b0d34f0301df4947157a3dfa054b1ee0af6b0f237c08487d86567,0-29,M1,30,30,0
+Development,SEA-seattle-5454776-0-1|qp13,historical,1.0,ec2ec6f109a846c21af8783dcd19863bddedaf541ac92be9704bfcaa6a9f827c,0-29,M2,30,30,0
+Development,SEA-seattle-5454776-0-1|qp13,historical,10.0,ec2ec6f109a846c21af8783dcd19863bddedaf541ac92be9704bfcaa6a9f827c,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5454776-0-1|qp13,historical,13.0,ec2ec6f109a846c21af8783dcd19863bddedaf541ac92be9704bfcaa6a9f827c,0-29,M1,30,30,0
+Development,SEA-seattle-5454776-0-1|qp31,historical,1.0,fb088c4eb7871f2f1a44779b73e4d06e83ed0ca9c60548a06e3aeaf177c7a103,0-29,M2,30,30,0
+Development,SEA-seattle-5454776-0-1|qp31,historical,2.0,fb088c4eb7871f2f1a44779b73e4d06e83ed0ca9c60548a06e3aeaf177c7a103,0-29,M0|M3,30,30,0
+Development,SEA-seattle-5454776-0-1|qp31,historical,6.0,fb088c4eb7871f2f1a44779b73e4d06e83ed0ca9c60548a06e3aeaf177c7a103,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx10181-0-0|qp22,historical,4.0,3e1e219710744fd635c08597ed44fe081e6b762a3f5345e1476b0e5ebaf15eaf,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx10181-0-0|qp9,historical,6.0,8de4c147e42b51e93542808a13c4c3fb2ceb60e7cec4bcb81de855748142d4c6,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx10181-0-0|qp9,historical,8.0,8de4c147e42b51e93542808a13c4c3fb2ceb60e7cec4bcb81de855748142d4c6,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx158-0-0|qp15,historical,2.0,28b37ca823fabfce3ae880f2f96faec8f7ab8f38b2d6591a4c759765f8b43212,0-29,M2,30,30,0
+Development,TAO-taoyuan-idx158-0-0|qp15,historical,12.0,28b37ca823fabfce3ae880f2f96faec8f7ab8f38b2d6591a4c759765f8b43212,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx158-0-0|qp15,historical,15.0,28b37ca823fabfce3ae880f2f96faec8f7ab8f38b2d6591a4c759765f8b43212,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx158-0-0|qp36,historical,2.0,c12a8c055e025f9be9a91fd0a6d8446816a8f7f5ecda2e8a9a0dccaf52997663,0-29,M2,30,30,0
+Development,TAO-taoyuan-idx158-0-0|qp36,historical,3.0,c12a8c055e025f9be9a91fd0a6d8446816a8f7f5ecda2e8a9a0dccaf52997663,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx158-0-0|qp36,historical,7.0,c12a8c055e025f9be9a91fd0a6d8446816a8f7f5ecda2e8a9a0dccaf52997663,0-29,M1,30,0,30
+Development,TAO-taoyuan-idx3410-0-9|qp12,historical,1.0,2ac4b0266611e7f36bfe32cb4c597169812fd6773972b518afce18cefe0a2d3e,0-29,M2,30,30,0
+Development,TAO-taoyuan-idx3410-0-9|qp12,historical,9.0,2ac4b0266611e7f36bfe32cb4c597169812fd6773972b518afce18cefe0a2d3e,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx3410-0-9|qp12,historical,12.0,2ac4b0266611e7f36bfe32cb4c597169812fd6773972b518afce18cefe0a2d3e,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx3410-0-9|qp29,historical,1.0,b7074966ddaf0c88cfde58a540072bc219ff8513a668dd71c13ba3df282fd15b,0-29,M2,30,30,0
+Development,TAO-taoyuan-idx3410-0-9|qp29,historical,2.0,b7074966ddaf0c88cfde58a540072bc219ff8513a668dd71c13ba3df282fd15b,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx3410-0-9|qp29,historical,5.0,b7074966ddaf0c88cfde58a540072bc219ff8513a668dd71c13ba3df282fd15b,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx3430-0-3|qp10,historical,7.0,5649782ad8547bb15833e018fecd1e2aae23b1e9c98333d035cb68747dd7a1ff,0-29,M0|M3,30,0,30
+Development,TAO-taoyuan-idx3430-0-3|qp10,historical,9.0,5649782ad8547bb15833e018fecd1e2aae23b1e9c98333d035cb68747dd7a1ff,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx3430-0-3|qp24,historical,1.0,d77d88647d2d50c3911250c7a9ff5ee63d40d7a9c0709dd81c675e5ead3bf0b0,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx3430-0-3|qp24,historical,4.0,d77d88647d2d50c3911250c7a9ff5ee63d40d7a9c0709dd81c675e5ead3bf0b0,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx5160-0-0|qp22,historical,1.0,1e76fec1adeb4b2d739890db5d45fde73319945dfd6250bce21bdb54b467d711,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx5160-0-0|qp22,historical,4.0,1e76fec1adeb4b2d739890db5d45fde73319945dfd6250bce21bdb54b467d711,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx5160-0-0|qp9,historical,6.0,40272a02e819bb287c32bc07f19a2bf3f76ae5f0f1b9523935677002cbdd4ad8,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx5160-0-0|qp9,historical,8.0,40272a02e819bb287c32bc07f19a2bf3f76ae5f0f1b9523935677002cbdd4ad8,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx5379-0-4|qp13,historical,1.0,e266049af508d0fc9b840bd49b68b61cbb7fa084af980a3586aed1e1bf40869b,0-29,M2,30,30,0
+Development,TAO-taoyuan-idx5379-0-4|qp13,historical,10.0,e266049af508d0fc9b840bd49b68b61cbb7fa084af980a3586aed1e1bf40869b,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx5379-0-4|qp13,historical,13.0,e266049af508d0fc9b840bd49b68b61cbb7fa084af980a3586aed1e1bf40869b,0-29,M1,30,0,30
+Development,TAO-taoyuan-idx5379-0-4|qp31,historical,1.0,ff4b5ab18f407f0d0d36903985982b55b6f02fe76979ec5209b162d7afe7ebea,0-29,M2,30,30,0
+Development,TAO-taoyuan-idx5379-0-4|qp31,historical,2.0,ff4b5ab18f407f0d0d36903985982b55b6f02fe76979ec5209b162d7afe7ebea,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx5379-0-4|qp31,historical,6.0,ff4b5ab18f407f0d0d36903985982b55b6f02fe76979ec5209b162d7afe7ebea,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx578-0-8|qp34,historical,1.0,ab7139e233ba12bf03c13d0811dd00fe95ae5115677e5eef4565b6d79663cda5,0-29,M0|M2|M3,30,30,0
+Development,TAO-taoyuan-idx578-0-8|qp34,historical,4.0,ab7139e233ba12bf03c13d0811dd00fe95ae5115677e5eef4565b6d79663cda5,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx6720-0-3|qp12,historical,1.0,476fcbeb11c008b398a93b1548a99c5995241d924c8812ad66c006f0e0ba8db5,0-29,M2,30,30,0
+Development,TAO-taoyuan-idx6720-0-3|qp12,historical,8.0,476fcbeb11c008b398a93b1548a99c5995241d924c8812ad66c006f0e0ba8db5,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx6720-0-3|qp12,historical,11.0,476fcbeb11c008b398a93b1548a99c5995241d924c8812ad66c006f0e0ba8db5,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx6720-0-3|qp28,historical,1.0,908e3da9c0c29e31490f5d54ad91f7932999f70c39875be32a9a700404e9de54,0-29,M0|M2|M3,30,30,0
+Development,TAO-taoyuan-idx6720-0-3|qp28,historical,5.0,908e3da9c0c29e31490f5d54ad91f7932999f70c39875be32a9a700404e9de54,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx7044-0-7|qp11,historical,8.0,dc78ff7a59f0f7c2dd9e7381e991106a11891c6f3cb43b37e3a3057584ef24b2,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx7044-0-7|qp11,historical,12.0,dc78ff7a59f0f7c2dd9e7381e991106a11891c6f3cb43b37e3a3057584ef24b2,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx7044-0-7|qp27,historical,1.0,9e103537d3a5dce1e3a8c7608e1a37180cd64768dbf95311f830198d386e33ac,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx7044-0-7|qp27,historical,5.0,9e103537d3a5dce1e3a8c7608e1a37180cd64768dbf95311f830198d386e33ac,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx718-0-1|qp10,historical,7.0,6b82e13d84e3212b153ee25930bf2ace38c78b384b88c91dee68c1219ca40c69,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx718-0-1|qp10,historical,9.0,6b82e13d84e3212b153ee25930bf2ace38c78b384b88c91dee68c1219ca40c69,0-29,M1,30,30,0
+Development,TAO-taoyuan-idx718-0-1|qp24,historical,1.0,7175a0e429d89812209ce358e679568aef346264820c876fc5550d567e1f75ce,0-29,M0|M3,30,30,0
+Development,TAO-taoyuan-idx718-0-1|qp24,historical,4.0,7175a0e429d89812209ce358e679568aef346264820c876fc5550d567e1f75ce,0-29,M1,30,30,0
+Development,TPE-taipei-idx11047-0-0|qp40,historical,1.0,4e1a3e3e68fa90aa44197b869387f2eb8b36d18a7f7bb9e40d73a63dc31c5cbe,0-29,M0|M3,30,30,0
+Development,TPE-taipei-idx11047-0-0|qp40,historical,2.0,4e1a3e3e68fa90aa44197b869387f2eb8b36d18a7f7bb9e40d73a63dc31c5cbe,0-29,M2,30,30,0
+Development,TPE-taipei-idx11047-0-0|qp40,historical,5.0,4e1a3e3e68fa90aa44197b869387f2eb8b36d18a7f7bb9e40d73a63dc31c5cbe,0-29,M1,30,30,0
+Development,TPE-taipei-idx12521-0-5|qp9,historical,5.0,490263cbc0e0b08b4169232434ace1092555a83e1b6ec0e9285de8b6c471d7b2,0-29,M0|M3,30,30,0
+Development,TPE-taipei-idx12521-0-5|qp9,historical,7.0,490263cbc0e0b08b4169232434ace1092555a83e1b6ec0e9285de8b6c471d7b2,0-29,M1,30,30,0
+Development,TPE-taipei-idx14193-0-0|qp10,historical,6.0,d31ad96409e7454a47064fd56f8ce08db0986d2100def71320c856a37b1346f6,0-29,M0|M3,30,30,0
+Development,TPE-taipei-idx14193-0-0|qp10,historical,9.0,d31ad96409e7454a47064fd56f8ce08db0986d2100def71320c856a37b1346f6,0-29,M1,30,30,0
+Development,TPE-taipei-idx14193-0-0|qp24,historical,1.0,9ca1c1bc391b16d033f5b2d00ad2fdf3346a0b65363658e60c5685ebad487a96,0-29,M0|M3,30,30,0
+Development,TPE-taipei-idx14193-0-0|qp24,historical,4.0,9ca1c1bc391b16d033f5b2d00ad2fdf3346a0b65363658e60c5685ebad487a96,0-29,M1,30,30,0
+Development,TPE-taipei-idx15074-0-0|qp12,historical,1.0,b41e3bea246bfa67ecd3e33c0ba15d66d087c54aca84e18fbde74ab86675a9cb,0-29,M2,30,30,0
+Development,TPE-taipei-idx15074-0-0|qp12,historical,8.0,b41e3bea246bfa67ecd3e33c0ba15d66d087c54aca84e18fbde74ab86675a9cb,0-29,M0|M3,30,30,0
+Development,TPE-taipei-idx15074-0-0|qp12,historical,12.0,b41e3bea246bfa67ecd3e33c0ba15d66d087c54aca84e18fbde74ab86675a9cb,0-29,M1,30,30,0
+Development,TPE-taipei-idx15074-0-0|qp28,historical,1.0,63e57e9a1935542b25cc649defd87bd5409a4dd8a12a80251ed55e9c99570d49,0-29,M0|M2,30,30,0
+Development,TPE-taipei-idx15074-0-0|qp28,historical,2.0,63e57e9a1935542b25cc649defd87bd5409a4dd8a12a80251ed55e9c99570d49,0-29,M3,30,30,0
+Development,TPE-taipei-idx15074-0-0|qp28,historical,5.0,63e57e9a1935542b25cc649defd87bd5409a4dd8a12a80251ed55e9c99570d49,0-29,M1,30,30,0
+Development,TPE-taipei-idx15608-0-1|qp37,historical,1.0,46016db1ae3ed4426a5f6c6218df648dc4a7f82c2fd283a5a9a7e37b051349ed,0-29,M0|M2|M3,30,30,0
+Development,TPE-taipei-idx15608-0-1|qp37,historical,4.0,46016db1ae3ed4426a5f6c6218df648dc4a7f82c2fd283a5a9a7e37b051349ed,0-29,M1,30,30,0
+Development,TPE-taipei-idx1592-0-2|qp10,historical,6.0,494620a8edc27762b135c3d3f86d52b7a5c0a64fa39153078fdcd74ed7dd80d6,0-29,M0|M3,30,30,0
+Development,TPE-taipei-idx1592-0-2|qp10,historical,9.0,494620a8edc27762b135c3d3f86d52b7a5c0a64fa39153078fdcd74ed7dd80d6,0-29,M1,30,30,0
+Development,TPE-taipei-idx1592-0-2|qp24,historical,4.0,98c71c6c07795a1f62c9fea2841d1317c643a7b88e6f386f6bb6333c5c7864eb,0-29,M1,30,30,0
+Development,TPE-taipei-idx326-0-1|qp10,historical,7.0,b482068f1c7050ad25ecfc86c8454f5616fefd9e65e1be2c4fe501668900330f,0-29,M0|M3,30,30,0
+Development,TPE-taipei-idx326-0-1|qp10,historical,9.0,b482068f1c7050ad25ecfc86c8454f5616fefd9e65e1be2c4fe501668900330f,0-29,M1,30,30,0
+Development,TPE-taipei-idx326-0-1|qp25,historical,1.0,6f42ca9f11058492e00d738b3b391e472a9c25d33b825d6c3127bc9da77fff3c,0-29,M0|M3,30,30,0
+Development,TPE-taipei-idx326-0-1|qp25,historical,4.0,6f42ca9f11058492e00d738b3b391e472a9c25d33b825d6c3127bc9da77fff3c,0-29,M1,30,30,0
+Development,TPE-taipei-idx674-0-1|qp10,historical,7.0,cd0933b90cca0cd4ed68280b5f5dc41ecf87a13b11b8a385a150e9c3310c3af4,0-29,M0|M3,30,30,0
+Development,TPE-taipei-idx674-0-1|qp10,historical,9.0,cd0933b90cca0cd4ed68280b5f5dc41ecf87a13b11b8a385a150e9c3310c3af4,0-29,M1,30,30,0
+Development,TPE-taipei-idx674-0-1|qp25,historical,1.0,7f5997632bddb14807ab121d84bcef6fd8e3b3a5b3a6b61025e574cbe8b3b5be,0-29,M0|M3,30,30,0
+Development,TPE-taipei-idx674-0-1|qp25,historical,4.0,7f5997632bddb14807ab121d84bcef6fd8e3b3a5b3a6b61025e574cbe8b3b5be,0-29,M1,30,30,0
+Development,TPE-taipei-idx813-0-1|qp45,historical,2.0,ee7bd37805d2bf76252e37ea039fd4558fa5fe72545993d7cd78a2031befcc5d,0-29,M0|M2|M3,30,30,0
+Development,TPE-taipei-idx813-0-1|qp45,historical,5.0,ee7bd37805d2bf76252e37ea039fd4558fa5fe72545993d7cd78a2031befcc5d,0-29,M1,30,30,0
+Development,TPE-taipei-idx9590-0-0|qp31,historical,3.0,83d1e9c71b67e8f4d797f633c5eec135ee0fb163a9eae2dc69eca1cefad9d039,0-29,M1,30,30,0
+Hong Kong,HK-ST-05,nearest-safe-anchor-v1,3.0,9f8c04175881b6e2d12df8800121cb9a553ca8d0273410094bbd0475dfca6839,0-29,M1,30,30,0
+Hong Kong,HK-ST-08,historical,2.0,c56b139f96af4978ed4ad966577003abb22e494f1a6369561beb81c2380466c8,0-29,M1,30,30,0
+Hong Kong,HK-ST-09,historical,3.0,386fb084b21b50ab43f4de2480637029d8a1bae0c1f50b93c2a1515e8c11dbfa,0-29,M1,30,30,0
+Hong Kong,HK-ST-11,historical,2.0,2c27686948caa08da63b7a8e906445fadba1ddf2c987e229b8362df912dfd3d0,0-29,M0|M3,30,30,0
+Hong Kong,HK-ST-11,historical,5.0,2c27686948caa08da63b7a8e906445fadba1ddf2c987e229b8362df912dfd3d0,0-29,M1,30,30,0
+Hong Kong,HK-ST-12,historical,1.0,e92fa3ee0cf8684b56a48f0a4de2e9b5bf02b024b4e8dc11a6995116a90e9530,0-29,M0|M3,30,30,0
+Hong Kong,HK-ST-12,historical,4.0,e92fa3ee0cf8684b56a48f0a4de2e9b5bf02b024b4e8dc11a6995116a90e9530,0-29,M1,30,30,0
+Hong Kong,HK-ST-15,historical,1.0,72a8163ddbeaefdb5f41800cb72fa02afe6a199114b6d44da2a0b551a0319fd6,0-29,M2,30,30,0
+Hong Kong,HK-ST-15,historical,3.0,72a8163ddbeaefdb5f41800cb72fa02afe6a199114b6d44da2a0b551a0319fd6,0-29,M1,30,30,0
+Hong Kong,HK-ST-16,nearest-safe-anchor-v1,2.0,8276ec193a2366cd1b84473465d4e405951ba66f4b1ee44c0ac16b12181359d0,0-29,M0|M3,30,30,0
+Hong Kong,HK-ST-16,nearest-safe-anchor-v1,5.0,8276ec193a2366cd1b84473465d4e405951ba66f4b1ee44c0ac16b12181359d0,0-29,M1,30,30,0
+Hong Kong,HK-ST-18,historical,1.0,fca675fa045a3d84dfbefddf5c9be81689bc480a0b261bed80b880ba8e4253d9,0-29,M2,30,30,0
+Hong Kong,HK-ST-18,historical,9.0,fca675fa045a3d84dfbefddf5c9be81689bc480a0b261bed80b880ba8e4253d9,0-29,M0|M3,30,0,30
+Hong Kong,HK-ST-18,historical,13.0,fca675fa045a3d84dfbefddf5c9be81689bc480a0b261bed80b880ba8e4253d9,0-29,M1,30,30,0
+Hong Kong,HK-ST-19,nearest-safe-anchor-v1,2.0,4eb77c199db3d8338b3e6a1cef9ba02d1ebf0f738763a8a329298034136fcebf,0-29,M0|M3,30,30,0
+Hong Kong,HK-ST-19,nearest-safe-anchor-v1,6.0,4eb77c199db3d8338b3e6a1cef9ba02d1ebf0f738763a8a329298034136fcebf,0-29,M1,30,30,0
+Hong Kong,HK-ST-21,historical,1.0,9a6b97c885f3b025ebe6cff5b47d874af35e61c625ef937d36250c519d57735f,0-29,M2,30,30,0
+Hong Kong,HK-ST-21,historical,2.0,9a6b97c885f3b025ebe6cff5b47d874af35e61c625ef937d36250c519d57735f,0-29,M0|M3,30,30,0
+Hong Kong,HK-ST-21,historical,5.0,9a6b97c885f3b025ebe6cff5b47d874af35e61c625ef937d36250c519d57735f,0-29,M1,30,30,0
+Hong Kong,HK-ST-22,nearest-safe-anchor-v1,1.0,4eb4adba96bcb1feccb17827b40c76e7e295fe90f926821f5feb3cb45906ee4a,0-29,M2,30,30,0
+Hong Kong,HK-ST-22,nearest-safe-anchor-v1,4.0,4eb4adba96bcb1feccb17827b40c76e7e295fe90f926821f5feb3cb45906ee4a,0-29,M3,30,30,0
+Hong Kong,HK-ST-22,nearest-safe-anchor-v1,5.0,4eb4adba96bcb1feccb17827b40c76e7e295fe90f926821f5feb3cb45906ee4a,0-29,M0,30,30,0
+Hong Kong,HK-ST-22,nearest-safe-anchor-v1,8.0,4eb4adba96bcb1feccb17827b40c76e7e295fe90f926821f5feb3cb45906ee4a,0-29,M1,30,30,0
+Hong Kong,HK-ST-24,nearest-safe-anchor-v1,1.0,1ba450955a07f75b6e59f79be6239b8dc4443f7b7993f95c49f53993ee9b61fd,0-29,M2,30,30,0
+Hong Kong,HK-ST-24,nearest-safe-anchor-v1,12.0,1ba450955a07f75b6e59f79be6239b8dc4443f7b7993f95c49f53993ee9b61fd,0-29,M0|M3,30,30,0
+Hong Kong,HK-ST-24,nearest-safe-anchor-v1,16.0,1ba450955a07f75b6e59f79be6239b8dc4443f7b7993f95c49f53993ee9b61fd,0-29,M1,30,30,0
+Hong Kong,HK-ST-25,historical,1.0,ec443349c1b1ddfd80dab5d9720f458f45298a5290769632831ca065d210dc0e,0-29,M2,30,30,0
+Hong Kong,HK-ST-25,historical,4.0,ec443349c1b1ddfd80dab5d9720f458f45298a5290769632831ca065d210dc0e,0-29,M1,30,30,0
+Hong Kong,HK-ST-27,historical,1.0,92bdeb54eec728dbccce8b6983541983dcc68b1dc8e1224b7a56cc9d0c2db89f,0-29,M2,30,30,0
+Hong Kong,HK-ST-27,historical,4.0,92bdeb54eec728dbccce8b6983541983dcc68b1dc8e1224b7a56cc9d0c2db89f,0-29,M0|M3,30,30,0
+Hong Kong,HK-ST-27,historical,7.0,92bdeb54eec728dbccce8b6983541983dcc68b1dc8e1224b7a56cc9d0c2db89f,0-29,M1,30,30,0
+Hong Kong,HK-ST-28,historical,1.0,53b35b2c89b213548a01bfc54fabcae4b040352694340550e94a4878443ce9ff,0-29,M0|M2|M3,30,30,0
+Hong Kong,HK-ST-28,historical,4.0,53b35b2c89b213548a01bfc54fabcae4b040352694340550e94a4878443ce9ff,0-29,M1,30,30,0
+Hong Kong,HK-ST-30,historical,1.0,b8632b32176b04dfc35a4a74fd76e1d5e83bacf8ab457cd98b49f1537c9351e2,0-29,M2,30,30,0
+Hong Kong,HK-ST-30,historical,2.0,b8632b32176b04dfc35a4a74fd76e1d5e83bacf8ab457cd98b49f1537c9351e2,0-29,M0|M3,30,30,0
+Hong Kong,HK-ST-30,historical,6.0,b8632b32176b04dfc35a4a74fd76e1d5e83bacf8ab457cd98b49f1537c9351e2,0-29,M1,30,30,0

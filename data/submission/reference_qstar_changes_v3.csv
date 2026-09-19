@@ -1,0 +1,6 @@
+tag,q_star_frozen,q_star_status_frozen,base_pass_frozen,n_baseline_seeds_frozen,q_star_v3,q_star_status_v3,base_pass_v3,n_baseline_seeds_v3,q_star_changed,baseline_pass_changed
+SEA-seattle-5445989-0-0|qp102,1.0,POSITIVE,1.0,30,0.0,ZERO,0.0,30,True,True
+SEA-seattle-5423808-0-1|qp103,2.0,POSITIVE,1.0,30,0.0,ZERO,0.0,30,True,True
+TPE-taipei-idx12521-0-5|qp21,4.0,POSITIVE,1.0,30,0.0,ZERO,0.0,30,True,True
+DC-063|qp35.3,1.0,POSITIVE,1.0,60,3.0,POSITIVE,1.0,30,True,False
+DC-114|qp43.2,8.0,POSITIVE,1.0,30,0.0,ZERO,0.0,30,True,True

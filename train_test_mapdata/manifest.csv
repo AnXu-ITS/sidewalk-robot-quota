@@ -1,8 +1,0 @@
-city,file,split,geometry,n_features,null_width,width_n,min,p25,med,p75,p90,max,qc_ok,qc_outlier,qc_zero,qc_missing
-nyc,train_nyc.geojson,train,{'LineString': 464956},464956,0,464956,0.091,2.103,2.865,3.993,5.486,50.414,463601,1355,0,0
-seattle,test_seattle.geojson,test,{'MultiLineString': 46085},46085,4,46081,0.0,1.067,1.524,1.829,1.829,41.453,34904,48,11129,4
-amsterdam,train_amsterdam.geojson,train,{'LineString': 217785},217785,0,217785,0.0,1.507,2.329,3.494,5.129,55.131,207750,10035,0,0
-melbourne,train_melbourne.geojson,train,{'MultiPolygon': 25446, 'Polygon': 7},25453,0,25453,0.01,1.068,1.974,2.905,3.592,19.472,24841,612,0,0
-taipei,train_taipei.geojson,train,{'MultiPolygon': 18060},18060,0,18060,0.32,1.21,1.82,3.52,4.96,19.9,17728,332,0,0
-newtaipei,train_newtaipei.geojson,train,{'MultiPolygon': 13981},13981,0,13981,0.24,1.61,2.01,3.02,4.65,54.69,13775,206,0,0
-taoyuan,test_taoyuan.geojson,test,{'MultiPolygon': 10198},10198,0,10198,0.16,1.9,2.52,3.45,4.68,21.56,10135,63,0,0

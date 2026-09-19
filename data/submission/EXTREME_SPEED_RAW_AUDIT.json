@@ -1,0 +1,41 @@
+{
+  "spec_hash": "a086e6cc27fd4f7d09d3b6c6adf35f27b058046b10dcc53986ff04e587b9a66e",
+  "technical_exit_code": 0,
+  "all_raw_hashes_match": true,
+  "window_timesteps": 2400,
+  "first_time": 100.0,
+  "last_time": 339.9,
+  "zone_observations": 135576,
+  "empty_zone_timesteps": 0,
+  "mean_speed_recomputed": 0.08088710391219685,
+  "baseline_mean": 1.1362044201698775,
+  "speed_retention_recomputed": 0.07119062597917297,
+  "density_recomputed": 1.5691666666666668,
+  "completed_departures": 0,
+  "completed_arrivals": 19,
+  "throughput_defined": false,
+  "seed_service_status": "FAIL",
+  "agents": {
+    "ped": {
+      "scheduled_window": 130,
+      "observed_window_cohort": 130,
+      "moved_window_cohort_by_end": 130,
+      "boundary_rejected_agents_total": 93,
+      "never_moved_boundary_agents": 0,
+      "neighbor_rejected_agents_total": 2,
+      "stock_start": 23,
+      "stock_near_end": 135
+    },
+    "robot": {
+      "scheduled_window": 8,
+      "observed_window_cohort": 8,
+      "moved_window_cohort_by_end": 8,
+      "boundary_rejected_agents_total": 4,
+      "never_moved_boundary_agents": 0,
+      "neighbor_rejected_agents_total": 4,
+      "stock_start": 2,
+      "stock_near_end": 9
+    }
+  },
+  "error_lines": 484
+}

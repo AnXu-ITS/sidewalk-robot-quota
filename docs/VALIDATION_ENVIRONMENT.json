@@ -1,0 +1,13 @@
+{
+  "python": "Python 3.14.7",
+  "packages": {
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1",
+    "pymupdf": "1.28.2"
+  },
+  "paper_pages": 12,
+  "submitted_pdf_byte_identical": true,
+  "recompiled_pdf_text_identical": true,
+  "no_new_simulation": true
+}

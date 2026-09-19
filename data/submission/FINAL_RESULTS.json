@@ -1,0 +1,534 @@
+{
+  "version": "Final submission: frozen primary-block references and complete exact tests",
+  "source_results_sha256": "cc36dd566c231bc60afbd82cb2a39e3c01f242ce1c5fee394deac893a25e22d5",
+  "reference_status": "CORRECTED: main reference reconstruction uses original seeds 0--29; independent block retained only for replication diagnostics",
+  "reference_counts": {
+    "POSITIVE": 185,
+    "ZERO": 154,
+    "OUT_OF_DOMAIN_GEOMETRY": 44,
+    "CEILING_CENSORED": 12,
+    "TECHNICAL_INVALID": 5
+  },
+  "counts": {
+    "candidates": 400,
+    "numeric": 351,
+    "cells": 140,
+    "fit": 185,
+    "fit_cells": 87,
+    "eval_cells": 64,
+    "cities": 7
+  },
+  "loco": {
+    "M0": {
+      "n": 164,
+      "positive": 98,
+      "zero": 66,
+      "exceed": 0,
+      "mae": 4.536585365853658,
+      "util": 0.16666666666666666,
+      "util_n": 139,
+      "ceiling_n": 8,
+      "abstain": 236,
+      "reasons": {
+        "DOMAIN": 187,
+        "OUT_OF_DOMAIN_GEOMETRY": 44,
+        "TECHNICAL_INVALID": 5
+      },
+      "zero_reasons": {
+        "MARGIN_FLOOR": 38,
+        "SERVICE": 28
+      },
+      "PASS": 98,
+      "FAIL": 0,
+      "UNTESTED": 0,
+      "INCOMPLETE": 0,
+      "mean_positive_quota": 4.8061224489795915,
+      "median_positive_quota": 5.0
+    },
+    "M1": {
+      "n": 164,
+      "positive": 136,
+      "zero": 28,
+      "exceed": 16,
+      "mae": 2.426829268292683,
+      "util": 0.75,
+      "util_n": 139,
+      "ceiling_n": 8,
+      "abstain": 236,
+      "reasons": {
+        "DOMAIN": 187,
+        "OUT_OF_DOMAIN_GEOMETRY": 44,
+        "TECHNICAL_INVALID": 5
+      },
+      "zero_reasons": {
+        "SERVICE": 28
+      },
+      "PASS": 118,
+      "FAIL": 18,
+      "UNTESTED": 0,
+      "INCOMPLETE": 0,
+      "mean_positive_quota": 6.3161764705882355,
+      "median_positive_quota": 5.0
+    },
+    "M2": {
+      "n": 164,
+      "positive": 59,
+      "zero": 105,
+      "exceed": 0,
+      "mae": 6.9817073170731705,
+      "util": 0.0,
+      "util_n": 139,
+      "ceiling_n": 8,
+      "abstain": 236,
+      "reasons": {
+        "DOMAIN": 187,
+        "OUT_OF_DOMAIN_GEOMETRY": 44,
+        "TECHNICAL_INVALID": 5
+      },
+      "zero_reasons": {
+        "MARGIN_FLOOR": 77,
+        "SERVICE": 28
+      },
+      "PASS": 59,
+      "FAIL": 0,
+      "UNTESTED": 0,
+      "INCOMPLETE": 0,
+      "mean_positive_quota": 1.1864406779661016,
+      "median_positive_quota": 1.0
+    },
+    "M3": {
+      "n": 164,
+      "positive": 98,
+      "zero": 66,
+      "exceed": 2,
+      "mae": 4.548780487804878,
+      "util": 0.18181818181818182,
+      "util_n": 139,
+      "ceiling_n": 8,
+      "abstain": 236,
+      "reasons": {
+        "DOMAIN": 187,
+        "OUT_OF_DOMAIN_GEOMETRY": 44,
+        "TECHNICAL_INVALID": 5
+      },
+      "zero_reasons": {
+        "MARGIN_FLOOR": 38,
+        "SERVICE": 28
+      },
+      "PASS": 96,
+      "FAIL": 2,
+      "UNTESTED": 0,
+      "INCOMPLETE": 0,
+      "mean_positive_quota": 4.826530612244898,
+      "median_positive_quota": 5.0
+    }
+  },
+  "hong_kong": [
+    {
+      "configuration": "ORIGINAL",
+      "method": "M0",
+      "n": 13,
+      "positive": 7,
+      "zero": 6,
+      "PASS": 7,
+      "FAIL": 0,
+      "UNTESTED": 0,
+      "exceed": 0,
+      "util": 0.16666666666666666,
+      "util_n": 10
+    },
+    {
+      "configuration": "ORIGINAL",
+      "method": "M1",
+      "n": 13,
+      "positive": 11,
+      "zero": 2,
+      "PASS": 10,
+      "FAIL": 1,
+      "UNTESTED": 0,
+      "exceed": 1,
+      "util": 0.6458333333333333,
+      "util_n": 10
+    },
+    {
+      "configuration": "ORIGINAL",
+      "method": "M2",
+      "n": 13,
+      "positive": 7,
+      "zero": 6,
+      "PASS": 7,
+      "FAIL": 0,
+      "UNTESTED": 0,
+      "exceed": 0,
+      "util": 0.08333333333333333,
+      "util_n": 10
+    },
+    {
+      "configuration": "ORIGINAL",
+      "method": "M3",
+      "n": 13,
+      "positive": 7,
+      "zero": 6,
+      "PASS": 7,
+      "FAIL": 0,
+      "UNTESTED": 0,
+      "exceed": 0,
+      "util": 0.16666666666666666,
+      "util_n": 10
+    },
+    {
+      "configuration": "REPAIRED",
+      "method": "M0",
+      "n": 5,
+      "positive": 4,
+      "zero": 1,
+      "PASS": 4,
+      "FAIL": 0,
+      "UNTESTED": 0,
+      "exceed": 0,
+      "util": 0.2,
+      "util_n": 5
+    },
+    {
+      "configuration": "REPAIRED",
+      "method": "M1",
+      "n": 5,
+      "positive": 5,
+      "zero": 0,
+      "PASS": 5,
+      "FAIL": 0,
+      "UNTESTED": 0,
+      "exceed": 0,
+      "util": 0.5,
+      "util_n": 5
+    },
+    {
+      "configuration": "REPAIRED",
+      "method": "M2",
+      "n": 5,
+      "positive": 2,
+      "zero": 3,
+      "PASS": 2,
+      "FAIL": 0,
+      "UNTESTED": 0,
+      "exceed": 0,
+      "util": 0.0,
+      "util_n": 5
+    },
+    {
+      "configuration": "REPAIRED",
+      "method": "M3",
+      "n": 5,
+      "positive": 4,
+      "zero": 1,
+      "PASS": 4,
+      "FAIL": 0,
+      "UNTESTED": 0,
+      "exceed": 0,
+      "util": 0.2,
+      "util_n": 5
+    }
+  ],
+  "intervals": {
+    "M0": {
+      "mae": [
+        3.79143176531013,
+        5.352576003713157
+      ],
+      "util": [
+        0.14285714285714285,
+        0.225
+      ]
+    },
+    "M1": {
+      "mae": [
+        1.935672514619883,
+        2.986842105263158
+      ],
+      "util": [
+        0.6666666666666666,
+        0.8
+      ]
+    },
+    "M2": {
+      "mae": [
+        5.930181164075549,
+        8.135165847665847
+      ],
+      "util": [
+        0.0,
+        0.05263157894736842
+      ]
+    },
+    "M3": {
+      "mae": [
+        3.807218647316539,
+        5.3677671370967746
+      ],
+      "util": [
+        0.15384615384615385,
+        0.2
+      ]
+    }
+  },
+  "paired_differences": {
+    "M0_minus_M3_mae": {
+      "estimate": -0.012195121951219967,
+      "ci": [
+        -0.04268537237511438,
+        0.018518518518518157
+      ]
+    },
+    "M1_minus_M0_util": {
+      "estimate": 0.5833333333333334,
+      "ci": [
+        0.4765151515151515,
+        0.6333333333333334
+      ]
+    }
+  },
+  "common_positive": {
+    "n": 98,
+    "m0_zero_m1_positive": 38,
+    "both_zero": 28,
+    "methods": {
+      "M0": {
+        "PASS": 98
+      },
+      "M1": {
+        "PASS": 86,
+        "FAIL": 12
+      }
+    }
+  },
+  "settings": {
+    "method_version": "29of30-censor-consistent-2026-09-11",
+    "dataset_version": "400 seed-reconstructed references; criterion-consistent censoring",
+    "git_commit": "c5bf01def5dcfefe06908ba3f67346e74cf045b6",
+    "nominal_model": {
+      "form": "q_hat_nom = c * W * (q_p / W)^p",
+      "c": 25.399038511341633,
+      "p": -0.9612709429477008
+    },
+    "safety_margin": {
+      "method": "additive pooled Q0.80",
+      "delta": 3.1163273712933957,
+      "note": "Full 400-row corrected development calibration; fixed pooled margin for principal comparison. LOCO separately refits coefficients and margin."
+    },
+    "baseline_qualification": {
+      "engine": "Eclipse SUMO + JuPedSim",
+      "seeds": 30,
+      "pass_threshold": "mean density <=1.2 and mean flow ratio in [0.9,1.2] (formal); >=29/30 sensitivity",
+      "density_limit": 1.2,
+      "flow_ratio_min": 0.9,
+      "flow_ratio_max": 1.2,
+      "note": "Formal archived mean-based baseline reverified from all seeds. Unified 29/30 baseline stored and evaluated separately."
+    },
+    "guardrails": {
+      "W_min": 1.6,
+      "x_crit": 33.333333333333336,
+      "q_max": 20.0,
+      "Q_low": {
+        "W": [
+          1.5,
+          1.6,
+          1.7,
+          1.8,
+          2.1,
+          2.4,
+          2.7,
+          3.0
+        ],
+        "Q": [
+          0.0,
+          5.0,
+          6.0,
+          8.0,
+          10.0,
+          18.0,
+          20.0,
+          20.0
+        ]
+      },
+      "C_W": {
+        "W": [
+          1.5,
+          1.6,
+          1.7,
+          1.8,
+          2.1,
+          2.4,
+          2.7,
+          3.0
+        ],
+        "C": [
+          10.0,
+          35.0,
+          35.0,
+          45.0,
+          45.0,
+          55.0,
+          90.0,
+          90.0
+        ]
+      },
+      "sharp_corner_guard": {
+        "max_turn_min_deg": 20.0,
+        "cum_turn_min_deg": 20.0,
+        "concentration_min": 0.6
+      },
+      "absolute_speed_floor": {
+        "vbar_min": 0.8
+      }
+    },
+    "execution_order": [
+      "OOD",
+      "base_pass",
+      "zero_guards",
+      "nominal",
+      "margin",
+      "Q_low",
+      "q_max",
+      "floor"
+    ],
+    "applicability_domain": {
+      "W_range": [
+        1.6,
+        3.0
+      ],
+      "q_p_max": 60.0,
+      "x_max": 33.333333333333336,
+      "geometry": "Type A, or Type B with sinuosity <= 1.05; no barriers; no sharp concentrated corners",
+      "type_in_domain": [
+        "A",
+        "B"
+      ],
+      "type_b_sinuosity_max": 1.05,
+      "ood_rule": "out-of-domain fallback — NO closed-form recommendation"
+    },
+    "dataset": {
+      "path": "data/corrected_reference_dataset.csv",
+      "sha256": "f6a0f4f8ec75f06a9f6323f635871d30c9ec4a460c5c98e9826a9fca427e3ce5",
+      "rows": 400,
+      "cities": [
+        "amsterdam",
+        "melbourne",
+        "newtaipei",
+        "nyc",
+        "taipei",
+        "seattle",
+        "taoyuan"
+      ]
+    },
+    "code": {
+      "runtime": "src/operational_quota.py"
+    }
+  },
+  "bootstrap": {
+    "n": 5000,
+    "seed": 2026091501,
+    "unit": "cell",
+    "conditional": true
+  },
+  "continuous_service": [
+    {
+      "method": "M0",
+      "groups": 98,
+      "median_of_group_medians": 0.9821039076353316,
+      "median_of_group_means": 0.981200813926266,
+      "median_of_group_minima": 0.9398016127449256,
+      "worst_group_minimum": 0.8826998397670729
+    },
+    {
+      "method": "M1",
+      "groups": 136,
+      "median_of_group_medians": 0.96257629250636,
+      "median_of_group_means": 0.959888865038446,
+      "median_of_group_minima": 0.9164852436480068,
+      "worst_group_minimum": 0.0711906259792493
+    },
+    {
+      "method": "M2",
+      "groups": 59,
+      "median_of_group_medians": 0.9953946229239774,
+      "median_of_group_means": 0.9951356896786022,
+      "median_of_group_minima": 0.95530008560033,
+      "worst_group_minimum": 0.9127304514180756
+    },
+    {
+      "method": "M3",
+      "groups": 98,
+      "median_of_group_medians": 0.9827849509986496,
+      "median_of_group_means": 0.981200813926266,
+      "median_of_group_minima": 0.9398016127449256,
+      "worst_group_minimum": 0.1084107372212457
+    }
+  ],
+  "q_star_changes": [
+    {
+      "tag": "SEA-seattle-5445989-0-0|qp102",
+      "q_star_frozen": 1.0,
+      "q_star_status_frozen": "POSITIVE",
+      "base_pass_frozen": 1.0,
+      "n_baseline_seeds_frozen": 30,
+      "q_star_v3": 0.0,
+      "q_star_status_v3": "ZERO",
+      "base_pass_v3": 0.0,
+      "n_baseline_seeds_v3": 30,
+      "q_star_changed": true,
+      "baseline_pass_changed": true
+    },
+    {
+      "tag": "SEA-seattle-5423808-0-1|qp103",
+      "q_star_frozen": 2.0,
+      "q_star_status_frozen": "POSITIVE",
+      "base_pass_frozen": 1.0,
+      "n_baseline_seeds_frozen": 30,
+      "q_star_v3": 0.0,
+      "q_star_status_v3": "ZERO",
+      "base_pass_v3": 0.0,
+      "n_baseline_seeds_v3": 30,
+      "q_star_changed": true,
+      "baseline_pass_changed": true
+    },
+    {
+      "tag": "TPE-taipei-idx12521-0-5|qp21",
+      "q_star_frozen": 4.0,
+      "q_star_status_frozen": "POSITIVE",
+      "base_pass_frozen": 1.0,
+      "n_baseline_seeds_frozen": 30,
+      "q_star_v3": 0.0,
+      "q_star_status_v3": "ZERO",
+      "base_pass_v3": 0.0,
+      "n_baseline_seeds_v3": 30,
+      "q_star_changed": true,
+      "baseline_pass_changed": true
+    },
+    {
+      "tag": "DC-063|qp35.3",
+      "q_star_frozen": 1.0,
+      "q_star_status_frozen": "POSITIVE",
+      "base_pass_frozen": 1.0,
+      "n_baseline_seeds_frozen": 60,
+      "q_star_v3": 3.0,
+      "q_star_status_v3": "POSITIVE",
+      "base_pass_v3": 1.0,
+      "n_baseline_seeds_v3": 30,
+      "q_star_changed": true,
+      "baseline_pass_changed": false
+    },
+    {
+      "tag": "DC-114|qp43.2",
+      "q_star_frozen": 8.0,
+      "q_star_status_frozen": "POSITIVE",
+      "base_pass_frozen": 1.0,
+      "n_baseline_seeds_frozen": 30,
+      "q_star_v3": 0.0,
+      "q_star_status_v3": "ZERO",
+      "base_pass_v3": 0.0,
+      "n_baseline_seeds_v3": 30,
+      "q_star_changed": true,
+      "baseline_pass_changed": true
+    }
+  ]
+}
