@@ -1,0 +1,38 @@
+path,bytes_before,reason,deleted,error,bytes_remaining
+CICPT2027/.build,20376055,reproducible build or page-render cache,False,"You do not have sufficient access rights to perform this operation or the item is hidden, system, or read only.",7522595
+CICPT2027/render_v3,0,reproducible build or page-render cache,True,,0
+render_v3,2499956,reproducible build or page-render cache,True,,0
+revision_review/writing_v2/submission_final/render,2076156,reproducible build or page-render cache,True,,0
+revision_review/writing_v2/reports/narrative_render,5224784,reproducible build or page-render cache,True,,0
+revision_review/writing_v2/reports/pages,2910031,reproducible build or page-render cache,True,,0
+revision_review/writing_v2/reports/pdf_render_v3_final,4158674,reproducible build or page-render cache,True,,0
+revision_review/writing_v2/reports/pdf_render_v3b,3942157,reproducible build or page-render cache,True,,0
+revision_review/writing_v2/reports/pdf_render_v3c,299568,reproducible build or page-render cache,True,,0
+revision_review/writing_v2/reports/pdf_render_v3d,807290,reproducible build or page-render cache,True,,0
+CICPT2027/figure_ppt/_source/coordinated/__pycache__,60422,Python bytecode cache,False,"You do not have sufficient access rights to perform this operation or the item is hidden, system, or read only.",0
+CICPT2027/figure_ppt/_source/hero_optimization/__pycache__,43697,Python bytecode cache,False,"You do not have sufficient access rights to perform this operation or the item is hidden, system, or read only.",0
+CICPT2027/figure_revision/01_ppt_sources/__pycache__,0,Python bytecode cache,False,"You do not have sufficient access rights to perform this operation or the item is hidden, system, or read only.",0
+CICPT2027/geminidesign/__pycache__,18586,Python bytecode cache,True,,0
+CICPT2027/revision_20260914/numerical_snapshot/src/__pycache__,8294,Python bytecode cache,False,"You do not have sufficient access rights to perform this operation or the item is hidden, system, or read only.",0
+CICPT2027/scripts/conference_20260915/__pycache__,21977,Python bytecode cache,True,,0
+CICPT2027/scripts/revision_20260914/__pycache__,11265,Python bytecode cache,False,"You do not have sufficient access rights to perform this operation or the item is hidden, system, or read only.",0
+revision_review/writing_v2/__pycache__,65039,Python bytecode cache,True,,0
+revision_review/writing_v2/figure_qa/__pycache__,101492,Python bytecode cache,True,,0
+pipeline/sim/scripts/__pycache__,56353,Python bytecode cache,False,"You do not have sufficient access rights to perform this operation or the item is hidden, system, or read only.",0
+src/sidewalk_admission/__pycache__,5474,Python bytecode cache,True,,0
+scripts/__pycache__,25481,Python bytecode cache,True,,0
+scripts/figure_qa/__pycache__,54257,Python bytecode cache,True,,0
+tests/__pycache__,3214,Python bytecode cache,True,,0
+CICPT2027/ascexmpl-new.aux,8005,LaTeX build auxiliary; source and final PDF retained,True,,0
+CICPT2027/ascexmpl-new.bbl,3991,LaTeX build auxiliary; source and final PDF retained,True,,0
+CICPT2027/ascexmpl-new.blg,1176,LaTeX build auxiliary; source and final PDF retained,True,,0
+CICPT2027/ascexmpl-new.log,44316,LaTeX build auxiliary; source and final PDF retained,True,,0
+CICPT2027/ascexmpl-new.out,3257,LaTeX build auxiliary; source and final PDF retained,True,,0
+revision_review/writing_v2/paper/ascexmpl-new.aux,6713,LaTeX build auxiliary; source and final PDF retained,True,,0
+revision_review/writing_v2/paper/ascexmpl-new.bbl,3991,LaTeX build auxiliary; source and final PDF retained,True,,0
+revision_review/writing_v2/paper/ascexmpl-new.blg,1116,LaTeX build auxiliary; source and final PDF retained,True,,0
+revision_review/writing_v2/paper/ascexmpl-new.log,44316,LaTeX build auxiliary; source and final PDF retained,True,,0
+revision_review/writing_v2/paper/ascexmpl-new.out,2131,LaTeX build auxiliary; source and final PDF retained,True,,0
+outputs/publication_check,36398543,"disposable publication verification build; canonical source, data and PDF retained",True,,0
+outputs/figures,725518,"disposable publication verification build; canonical source, data and PDF retained",True,,0
+outputs/paper,1354722,"disposable publication verification build; canonical source, data and PDF retained",True,,0
