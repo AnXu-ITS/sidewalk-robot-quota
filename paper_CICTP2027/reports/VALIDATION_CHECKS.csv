@@ -1,0 +1,17 @@
+check,status,records,note
+Frozen queue uniqueness,PASS,1920,
+No redundant seed reruns,PASS,1920,
+Replication sample unchanged,PASS,15,
+Held-out cities and cells excluded from residuals,PASS,2106,
+All sweep positive recommendations exact-matched,PASS,543,
+Frozen endpoints preserved,PASS,2,
+Frozen net/geometry/arrival/config/parser functions identical,PASS,5,
+Existing service boundary tests,PASS,3,
+Independent tests have exact independent baselines,PASS,28,
+E1 denominators and terminology checked,PASS,13140,Unrecoverable cohort completion and insertion are explicit missing values
+Failure decomposition complete original groups,PASS,18,
+"New run raw hashes, physics and output diagnostics",PASS,1920,
+New movement-proxy half-open stock conservation,PASS,3840,
+Every original research asset unchanged,PASS,1739,
+Git state unchanged,PASS,1,New package is ignored by existing publication-only .gitignore; no commits
+All new scripts parse,PASS,4,

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "reference_scenarios": 400,
+  "evaluated_scenarios": 164,
+  "city_folds": 7,
+  "heldout_leakage": false,
+  "sweep_predictions": 2000,
+  "positive_sweep_recommendations": 543,
+  "unique_sweep_groups": 463,
+  "new_seed_records": 1920,
+  "replicated_conditions": 28,
+  "replication_m0_unchanged": 13,
+  "replication_m1_unchanged": 7,
+  "failed_m1_groups": 18,
+  "speed_involved_in_all_failed_groups": true,
+  "hong_kong_original": 13,
+  "hong_kong_repaired": 5,
+  "demand_audit_seed_rows": 13140,
+  "guardrail_knots_reconstructed": 8,
+  "new_simulations_executed": 0
+}

@@ -1,0 +1,5 @@
+{
+  "sha256": "1d57b9006082787f29d9f72a8c0a38f36cf89b2e5f3430d48f5923a8f3dcbaae",
+  "rule": "Deterministic ranking from original seeds only; independent outcomes not consulted",
+  "selection_random_seed": null
+}

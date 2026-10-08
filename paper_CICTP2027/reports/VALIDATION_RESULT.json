@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checks": 16,
+  "new_runs": 1920,
+  "original_assets": 1739,
+  "original_assets_changed": 0,
+  "manuscript_changed": false,
+  "technical_failures": 0,
+  "no_heldout_fit_or_margin_leakage": true,
+  "architecture_selection_independence": "not certified; see E5"
+}

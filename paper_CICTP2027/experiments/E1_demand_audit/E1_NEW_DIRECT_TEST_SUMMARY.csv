@@ -1,0 +1,13 @@
+experiment,type,service_group_status,seed_service_PASS,seed_type_rows,scheduled,position_ratio_min,end_of_run_cohort_completion_min,window_completed_ratio_min
+E2,ped,PASS,False,1,44,1.0,1.0,1.0
+E2,ped,PASS,True,719,35596,1.0,1.0,0.95
+E2,robot,PASS,False,1,28,1.0,1.0,1.0
+E2,robot,PASS,True,719,27212,1.0,1.0,0.9285714285714286
+E3,ped,FAIL,False,18,2182,0.8793103448275862,0.0919540229885057,0.264367816091954
+E3,ped,FAIL,True,102,6518,0.9942528735632185,0.9885057471264368,0.942528735632184
+E3,ped,PASS,False,8,382,1.0,0.2692307692307692,0.4538461538461538
+E3,ped,PASS,True,652,53318,1.0,1.0,0.9444444444444444
+E3,robot,FAIL,False,18,344,1.0,0.0,0.125
+E3,robot,FAIL,True,102,3256,1.0,1.0,0.875
+E3,robot,PASS,False,8,204,1.0,0.125,0.375
+E3,robot,PASS,True,652,12876,1.0,1.0,0.75

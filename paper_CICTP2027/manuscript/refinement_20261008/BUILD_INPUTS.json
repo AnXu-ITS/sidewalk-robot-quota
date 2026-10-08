@@ -1,0 +1,6 @@
+{
+  "results": "reproduced",
+  "margin_csv_sha256": "cfe18d6bfb9925561c7a84ed872d37f549803168b1e6141a92d24b144f2ec6c3",
+  "direct_labels": "Prespecified residual quantile; no-margin condition explicit",
+  "intervals": "Descriptive complete evaluated-sample counts; no population risk interval inferred"
+}

@@ -1,0 +1,9 @@
+{
+  "completed": 1920,
+  "planned": 1920,
+  "technical_failures": 0,
+  "batch_wall_seconds": 1395.5589548000135,
+  "total_seed_wall_seconds": 5427.524705099961,
+  "simulator_seconds": 2735.5851036001113,
+  "retries": 0
+}

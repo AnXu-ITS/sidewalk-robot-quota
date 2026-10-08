@@ -1,0 +1,114 @@
+{
+  "guardrails": {
+    "W_min": 1.6,
+    "x_crit": 33.333333333333336,
+    "q_max": 20.0,
+    "Q_low": {
+      "W": [
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        2.1,
+        2.4,
+        2.7,
+        3.0
+      ],
+      "Q": [
+        0.0,
+        5.0,
+        6.0,
+        8.0,
+        10.0,
+        18.0,
+        20.0,
+        20.0
+      ]
+    },
+    "C_W": {
+      "W": [
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        2.1,
+        2.4,
+        2.7,
+        3.0
+      ],
+      "C": [
+        10.0,
+        35.0,
+        35.0,
+        45.0,
+        45.0,
+        55.0,
+        90.0,
+        90.0
+      ]
+    },
+    "sharp_corner_guard": {
+      "max_turn_min_deg": 20.0,
+      "cum_turn_min_deg": 20.0,
+      "concentration_min": 0.6
+    },
+    "absolute_speed_floor": {
+      "vbar_min": 0.8
+    }
+  },
+  "applicability_domain": {
+    "W_range": [
+      1.6,
+      3.0
+    ],
+    "q_p_max": 60.0,
+    "x_max": 33.333333333333336,
+    "geometry": "Type A, or Type B with sinuosity <= 1.05; no barriers; no sharp concentrated corners",
+    "type_in_domain": [
+      "A",
+      "B"
+    ],
+    "type_b_sinuosity_max": 1.05,
+    "ood_rule": "out-of-domain fallback \u2014 NO closed-form recommendation"
+  },
+  "service": {
+    "speed_retention": 0.9,
+    "density_limit": 1.2,
+    "throughput_low": 0.9,
+    "throughput_high": 1.2,
+    "passing_seeds": 29,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ]
+  },
+  "parameter_file": "data/submission/fit_parameters_v3.csv"
+}

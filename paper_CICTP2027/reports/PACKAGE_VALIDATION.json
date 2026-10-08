@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "pages": 10,
+  "figures": 3,
+  "tables": 3,
+  "abstract_words": 184,
+  "keywords": 5,
+  "public_files": 104,
+  "largest_file_bytes": 22275844,
+  "private_paths_found": 0,
+  "credentials_found": 0,
+  "off_page_text": 0,
+  "release_url": "https://github.com/AnXu-ITS/sidewalk-robot-quota/releases/tag/cictp2027-v1.0.0",
+  "reproduced_main_results": true,
+  "separated_scientific_versions": true
+}

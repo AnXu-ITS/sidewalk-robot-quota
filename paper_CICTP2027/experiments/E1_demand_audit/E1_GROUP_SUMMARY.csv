@@ -1,0 +1,12 @@
+dataset,scope,method,candidate_status,groups,seed_rows,scheduled_pedestrians,first_observed_scheduled_cohort,window_completed_arrivals,first_observed_ratio_min,window_completed_ratio_min,completed_ratio_median,position_proxy_seed_coverage,position_proxy_ratio_min,seeds_with_under_90pct_observed,seeds_with_under_90pct_window_completed,passing_seeds_with_under_90pct_window_completed
+Development,LOCO,M0,PASS,98,2940,222000,222000,222146,1.0,0.9166666666666666,1.0,330,1.0,0,0,0
+Development,LOCO,M1,FAIL,18,540,42300,42300,40992,1.0,0.1388888888888889,1.0,90,0.9540229885057472,0,18,0
+Development,LOCO,M1,PASS,118,3540,322440,322440,322405,1.0,0.3450704225352112,1.0,540,1.0,0,4,1
+Development,LOCO,M2,PASS,59,1770,192360,192360,192499,1.0,0.7647058823529411,1.0,0,,0,1,1
+Development,LOCO,M3,FAIL,2,60,2160,2160,2135,1.0,0.1388888888888889,1.0,0,,0,1,0
+Development,LOCO,M3,PASS,96,2880,219840,219840,219992,1.0,0.9166666666666666,1.0,330,1.0,0,0,0
+Hong Kong,Frozen transfer,M0,PASS,11,330,30000,30000,29992,1.0,0.95,1.0,120,1.0,0,0,0
+Hong Kong,Frozen transfer,M1,FAIL,1,30,4800,4800,4576,1.0,0.36875,1.003125,0,,0,3,0
+Hong Kong,Frozen transfer,M1,PASS,15,450,46800,46800,46790,1.0,0.94375,1.0,210,1.0,0,0,0
+Hong Kong,Frozen transfer,M2,PASS,9,270,30000,30000,30010,1.0,0.95,1.0,60,1.0,0,0,0
+Hong Kong,Frozen transfer,M3,PASS,11,330,30000,30000,29996,1.0,0.95,1.0,120,1.0,0,0,0

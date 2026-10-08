@@ -1,0 +1,13 @@
+{
+  "E2_unique_candidate_groups": 463,
+  "E2_covered": 439,
+  "E2_new_groups": 24,
+  "E3_total_requested_groups": 43,
+  "E3_new_groups": 40,
+  "total_new_groups": 64,
+  "total_new_seed_runs": 1920,
+  "estimated_serial_simulator_seconds": 9309.16121395072,
+  "estimated_four_worker_seconds": 2327.29030348768,
+  "workers": 4,
+  "replication_sample_sha256": "1d57b9006082787f29d9f72a8c0a38f36cf89b2e5f3430d48f5923a8f3dcbaae"
+}
