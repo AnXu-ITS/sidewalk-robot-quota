@@ -19,7 +19,16 @@ def main():
     abstract=re.search(r'\\begin\{abstract\}(.*?)\\end\{abstract\}',source,re.S).group(1)
     keywords=re.search(r'\\KeyWords\{([^}]+)\}',source).group(1).split(';')
     assert len(abstract.split())<=300 and len(keywords)<=5
-    assert source.count(r'\begin{figure}')==3 and source.count(r'\begin{table}')==3
+    assert source.count(r'\begin{figure}')==4 and source.count(r'\begin{table}')==3
+    assert 'Source and permission statement pending' not in source
+    assert 'CC0 1.0' in source and 'Retired electrician' in source
+    selection=pd.read_csv(ROOT/'figures/HK_REPRESENTATIVE_SELECTION.csv')
+    assert len(selection)==8 and selection.tag.nunique()==8
+    assert selection.configuration.value_counts().to_dict()=={'ORIGINAL':4,'REPAIRED':4}
+    assert selection.selection_uses_service_outcomes.eq(False).all()
+    all18=json.loads((ROOT/'figures/hong_kong_all18_metric.provenance.json').read_text(encoding='utf-8'))
+    assert all18['case_count']==18 and all18['total_evaluated_cases']==18
+    assert all18['independent_rescaling']==False and all18['new_simulations']==0
     release='https://github.com/AnXu-ITS/sidewalk-robot-quota/releases/tag/cictp2027-v1.0.0'
     assert release in source
     d=fitz.open(ROOT/'manuscript/ascexmpl-new.pdf');assert len(d)<=12
@@ -27,6 +36,14 @@ def main():
     assert release in uris
     text='\n'.join(p.get_text() for p in d)
     assert 'Jin et al. 2026' in text
+    full_sentence='A zero denominator is undefined and fails the flow component.'
+    service_pages=[i for i,p in enumerate(d) if full_sentence in ' '.join(p.get_text().split())]
+    assert len(service_pages)==1,'The service sentence must remain continuous on one page'
+    framework_pages=[i for i,p in enumerate(d) if 'Fig. 2.' in p.get_text()]
+    assert len(framework_pages)==1 and service_pages[0]<=framework_pages[0]
+    if service_pages[0]==framework_pages[0]:
+        t=' '.join(d[service_pages[0]].get_text().split())
+        assert t.index(full_sentence)<t.index('Fig. 2.')
     # Bounds check individual visible text spans. Content outside page is not accepted.
     clipped=[]
     for i,p in enumerate(d):
@@ -52,9 +69,11 @@ def main():
     s=pd.read_csv(ROOT/'experiments/E2_margin_sweep/E2_MARGIN_SWEEP_SCENARIOS.csv')
     assert s[s.quota.gt(0)].service_status.isin(['PASS','FAIL']).all()
     assert s[s.quota.gt(0)].reuse_valid.eq(True).all()
-    result=dict(status='PASS',pages=len(d),figures=3,tables=3,abstract_words=len(abstract.split()),keywords=len(keywords),
+    result=dict(status='PASS',pages=len(d),figures=4,tables=3,abstract_words=len(abstract.split()),keywords=len(keywords),
                 public_files=len(files),largest_file_bytes=largest,private_paths_found=0,credentials_found=0,off_page_text=0,
-                release_url=release,reproduced_main_results=True,separated_scientific_versions=True)
+                release_url=release,reproduced_main_results=True,separated_scientific_versions=True,
+                scene_license='CC0 1.0',main_hk_examples=8,repository_hk_configurations=18,
+                service_sentence_continuous=True)
     output=ROOT/'outputs/package_validation.json';output.parent.mkdir(exist_ok=True)
     output.write_text(json.dumps(result,indent=2),encoding='utf-8');print(json.dumps(result,indent=2))
 

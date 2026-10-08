@@ -14,6 +14,13 @@ detailed experimental record. [Manuscript](manuscript/ascexmpl-new.pdf) ·
 [Reproduction](REPRODUCE.md) · [Data dictionary](DATA_DICTIONARY.md) ·
 [Version history](../research_versions/README.md)
 
+The current manuscript uses a credited CC0 scene and eight geometry-selected
+Hong Kong examples. The [complete 18-case metric figure](figures/hong_kong_all18_metric.pdf),
+[selection rule](figures/README.md) and
+[photo provenance](manuscript/visual_revision_20261008/sources/PHOTO_PROVENANCE.md)
+are available separately. This presentation update leaves all experimental
+results and the archived v1.0.0 release unchanged.
+
 ## What the evidence shows
 
 The common city-held-out evaluation contains **164 scenarios / 64 cells**.

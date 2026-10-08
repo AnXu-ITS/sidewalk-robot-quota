@@ -27,6 +27,10 @@
 \renewcommand{\bottomfraction}{0.8}
 \renewcommand{\textfraction}{0.08}
 \renewcommand{\floatpagefraction}{0.90}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\makeatother
 \NameTag{}
 \begin{document}
 \clubpenalty=10000 \widowpenalty=10000
@@ -48,11 +52,19 @@ Sidewalk delivery robots offer a new option for urban logistics, but their acces
 \KeyWords{sidewalk delivery robots; pedestrian service; admission control; microscopic simulation; urban logistics}
 
 \section{Introduction}
-Sidewalk delivery robots are being explored for parcel and grocery delivery over the final part of an urban trip. Their potential benefits have motivated studies of freight efficiency and last-mile operations \cite{Jennings2019,Alverhed2024}. These robots also use space that is primarily intended for walking. As deployment expands, managing the amount of robot traffic becomes a pedestrian-service question as well as a logistics question.
+Sidewalk delivery robots are being explored for parcel and grocery delivery over the final part of an urban trip. Their potential benefits have motivated studies of freight efficiency and last-mile operations \cite{Jennings2019,Alverhed2024}. These robots also use space that is primarily intended for walking (Fig.~\ref{fig:scene}). As deployment expands, managing the amount of robot traffic becomes a pedestrian-service question as well as a logistics question.
+
+\begin{figure}[!htbp]
+\centering\includegraphics[width=\textwidth]{visual_revision_20261008/figures/figure1_scene.pdf}
+\caption{Illustrative sidewalk-delivery-robot scene in an urban pedestrian environment. The image motivates the local admission problem studied in this paper: how much robot access should be offered while acceptable pedestrian service is maintained. Photograph: Retired electrician / \href{https://commons.wikimedia.org/wiki/File:Moscow,_Yandex_employee_walking_his_pet_A-505_robot,_Aug_2025_04.jpg}{Wikimedia Commons}, \href{https://creativecommons.org/publicdomain/zero/1.0/}{CC0 1.0}; vector annotations added by the authors.}
+\label{fig:scene}
+\end{figure}
 
 Operating permissions and fleet allowances govern deployment at a broader scale \cite{Kovacica2024,DDOTPDD}. They do not specify how many robots should enter a particular sidewalk during a period of pedestrian activity. The same fleet can impose different local loads depending on route concentration and demand. Sidewalk width provides space for encounters and passing, while pedestrian demand determines how intensively that space is used. Local entry-rate management therefore requires more information than a permit or fleet total.
 
-Existing studies provide evidence on robot interactions with pedestrians and cyclists \cite{Gehrke2022} and on routing under uncertain travel conditions \cite{TongSimoni2026}. These concerns motivate a complementary question at the sidewalk-segment scale: how much robot access should be offered while maintaining acceptable pedestrian service? A flow estimate alone is insufficient. It may apply outside its assessed geometric range, or it may offer access where the pedestrian-only condition already performs poorly. Even under suitable conditions, a conservative rate can protect service at the cost of useful delivery access.
+Quantitative interaction studies measure different aspects of shared-space performance. Corridor experiments show that a crossing mobile robot can reduce collective pedestrian speed \cite{Chen2018}. Laboratory-calibrated simulations evaluate a person-following delivery robot's speed under changing crowd density, direction and corridor width \cite{Li2025}. Field studies examine encounter conflicts and pedestrian or cyclist responses \cite{Gehrke2022}, while routing models account for uncertain sidewalk travel conditions \cite{TongSimoni2026}. These studies inform interaction and deployment assessment. The present study instead treats robot entry flow as the allocation variable and tests each offered rate against a stated pedestrian-service objective.
+
+A flow estimate alone is insufficient for that local decision. It may apply outside its assessed geometric range, or it may offer access where the pedestrian-only condition already performs poorly. Even under suitable conditions, a conservative rate can protect service at the cost of useful delivery access.
 
 This study addresses that allocation problem through an interpretable admission framework. Local checks determine whether assessment is appropriate, and a width--demand relation proposes a candidate entry rate. A controllable margin reduces that rate before its service performance is tested directly. The contributions are a clear local admission procedure, evidence of how conservativeness changes both access and pedestrian service, and an assessment of the role of geometry and operating conditions. By varying the margin under a common service objective, the study examines how much access is withheld to reduce service deterioration.
 
@@ -63,12 +75,6 @@ The development sample contains \Candidates{} geometry--demand scenarios from \C
 Simulations use \EngineVersion{} with JuPedSim \cite{Lopez2018}. Both agent types use its collision-free-speed implementation, with robots represented by a larger walking-agent type. Pedestrians have radius \PedRadius{}~m and desired speeds with mean \PedSpeed{}~m/s and standard deviation \PedSD{}~m/s, bounded by \PedMin{} and \PedMax{}~m/s. The reference robot has dimensions \RobotLength{} by \RobotWidth{}~m and nominal speed \RobotSpeed{}~m/s. Its interaction representation is a collision disc of radius \RobotRadius{}~m. Pedestrians travel equally in both directions, while robots enter in one direction. Regular arrival schedules specify demand, and random seeds vary stochastic agent properties.
 
 Each run uses a \TimeStep{}~s time step, a \Warmup{}~s warm-up and a \Measurement{}~s measurement window, followed by a \Tail{}~s completion period. Speed and density are measured in a central \ZoneLength{}~m zone. For irregular polygons, positions are projected onto the measurement axis; zone length times representative width supplies the density denominator. Polygon erosion by the robot radius checks geometric feasibility before evaluation. Cases without a feasible robot-centre region, or without completed measurements because of the \Timeout{}~s runtime limit, are excluded. Completed adverse outcomes remain in the analysis.
-
-\begin{figure}[!htbp]
-\centering\includegraphics[width=\textwidth]{refinement_20261008/figures/figure1.pdf}
-\caption{Local robot admission. Geometry and pedestrian-service checks precede the candidate entry rate. A positive rate receives a configuration-matched service test.}
-\label{fig:framework}
-\end{figure}
 
 \subsection{Pedestrian Service and the Reference Flow}
 The service objective combines walking speed, pedestrian density and completed-trip balance. For seed $s$, $\bar v_s$ is mean pedestrian speed in the measurement zone and window, and $\bar k_s$ is the mean zone count divided by its area. Robots are excluded from both measures. Baseline speed $v_0$ is the mean of the 30 pedestrian-only seed means for the same configuration. A seed qualifies when
@@ -82,6 +88,12 @@ Density is measured in ped/m$^2$. The flow ratio $T_s=N_{\rm arr,s}^{\rm comp}/N
 
 A tested flow passes when at least \PassN{} of \SeedN{} seeds satisfy Eq.~\ref{eq:service}. The same acceptance rule evaluates the pedestrian-only baseline, with $B=1$ denoting qualification. Conditional on a qualifying baseline, the reference $q^*$ is the highest qualifying robot flow in the original finite scan. Discrete coarse tests cover 0--10~robots/min; selective higher-flow tests and integer refinements extend the scan up to \QMax{}~robots/min. The reference is zero when no positive scanned flow qualifies and is ceiling-censored at \QMax{}~robots/min. Unsupported and technically unresolved references remain undefined. The complete scan support is provided in the research repository.
 
+\begin{figure}[H]
+\centering\includegraphics[width=\textwidth]{visual_revision_20261008/figures/figure2_framework.pdf}
+\caption{Local robot admission. Geometry and pedestrian-service checks precede the candidate entry rate. A positive rate receives a configuration-matched service test.}
+\label{fig:framework}
+\end{figure}
+
 \subsection{Admission Checks and Conservative Allocation}
 Figure~\ref{fig:framework} distinguishes an unsupported condition, zero admission and a positive candidate rate. The applicability domain $\mathcal D$ covers widths of \WidthMin{}--\WidthMax{}~m and positive pedestrian demand up to \DemandMax{}~ped/min. Specific demand is $x=q_p/W<\SpecificMax{}$~ped/(min\,m). Straight corridors and mildly curved corridors with sinuosity no greater than \SinuosityMax{} are assessed. Concentrated turns are excluded when maximum and cumulative angles both reach \TurnAngle{} degrees and their ratio reaches \TurnRatio{}.
 
@@ -93,14 +105,16 @@ Within the domain, the service gate $G$ requires a qualifying pedestrian baselin
 \end{equation}
 Ordinary least squares uses positive uncensored training references. An additive margin $\Delta$ is the selected linearly interpolated empirical quantile of $[q_{\rm nom}-q^*]_+$ over all training cases with defined references, including zeros and ceiling-censored observations. Fitting and margin calibration retain the recorded rounded $x$ values; prediction evaluates $q_p/W$ from the stored inputs.
 
-The offered entry rate is
+For valid inputs within $\mathcal D$, define the bounded rate $q_b$. The offered integer entry rate is
 \begin{equation}
-q_{\rm cand}=\begin{cases}
-\text{abstain},&\text{invalid inputs or }(W,q_p,g)\notin\mathcal D,\\
-0,&(W,q_p,g)\in\mathcal D,\ G=0,\\
-\lfloor\min\{q_{\max},Q_{\rm low}(W),[q_{\rm nom}-\Delta]_+\}\rfloor,
- &(W,q_p,g)\in\mathcal D,\ G=1.
+\begin{aligned}
+q_b&=\min\{q_{\max},Q_{\rm low}(W),[q_{\rm nom}-\Delta]_+\},\\[2pt]
+q_{\rm cand}&=\begin{cases}
+\text{abstain},&\text{invalid inputs or outside }\mathcal D,\\
+0,&\text{within }\mathcal D,\ G=0,\\
+\lfloor q_b\rfloor,&\text{within }\mathcal D,\ G=1.
 \end{cases}
+\end{aligned}
 \label{eq:quota}
 \end{equation}
 Here $[z]_+=\max(0,z)$, $g$ describes geometry and $q_{\max}=\QMax{}$~robots/min. The demand gate and low-demand ceiling are fixed guardrails developed from synthetic width--demand experiments. Table~\ref{tab:guards} supplies their values, with linear interpolation between widths. Margin subtraction can produce zero even when the service gate passes. At fixed specific demand, Eq.~\ref{eq:nominal} scales linearly with width; its full-development exponent $p=\MainP{}$ implies approximately $W^{1.93}q_p^{-0.93}$. This is an empirical scaling relation over the assessed domain.
@@ -132,7 +146,7 @@ Hong Kong transfer applies the full-development parameters $c=\MainC{}$, $p=\Mai
 The margin sweep shows that reducing failed service tests requires giving up some robot access (Fig.~\ref{fig:tradeoff}). Without a margin, 136 scenarios receive positive rates and 18 fail. At the M0 quantile of 0.80, all 98 positive recommendations pass. A further increase to 0.90 leaves 58 positive recommendations, also with no observed failures. The intermediate settings show how the margin can adjust the balance between these outcomes. The 0.80 setting retains more opportunities than 0.90 at the same observed failure count in this sample; it is not a universal optimum.
 
 \begin{figure}[!htbp]
-\centering\includegraphics[width=\textwidth]{refinement_20261008/figures/figure2.pdf}
+\centering\includegraphics[width=\textwidth]{visual_revision_20261008/figures/figure3_tradeoff.pdf}
 \caption{Observed access--service trade-off across five prespecified margin settings. Each point combines positive recommendations and failed direct tests on the 164 evaluated scenarios. The connecting line indicates the tested sequence, not an interpolated service guarantee.}
 \label{fig:tradeoff}
 \end{figure}
@@ -156,11 +170,11 @@ The median of the group-median speed-retention values is 0.982 for M0 and 0.963 
 Independent seeds preserve all 13 replicated positive M0 decisions, while only 7 of 15 M1 decisions remain unchanged. M1 transitions occur in both directions: two passes become failures and six failures become passes. Both methods are stable in the robust stratum, whereas changes occur in the boundary and failure strata. The deliberately stratified sample supports the stability of the tested conservative recommendations and identifies sensitivity near the service boundary. It does not estimate reliability across the full scenario population.
 
 \subsection{Geometry and Operating Conditions Affect Admission}
-The Hong Kong results show that entrance configuration influences whether a sidewalk can be assessed (Fig.~\ref{fig:hk}). Original entrances support 13 configurations; geometry-based repairs make another five sites evaluable. M0 offers seven positive rates in the original group and four in the repaired group, all passing. M1 offers 11 and five positives, with one failure among the original configurations. More offered access thus remains associated with a service trade-off after transfer. The extra evaluable sites do not constitute a before--after service comparison at identical entrances.
+The Hong Kong results show that entrance configuration influences whether a sidewalk can be assessed (Fig.~\ref{fig:hk}). Original entrances support 13 configurations; geometry-based repairs make another five sites evaluable. M0 offers seven positive rates in the original group and four in the repaired group, all passing. M1 offers 11 and five positives, with one failure among the original configurations. More offered access thus remains associated with a service trade-off after transfer. The extra evaluable sites do not constitute a before--after service comparison at identical entrances. Figure~\ref{fig:hk} shows eight examples selected by geometry and entrance-repair characteristics; the reported totals use all 18 configurations.
 
-\begin{figure}[!htbp]
-\centering\includegraphics[width=\textwidth]{refinement_20261008/figures/figure3.pdf}
-\caption{Transfer to real Hong Kong sidewalk polygons. Shapes are independently scaled and rotated; R marks a repaired entrance. Reference and candidate flows use frozen development parameters, with original and repaired configurations kept separate.}
+\begin{figure}[H]
+\centering\includegraphics[width=\textwidth]{visual_revision_20261008/figures/figure4_hk_representative.pdf}
+\caption{Eight geometrically selected Hong Kong configurations at a common metric scale. Each polygon retains its recorded local orientation and equal longitudinal and transverse scales. $W$ is the representative input width. Circles mark original centreline endpoints; triangles mark repaired entrance anchors (R). Arrows indicate robot direction. Reference and M0/M1 candidate flows are in robots/min. Zero admission is not a service pass. The \href{https://github.com/AnXu-ITS/sidewalk-robot-quota/blob/main/paper_CICTP2027/figures/hong_kong_all18_metric.pdf}{complete 18-configuration figure} and selection rule are available in the repository.}
 \label{fig:hk}
 \end{figure}
 
@@ -173,7 +187,7 @@ Operating assumptions can change service at the same entry rate (Table~\ref{tab:
 \end{table}
 
 \FloatBarrier
-\clearpage
+\Needspace{6\baselineskip}
 \section{Discussion}
 Conservative admission is a management choice about the balance between delivery access and walking service. A margin can reduce the rate offered on an admitted sidewalk and can withhold access altogether. Its value should therefore be judged alongside the opportunities it removes, rather than by regression error alone. The passing zero-margin opportunities withheld by M0 make this distinction concrete. The useful decision is how much conservativeness is appropriate for the stated service objective and operating conditions.
 

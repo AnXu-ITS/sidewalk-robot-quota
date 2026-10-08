@@ -1,0 +1,9 @@
+tag,configuration,W_m,display_rotation_deg,display_scale,display_translation_m,marker_meaning
+HK-ST-06,ORIGINAL,1.618,0,1,"[0, 50]",original centreline endpoints
+HK-ST-15,ORIGINAL,2.197,0,1,"[0, 43]",original centreline endpoints
+HK-ST-25,ORIGINAL,2.632,0,1,"[0, 36]",original centreline endpoints
+HK-ST-28,ORIGINAL,2.54,0,1,"[0, 29]",original centreline endpoints
+HK-ST-05,REPAIRED,1.613,0,1,"[0, 22]",repaired entrance anchors
+HK-ST-16,REPAIRED,2.068,0,1,"[0, 15]",repaired entrance anchors
+HK-ST-22,REPAIRED,2.475,0,1,"[0, 8]",repaired entrance anchors
+HK-ST-24,REPAIRED,2.472,0,1,"[0, 1]",repaired entrance anchors

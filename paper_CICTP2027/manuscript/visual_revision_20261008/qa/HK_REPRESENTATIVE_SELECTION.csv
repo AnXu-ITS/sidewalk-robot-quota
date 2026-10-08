@@ -1,0 +1,9 @@
+tag,configuration,selection_reason,W_m,sinuosity,rect_fill,selection_uses_service_outcomes
+HK-ST-06,ORIGINAL,Narrowest original representative input width,1.618,1.0004,0.551,False
+HK-ST-15,ORIGINAL,Straightest remaining original centreline,2.197,1.0,0.898,False
+HK-ST-25,ORIGINAL,Widest remaining original representative input width,2.632,1.0169,0.444,False
+HK-ST-28,ORIGINAL,Lowest remaining original polygon rectangular fill,2.54,1.02,0.414,False
+HK-ST-05,REPAIRED,Narrowest repaired representative input width,1.613,1.0047,0.717,False
+HK-ST-16,REPAIRED,Highest remaining repaired centreline sinuosity,2.068,1.0281,0.449,False
+HK-ST-22,REPAIRED,Lowest remaining repaired polygon rectangular fill,2.475,1.0099,0.427,False
+HK-ST-24,REPAIRED,Largest remaining sum of endpoint-to-anchor displacements,2.472,1.0017,0.671,False
